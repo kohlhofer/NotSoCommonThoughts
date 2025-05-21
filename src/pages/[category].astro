@@ -29,24 +29,26 @@ const categoryName = category
   .join(' ');
 ---
 
-<Layout title={`${categoryName} - Not So Common Thoughts`}>
+<Layout title="Not So Common Thoughts">
   <div class="max-w-2xl">
     <!-- Mobile header -->
     <div class="sm:hidden flex items-center gap-2 mb-6">
-      <a href="/" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+      <a href="/" class="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors">
         ← Home
       </a>
-      <span class="text-gray-400 dark:text-gray-600">/</span>
-      <span class="text-sm text-gray-900 dark:text-white">{categoryName}</span>
+      <span class="text-slate-400 dark:text-slate-600">/</span>
+      <span class="text-sm text-slate-900 dark:text-slate-100">{categoryName}</span>
     </div>
 
     <!-- Desktop title -->
-    <h1 class="hidden sm:block text-3xl font-normal text-gray-900 dark:text-white mb-8">
+    <h1 class="hidden sm:block text-3xl font-serif text-slate-900 dark:text-slate-100 mb-8">
       {categoryName}
     </h1>
 
-    {posts.map(post => (
-      <PostListItem post={post} />
-    ))}
+    <div class="space-y-6 sm:space-y-8">
+      {posts.map(post => (
+        <PostListItem post={post} />
+      ))}
+    </div>
   </div>
 </Layout> 
