@@ -42,7 +42,7 @@ const isHome = currentPath === '/';
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 focus:outline-none"
+        class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-300 focus:outline-none"
         aria-label="Toggle menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ const isHome = currentPath === '/';
       <!-- Sidebar -->
       <aside
         id="sidebar"
-        class="fixed sm:static inset-0 z-40 w-64 bg-white dark:bg-gray-900 border-r border-indigo-100 dark:border-indigo-900 transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out"
+        class="fixed sm:static inset-0 z-40 w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out"
       >
         <div class="p-8">
           <div class="sticky top-8">
@@ -62,8 +62,8 @@ const isHome = currentPath === '/';
             <nav class="space-y-2">
               <a
                 href="/"
-                class={`block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors ${
-                  isHome ? 'text-indigo-600 dark:text-indigo-400 font-medium' : ''
+                class={`block text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors ${
+                  isHome ? 'text-blue-600 dark:text-blue-400 font-medium' : ''
                 }`}
               >
                 Home
@@ -71,8 +71,8 @@ const isHome = currentPath === '/';
               {formattedCategories.map(category => (
                 <a
                   href={`/${category.slug}`}
-                  class={`block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors ${
-                    currentPath === `/${category.slug}` ? 'text-indigo-600 dark:text-indigo-400 font-medium' : ''
+                  class={`block text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors ${
+                    currentPath === `/${category.slug}` ? 'text-blue-600 dark:text-blue-400 font-medium' : ''
                   }`}
                 >
                   {category.name}
@@ -80,8 +80,8 @@ const isHome = currentPath === '/';
               ))}
             </nav>
 
-            <div class="mt-8 text-sm text-gray-500 dark:text-gray-400">
-              <p class="mb-2">Not so common thoughts is a blog by <a href="https://kohlhofer.com/about" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">Alexander Kohlhofer</a>.</p>
+            <div class="mt-8 text-sm text-slate-500 dark:text-slate-400">
+              <p class="mb-2">Not so common thoughts is a blog by <a href="https://kohlhofer.com/about" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Alexander Kohlhofer</a>.</p>
             </div>
           </div>
         </div>
@@ -93,12 +93,12 @@ const isHome = currentPath === '/';
       </main>
     </div>
 
-    <footer class="bg-indigo-50 dark:bg-indigo-900/20 border-t border-indigo-100 dark:border-indigo-800">
+    <footer class="bg-slate-50 dark:bg-slate-900/20 border-t border-slate-200 dark:border-slate-800">
       <div class="container mx-auto px-4 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-600 dark:text-gray-300">© {new Date().getFullYear()} NotSoCommonThoughts</p>
+          <p class="text-slate-600 dark:text-slate-300">© {new Date().getFullYear()} NotSoCommonThoughts</p>
           <div class="flex space-x-4 mt-4 md:mt-0">
-            <a href="/rss.xml" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">RSS</a>
+            <a href="/rss.xml" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">RSS</a>
           </div>
         </div>
       </div>
