@@ -1,4 +1,75 @@
-# Astro Starter Kit: Minimal
+# Not So Common Thoughts
+
+A modern blog built with Astro, featuring responsive design, category-based organization, and newsletter integration.
+
+## Features
+
+- 🎨 Modern, responsive design
+- 📱 Mobile-first approach
+- 🏷️ Category-based organization
+- 📧 Newsletter integration (coming soon)
+- 🌙 Dark mode support
+- 📝 MDX support for enhanced content
+- 🎯 SEO optimized
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/NotSoCommonThoughts.git
+cd NotSoCommonThoughts
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:4321`
+
+## Creating Content
+
+Blog posts are written in Markdown or MDX and stored in the `src/content/blog` directory. Each post should include frontmatter with the following fields:
+
+```yaml
+---
+title: "Your Post Title"
+description: "A brief description of your post"
+date: YYYY-MM-DD
+tags: ["tag1", "tag2"]
+image: "/path/to/image.jpg" # optional
+author: "Your Name" # optional
+---
+```
+
+## Deployment
+
+This site is configured for deployment on GitHub Pages. To deploy:
+
+1. Push your changes to the main branch
+2. GitHub Actions will automatically build and deploy the site
+
+## Customization
+
+- Edit `src/layouts/Layout.astro` to modify the site layout
+- Update `tailwind.config.mjs` to customize the theme
+- Modify `src/content/config.ts` to change the content schema
+
+## License
+
+MIT License - feel free to use this template for your own blog!
 
 ```sh
 npm create astro@latest -- --template minimal

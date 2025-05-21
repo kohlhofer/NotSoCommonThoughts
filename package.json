@@ -9,6 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.13"
+    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.7.13",
+    "mdx": "^0.3.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3"
   }
 }

@@ -1,16 +1,91 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
+// Get all blog posts
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Get featured categories
+const categories = ['bits', 'long-form', 'ai'];
+const featuredPosts = categories.map(category => {
+  return posts
+    .filter(post => post.data.tags?.includes(category))
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+    .slice(0, 3);
+});
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Not So Common Thoughts">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Welcome to Not So Common Thoughts</h1>
+    
+    <!-- Featured Categories -->
+    <div class="space-y-12 mb-16">
+      {categories.map((category, index) => (
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 capitalize">{category}</h2>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredPosts[index].map(post => (
+              <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                {post.data.image && (
+                  <img
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-48 object-cover"
+                  />
+                )}
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">{post.data.description}</p>
+                  <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <time datetime={post.data.date.toISOString()}>
+                      {post.data.date.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <!-- Latest Posts -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Latest Posts</h2>
+      <div class="space-y-8">
+        {sortedPosts.map(post => (
+          <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">{post.data.description}</p>
+            <div class="flex items-center justify-between">
+              <time datetime={post.data.date.toISOString()} class="text-sm text-gray-500 dark:text-gray-400">
+                {post.data.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+              <div class="flex space-x-2">
+                {post.data.tags?.map(tag => (
+                  <span class="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

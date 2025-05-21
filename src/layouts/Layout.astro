@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Not So Common Thoughts - A blog about technology, AI, and more" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white dark:bg-gray-900">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white">NotSoCommonThoughts</a>
+          <div class="hidden md:flex space-x-6">
+            <a href="/bits" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Bits</a>
+            <a href="/long-form" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Long Form</a>
+            <a href="/ai" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">AI</a>
+          </div>
+          <button class="md:hidden" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+          <div class="flex flex-col space-y-4 mt-4">
+            <a href="/bits" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Bits</a>
+            <a href="/long-form" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Long Form</a>
+            <a href="/ai" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">AI</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-600 dark:text-gray-300">© {new Date().getFullYear()} NotSoCommonThoughts</p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="/rss.xml" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">RSS</a>
+            <a href="/newsletter" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Newsletter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script> 
