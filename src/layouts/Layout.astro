@@ -42,7 +42,7 @@ const isHome = currentPath === '/';
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none"
+        class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 focus:outline-none"
         aria-label="Toggle menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,17 +53,17 @@ const isHome = currentPath === '/';
       <!-- Sidebar -->
       <aside
         id="sidebar"
-        class="fixed sm:static inset-0 z-40 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out"
+        class="fixed sm:static inset-0 z-40 w-64 bg-white dark:bg-gray-900 border-r border-indigo-100 dark:border-indigo-900 transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out"
       >
         <div class="p-8">
           <div class="sticky top-8">
-            <a href="/" class="text-xl font-bold text-gray-900 dark:text-white mb-8 block">Not So Common Thoughts</a>
+            <a href="/" class="text-xl font-bold text-blue-700 dark:text-blue-400 mb-8 block hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Not So Common Thoughts</a>
 
             <nav class="space-y-2">
               <a
                 href="/"
-                class={`block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white ${
-                  isHome ? 'text-primary-600 dark:text-primary-400 font-medium' : ''
+                class={`block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors ${
+                  isHome ? 'text-indigo-600 dark:text-indigo-400 font-medium' : ''
                 }`}
               >
                 Home
@@ -71,8 +71,8 @@ const isHome = currentPath === '/';
               {formattedCategories.map(category => (
                 <a
                   href={`/${category.slug}`}
-                  class={`block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white ${
-                    currentPath === `/${category.slug}` ? 'text-primary-600 dark:text-primary-400 font-medium' : ''
+                  class={`block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors ${
+                    currentPath === `/${category.slug}` ? 'text-indigo-600 dark:text-indigo-400 font-medium' : ''
                   }`}
                 >
                   {category.name}
@@ -81,7 +81,7 @@ const isHome = currentPath === '/';
             </nav>
 
             <div class="mt-8 text-sm text-gray-500 dark:text-gray-400">
-              <p class="mb-2">Not so common thoughts is a blog by <a href="https://kohlhofer.com/about" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 dark:hover:text-white">Alexander Kohlhofer</a>.</p>
+              <p class="mb-2">Not so common thoughts is a blog by <a href="https://kohlhofer.com/about" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">Alexander Kohlhofer</a>.</p>
             </div>
           </div>
         </div>
@@ -93,12 +93,12 @@ const isHome = currentPath === '/';
       </main>
     </div>
 
-    <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <footer class="bg-indigo-50 dark:bg-indigo-900/20 border-t border-indigo-100 dark:border-indigo-800">
       <div class="container mx-auto px-4 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-600 dark:text-gray-300">© {new Date().getFullYear()} NotSoCommonThoughts</p>
           <div class="flex space-x-4 mt-4 md:mt-0">
-            <a href="/rss.xml" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">RSS</a>
+            <a href="/rss.xml" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">RSS</a>
           </div>
         </div>
       </div>
