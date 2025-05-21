@@ -1,0 +1,41 @@
+---
+interface Props {
+  post: {
+    data: {
+      title: string;
+      date: Date;
+      description: string;
+    };
+    slug: string;
+  };
+}
+
+const { post } = Astro.props;
+---
+
+<article class="mb-8">
+  <a href={`/blog/${post.slug}`} class="group">
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+      <h2 class="text-xl font-normal text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">
+        {post.data.title}
+      </h2>
+      <time datetime={post.data.date.toISOString()} class="hidden sm:block text-xl font-light text-gray-900 dark:text-white whitespace-nowrap">
+        {post.data.date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </time>
+    </div>
+    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
+      {post.data.description}
+    </p>
+    <time datetime={post.data.date.toISOString()} class="sm:hidden block mt-2 text-sm font-light text-gray-600 dark:text-gray-400">
+      {post.data.date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })}
+    </time>
+  </a>
+</article> 

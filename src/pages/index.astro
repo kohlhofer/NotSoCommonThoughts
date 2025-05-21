@@ -1,91 +1,79 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PostListItem from '../components/PostListItem.astro';
 
 // Get all blog posts
 const posts = await getCollection('blog');
-const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-// Get featured categories
-const categories = ['bits', 'long-form', 'ai'];
-const featuredPosts = categories.map(category => {
-  return posts
-    .filter(post => post.data.tags?.includes(category))
-    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-    .slice(0, 3);
-});
+// Get posts by category
+const writingPosts = posts
+  .filter(post => post.data.tags?.includes('long-form'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+
+const bitsPosts = posts
+  .filter(post => post.data.tags?.includes('bits'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+
+const aiPosts = posts
+  .filter(post => post.data.tags?.includes('ai'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Welcome to Not So Common Thoughts</h1>
-    
-    <!-- Featured Categories -->
-    <div class="space-y-12 mb-16">
-      {categories.map((category, index) => (
-        <section>
-          <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 capitalize">{category}</h2>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuredPosts[index].map(post => (
-              <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                {post.data.image && (
-                  <img
-                    src={post.data.image}
-                    alt={post.data.title}
-                    class="w-full h-48 object-cover"
-                  />
-                )}
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-                  </h3>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">{post.data.description}</p>
-                  <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                    <time datetime={post.data.date.toISOString()}>
-                      {post.data.date.toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </time>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+  <div class="max-w-2xl px-4 sm:px-6 lg:px-8">
+    <!-- Writing Section -->
+    <section class="mb-12 sm:mb-16">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 mb-6">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Writing</h2>
+        <a href="/long-form" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+          See all →
+        </a>
+      </div>
+      <div class="space-y-6 sm:space-y-8">
+        {writingPosts.map(post => (
+          <PostListItem post={post} />
+        ))}
+      </div>
+    </section>
 
-    <!-- Latest Posts -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Latest Posts</h2>
-      <div class="space-y-8">
-        {sortedPosts.map(post => (
-          <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">{post.data.description}</p>
-            <div class="flex items-center justify-between">
-              <time datetime={post.data.date.toISOString()} class="text-sm text-gray-500 dark:text-gray-400">
-                {post.data.date.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-              <div class="flex space-x-2">
-                {post.data.tags?.map(tag => (
-                  <span class="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </article>
+    <!-- Bits Section -->
+    <section class="mb-12 sm:mb-16">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 mb-6">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Bits</h2>
+        <a href="/bits" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+          See all →
+        </a>
+      </div>
+      <div class="space-y-6 sm:space-y-8">
+        {bitsPosts.map(post => (
+          <PostListItem post={post} />
+        ))}
+      </div>
+    </section>
+
+    <!-- AI Section -->
+    <section class="mb-12 sm:mb-16">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 mb-6">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">AI</h2>
+        <a href="/ai" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+          See all →
+        </a>
+      </div>
+      <div class="space-y-6 sm:space-y-8">
+        {aiPosts.map(post => (
+          <PostListItem post={post} />
         ))}
       </div>
     </section>
   </div>
 </Layout>
+
+<style>
+  .bg-grid-white {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PostListItem from '../components/PostListItem.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  // Get all unique tags from all posts
+  const categories = [...new Set(posts.flatMap(post => post.data.tags || ['uncategorized']))];
+  
+  return categories.map(category => {
+    // Include posts that have this tag anywhere in their tags array
+    const categoryPosts = posts.filter(post => 
+      (post.data.tags || ['uncategorized']).includes(category)
+    );
+    const sortedPosts = categoryPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    
+    return {
+      params: { category },
+      props: { posts: sortedPosts, category }
+    };
+  });
+}
+
+const { posts, category } = Astro.props;
+const categoryName = category
+  .split('-')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+---
+
+<Layout title={`${categoryName} - Not So Common Thoughts`}>
+  <div class="max-w-2xl">
+    <!-- Mobile header -->
+    <div class="sm:hidden flex items-center gap-2 mb-6">
+      <a href="/" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+        ← Home
+      </a>
+      <span class="text-gray-400 dark:text-gray-600">/</span>
+      <span class="text-sm text-gray-900 dark:text-white">{categoryName}</span>
+    </div>
+
+    <!-- Desktop title -->
+    <h1 class="hidden sm:block text-3xl font-normal text-gray-900 dark:text-white mb-8">
+      {categoryName}
+    </h1>
+
+    {posts.map(post => (
+      <PostListItem post={post} />
+    ))}
+  </div>
+</Layout> 
