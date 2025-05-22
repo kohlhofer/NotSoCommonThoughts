@@ -11,10 +11,12 @@
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",
     "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.4.0",
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.7.13",
     "mdx": "^0.3.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "vite-plugin-compression": "^0.5.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
