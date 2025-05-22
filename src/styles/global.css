@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,20 @@
 }
 
 /* Custom styles */
+body {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.015) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.015) 0px, transparent 50%);
+}
+
+.dark body {
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.025) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.025) 0px, transparent 50%);
+}
+
 .prose {
   @apply max-w-none;
 }
@@ -27,4 +43,26 @@
 
 .prose code {
   @apply text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded;
+}
+
+.prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-weight: 400;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.embossed {
+  background: linear-gradient(135deg, #ef4444, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .embossed {
+  background: linear-gradient(135deg, #f87171, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 } 

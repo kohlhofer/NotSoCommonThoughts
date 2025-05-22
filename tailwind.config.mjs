@@ -22,11 +22,10 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '65ch',
             color: 'inherit',
             a: {
               color: 'inherit',
-              textDecoration: 'underline',
+              textDecoration: 'none',
               fontWeight: '500',
             },
             strong: {
@@ -34,6 +33,42 @@ export default {
             },
             code: {
               color: 'inherit',
+            },
+            h1: {
+              color: 'inherit',
+            },
+            h2: {
+              color: 'inherit',
+            },
+            h3: {
+              color: 'inherit',
+            },
+            h4: {
+              color: 'inherit',
+            },
+            blockquote: {
+              color: 'inherit',
+            },
+            hr: {
+              borderColor: 'inherit',
+            },
+            ol: {
+              color: 'inherit',
+            },
+            ul: {
+              color: 'inherit',
+            },
+            li: {
+              color: 'inherit',
+            },
+            thead: {
+              color: 'inherit',
+            },
+            tbody: {
+              color: 'inherit',
+            },
+            tr: {
+              borderBottomColor: 'inherit',
             },
           },
         },
