@@ -1,7 +1,7 @@
 ---
 title: "Let Go and Trust"
 description: "A reminder that excellence comes from trust, not control."
-date: 2024-03-02
+date: 2025-03-02
 slug: let-go-and-trust
 tags: ["Work","bits"]
 ---

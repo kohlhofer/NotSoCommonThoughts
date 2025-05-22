@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding kohlhofer.com: Creation at the Speed of Thought"
 description: "How I built kohlhofer.com trying out a new approach to design and software development."
-date: 2024-02-10
+date: 2025-02-10
 slug: vibe-coding-kohlhofer
 tags: ["Design", "Code", "Artificial Intelligence"]
 ---
@@ -22,9 +22,9 @@ Coding principles like DRY (Don't Repeat Yourself) matter less because the AI is
 
 The [maps page](https://kohlhofer.com/map) on kohlhofer.com is a great example of this new workflow. It's built with D3, and the core implementation didn't take long at all. What surprised me was how much of my time was spent not on the technical side, but on iterating through the presentation and design details—colors, layout, interactivity, and how the data should feel. With AI and modern tools, I could focus entirely on the result and the user experience, rather than wrestling with the underlying code.
 
-## AI as Integration Partner
-
 The [bits page](https://kohlhofer.com/bits) is another testament to this new way of working. I took some of my older CodePen explorations—like the [City](https://kohlhofer.com/city) generator and [Lorenz](https://kohlhofer.com/lorenz) visualizations—and quickly ported them over to the site. I barely touched any code myself. AI created the scaffolding, and I simply talked through the integration, describing what I wanted and how things should fit together. The process was fast, fluid, and let me focus on the creative and conceptual side rather than the technical plumbing.
+
+![Lorenz Bit](/images/lorenz-bit.jpg)
 
 ## Lessons Learned: Letting Go and Trusting the Process
 

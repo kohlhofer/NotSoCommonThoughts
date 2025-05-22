@@ -1,7 +1,7 @@
 ---
 title: "Permission to Enjoy"
 description: "A reflection on seniority, freedom, responsibility, and the power of a mentor's simple advice."
-date: 2024-03-15
+date: 2025-03-15
 slug: permission-to-enjoy
 tags: ["bits"]
 ---
@@ -12,4 +12,6 @@ With seniority comes freedom—but also responsibility, and, more often than not
 
 **Just do more of the things you enjoy** 
 
-That simple reminder was exactly what I needed. It helped me re-center, find more joy in my work, and, as a result, have more impact.
+That simple cue was exactly what I needed. It helped me de-clutter my days, find more joy in my work, and, as a result, have more impact.
+
+![Focus Illustration](/images/focus-illustration.jpeg)

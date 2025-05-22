@@ -1,7 +1,7 @@
 ---
 title: "AI and the Rise of Judgement Over Technical Skill"
 description: "As AI removes technical barriers, judgement becomes the key differentiator."
-date: 2024-06-01
+date: 2025-06-01
 slug: ai-and-judgement
 tags: ["Artificial Intelligence"]
 ---
