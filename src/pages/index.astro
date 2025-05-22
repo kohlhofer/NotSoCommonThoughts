@@ -24,66 +24,74 @@ const aiPosts = posts
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-      <!-- Left Column -->
-      <div>
-        <!-- Writing Section -->
-        <section class="mb-12 sm:mb-16">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">Writing</h2>
-            <a href="/writing" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
-              See all
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </div>
-          <div class="space-y-6 sm:space-y-8">
-            {writingPosts.map(post => (
-              <PostListItem post={post} />
-            ))}
-          </div>
-        </section>
+  <div class="pt-8 sm:pt-16">
+    <div class="max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Left Column -->
+        <div>
+          <!-- Writing Section -->
+          <section class="mb-12 sm:mb-16">
+            <div class="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+              <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">Writing</h2>
+            </div>
+            <div class="space-y-6 sm:space-y-8">
+              {writingPosts.map(post => (
+                <PostListItem post={post} />
+              ))}
+            </div>
+            <div class="mt-6">
+              <a href="/writing" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
+                See all writing posts
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </section>
 
-        <!-- Bits Section -->
-        <section class="mb-12 sm:mb-16">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">Bits</h2>
-            <a href="/bits" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
-              See all
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </div>
-          <div class="space-y-6 sm:space-y-8">
-            {bitsPosts.map(post => (
-              <PostListItem post={post} />
-            ))}
-          </div>
-        </section>
-      </div>
+          <!-- Bits Section -->
+          <section class="mb-12 sm:mb-16">
+            <div class="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+              <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">Bits</h2>
+            </div>
+            <div class="space-y-6 sm:space-y-8">
+              {bitsPosts.map(post => (
+                <PostListItem post={post} />
+              ))}
+            </div>
+            <div class="mt-6">
+              <a href="/bits" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
+                See all bits posts
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
 
-      <!-- Right Column -->
-      <div>
-        <!-- AI Section -->
-        <section class="mb-12 sm:mb-16">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">AI</h2>
-            <a href="/ai" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
-              See all
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </div>
-          <div class="space-y-6 sm:space-y-8">
-            {aiPosts.map(post => (
-              <PostListItem post={post} />
-            ))}
-          </div>
-        </section>
+        <!-- Right Column -->
+        <div>
+          <!-- AI Section -->
+          <section class="mb-12 sm:mb-16">
+            <div class="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+              <h2 class="text-2xl font-serif text-slate-900 dark:text-slate-100">AI</h2>
+            </div>
+            <div class="space-y-6 sm:space-y-8">
+              {aiPosts.map(post => (
+                <PostListItem post={post} />
+              ))}
+            </div>
+            <div class="mt-6">
+              <a href="/ai" class="text-sm font-normal text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors flex items-center gap-1">
+                See all AI posts
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
