@@ -37,8 +37,13 @@ body {
   @apply text-primary-600 dark:text-primary-400;
 }
 
+/* Code block styles */
 .prose pre {
-  @apply bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto;
+  @apply bg-[#1c2128] text-gray-100 rounded-lg p-4 overflow-x-auto !important;
+}
+
+.prose pre code {
+  @apply bg-transparent text-gray-100 p-0 !important;
 }
 
 .prose code {
