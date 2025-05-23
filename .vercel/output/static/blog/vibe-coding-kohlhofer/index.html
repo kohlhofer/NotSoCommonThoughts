@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.7.13"><meta name="description" content="Not So Common Thoughts - A blog about technology, AI, and more"><title>Not So Common Thoughts</title><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-DTND00MKLK"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-DTND00MKLK");</script><link rel="stylesheet" href="/_astro/_category_.BgUQynqq.css"></head> <body class="min-h-screen bg-slate-900 dark:bg-slate-900"> <div class="flex min-h-screen"> <!-- Mobile menu button --> <button id="mobile-menu-button" class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded-md text-white hover:text-red-400 focus:outline-none bg-slate-900/80 backdrop-blur-sm" aria-label="Toggle menu"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> <!-- Sidebar --> <aside id="sidebar" class="fixed sm:fixed sm:top-0 w-64 min-h-screen p-8 overflow-y-auto transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out z-20 bg-slate-900"> <div class="mb-8"> <h1 class="text-2xl font-sans"> <a href="/" class="hover:text-red-400 transition-colors font-outfit embossed"> <span class="text-slate-300 font-normal">Not So </span><span class="text-red-400 font-bold">Common Thoughts</span> </a> </h1> </div> <!-- Search Input --> <div class="mb-4"> <div class="relative flex items-center"> <input type="text" id="search-input" placeholder="Search posts..." class="w-full bg-transparent text-white placeholder-slate-400 border-b-2 border-slate-700 focus:border-red-400 pl-6 pr-0 py-1.5 text-sm focus:outline-none transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 absolute left-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> <div id="search-results" class="absolute z-10 w-full top-full mt-1 bg-slate-800 rounded-md shadow-lg hidden"> <div class="py-2 max-h-96 overflow-y-auto"> <!-- Results will be populated here --> </div> </div> </div> </div> <nav> <ul> <li> <a href="/Work" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Work</span> <span class="text-xs text-slate-400">1</span> </a> </li><li> <a href="/little-bits" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Little Bits</span> <span class="text-xs text-slate-400">3</span> </a> </li><li> <a href="/Artificial Intelligence" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Artificial Intelligence</span> <span class="text-xs text-slate-400">3</span> </a> </li><li> <a href="/Design" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Design</span> <span class="text-xs text-slate-400">1</span> </a> </li><li> <a href="/Code" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Code</span> <span class="text-xs text-slate-400">2</span> </a> </li><li> <a href="/Music" class="block text-sm flex justify-between items-center py-2 text-slate-300 hover:text-red-400"> <span>Music</span> <span class="text-xs text-slate-400">1</span> </a> </li> </ul> </nav> <!-- Theme Toggle --> <div class="mt-12 flex items-center gap-4"> <button id="theme-toggle" class="flex items-center gap-1.5 text-xs text-slate-300 hover:text-red-400 transition-colors" aria-label="Toggle dark mode"> <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg> <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden" viewBox="0 0 20 20" fill="currentColor"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path> </svg> <span class="theme-text">Theme</span> </button> <button id="random-post-button" class="text-xs text-slate-300 hover:text-red-400 transition-colors flex items-center gap-1.5" aria-label="Go to a random post" title="Show random post" type="button"> <span id="dice-icon"></span> <span>Random</span> </button> </div> </aside> <!-- Main Content and Footer Container --> <div class="flex-1 sm:ml-64 flex flex-col min-h-screen"> <!-- Main Content --> <main class="flex-1"> <div class="bg-white dark:bg-slate-800 rounded-bl-xl shadow-2xl min-h-[80vh]">  <div class="p-8 sm:p-16"> <article class="max-w-2xl"> <header class="mb-8 pr-8 sm:pr-0"> <h1 class="text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4" style="line-height:1.2"> Vibe Coding kohlhofer.com: Creation at the Speed of Thought </h1> <div class="text-sm text-slate-600 dark:text-slate-400">
+Posted 3 months ago in  <a href="/Design" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors">Design</a>  ·  <a href="/Code" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors">Code</a>  ·  <a href="/Artificial Intelligence" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors">Artificial Intelligence</a>  </div> </header> <div class="prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-red-600 dark:prose-a:text-red-400 prose-a:no-underline hover:prose-a:underline prose-p:font-serif prose-li:font-serif prose-headings:text-slate-900 dark:prose-headings:text-slate-100 prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-strong:text-slate-900 dark:prose-strong:text-slate-100 prose-code:text-slate-900 dark:prose-code:text-slate-100 prose-blockquote:text-slate-600 dark:prose-blockquote:text-slate-400 prose-ul:text-slate-600 dark:prose-ul:text-slate-400 prose-ol:text-slate-600 dark:prose-ol:text-slate-400 prose-li:text-slate-600 dark:prose-li:text-slate-400 max-w-none"> <p><em><strong>Edit (June 2024):</strong> Since writing this, “vibe coding” has become a mainstay term. I still think it’s a terrible name—but the approach and speed it describes are here to stay.</em></p>
+<p>I built the new version <a href="https://kohlhofer.com">kohlhofer.com</a> in just a few days, and the process felt less like a solo project and more like collaborating with a high-performing team—only much faster. Some people call this “vibe coding”—letting intuition, rapid iteration, and AI support drive the entire creation process. I don’t love the term (it’s not mine), but it does capture the spirit of how quickly and fluidly things came together.</p>
+<h2 id="did-i-code-it-defenitely-not">Did I code it? Defenitely not.</h2>
+<p>Did I design it? Absolutely. But not in the traditional sense. I directed the design much like you would when working with a great team of designers: setting the vision, making key decisions, and letting the details emerge through fast feedback and iteration. With AI as my creative partner, the boundaries between design, content, and implementation blurred. It was all happening at once.</p>
+<h2 id="rethinking-engineering-principles">Rethinking engineering principles?</h2>
+<p>Coding principles like DRY (Don’t Repeat Yourself) matter less because the AI is perfectly happy to update navigation elements or content in multiple places. And with the site hosted on GitHub Pages, deployment and updates are effortless. The friction of manual updates is gone, so you can focus on what matters—clarity and experience. It’s a simple, robust solution for a personal site that’s always evolving.</p>
+<h2 id="iteration-over-implementation">Iteration Over Implementation</h2>
+<p>The <a href="https://kohlhofer.com/map">maps page</a> on kohlhofer.com is a great example of this new workflow. It’s built with D3, and the core implementation didn’t take long at all. What surprised me was how much of my time was spent not on the technical side, but on iterating through the presentation and design details—colors, layout, interactivity, and how the data should feel. With AI and modern tools, I could focus entirely on the result and the user experience, rather than wrestling with the underlying code.</p>
+<p>The <a href="https://kohlhofer.com/bits">bits page</a> is another testament to this new way of working. I took some of my older CodePen explorations—like the <a href="https://kohlhofer.com/city">City</a> generator and <a href="https://kohlhofer.com/lorenz">Lorenz</a> visualizations—and quickly ported them over to the site. I barely touched any code myself. AI created the scaffolding, and I simply talked through the integration, describing what I wanted and how things should fit together. The process was fast, fluid, and let me focus on the creative and conceptual side rather than the technical plumbing.</p>
+<p><img src="/images/lorenz-bit.jpg" alt="Lorenz Bit"></p>
+<h2 id="lessons-learned-letting-go-and-trusting-the-process">Lessons Learned: Letting Go and Trusting the Process</h2>
+<p>My experience as a manager and team leader has taught me that the best results come when you let go of control and trust the people (and now, the tools) you work with. Excellence rarely comes from micromanagement or rigid prescriptions—it comes from creating space for others to contribute, experiment, and surprise you.</p>
+<p>I’ve found the same principle applies when working with AI. The less prescriptive I am, the more surprising—and often delightful—the results. I enjoy being surprised at work and in life, and this new way of building things rekindled that sense of discovery.</p>
+<p>I’ll do a lot more of this.</p> </div> <div class="flex justify-center my-12"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path> </svg> </div> </article> <section class="max-w-2xl mt-16"> <div class="mb-6 pb-2 border-b border-slate-200 dark:border-slate-700"> <h2 class="text-lg font-serif text-slate-900 dark:text-slate-100">More posts</h2> </div> <div class="grid grid-cols-1 lg:grid-cols-2 gap-6"> <article class="group"> <div class="flex flex-col"> <h2 class="text-xl font-serif text-slate-900 dark:text-slate-100 mb-2"> <a href="/blog/think-more-not-just-more" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"> Don&#39;t just do more, think more </a> </h2> <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 mb-2 font-serif"> A personal reflection on how AI-driven productivity gains should be reinvested in thinking, not just doing. </p> <time datetime="2025-05-21T00:00:00.000Z" class="text-sm font-normal text-slate-500 dark:text-slate-400"> May 20, 2025 </time> </div> </article><article class="group"> <div class="flex flex-col"> <h2 class="text-xl font-serif text-slate-900 dark:text-slate-100 mb-2"> <a href="/blog/ai-and-judgement" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"> AI and the Rise of Judgement Over Technical Skill </a> </h2> <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 mb-2 font-serif"> As AI removes technical barriers, judgement becomes the key differentiator. </p> <time datetime="2025-05-20T00:00:00.000Z" class="text-sm font-normal text-slate-500 dark:text-slate-400"> May 19, 2025 </time> </div> </article><article class="group"> <div class="flex flex-col"> <h2 class="text-xl font-serif text-slate-900 dark:text-slate-100 mb-2"> <a href="/blog/music-page-youtube" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"> Building a Music Player: YouTube as a Backend </a> </h2> <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 mb-2 font-serif"> How I built a music player for kohlhofer.com that pulls from a YouTube playlist, fetches video backgrounds, and focuses on an integrated audio/visual listening experience. </p> <time datetime="2025-03-12T00:00:00.000Z" class="text-sm font-normal text-slate-500 dark:text-slate-400"> March 11, 2025 </time> </div> </article> </div> </section> </div>  </div> </main> <!-- Footer --> <footer class="pr-8 py-4 bg-slate-900"> <div class="flex justify-between items-center"> <p class="text-xs text-slate-400 font-serif">
+© 2025 Not So Common Thoughts by <a href="https://kohlhofer.com/about" class="text-red-400 hover:text-red-300 transition-colors">A. Kohlhofer</a>. All rights reserved.
+</p> <a href="/rss.xml" class="text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded-sm transition-colors">RSS</a> </div> </footer> </div> </div> <script>(function(){const searchablePosts = [{"title":"Let Go and Trust","slug":"let-go-and-trust","category":"Work","description":"A reminder that excellence comes from trust, not control."},{"title":"Permission to Enjoy","slug":"permission-to-enjoy","category":"little-bits","description":"A reflection on seniority, freedom, responsibility, and the power of a mentor's simple advice."},{"title":"Don't just do more, think more","slug":"think-more-not-just-more","category":"little-bits","description":"A personal reflection on how AI-driven productivity gains should be reinvested in thinking, not just doing."},{"title":"AI and the Rise of Judgement Over Technical Skill","slug":"ai-and-judgement","category":"Artificial Intelligence","description":"As AI removes technical barriers, judgement becomes the key differentiator."},{"title":"Vibe Coding kohlhofer.com: Creation at the Speed of Thought","slug":"vibe-coding-kohlhofer","category":"Design","description":"How I built kohlhofer.com trying out a new approach to design and software development."},{"title":"Building a Music Player: YouTube as a Backend","slug":"music-page-youtube","category":"Music","description":"How I built a music player for kohlhofer.com that pulls from a YouTube playlist, fetches video backgrounds, and focuses on an integrated audio/visual listening experience."}];
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const sidebar = document.getElementById('sidebar');
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        sidebar.style.transform = isMenuOpen ? 'translateX(0)' : 'translateX(-100%)';
+      }
+
+      function handleResize() {
+        // If we're on desktop (sm breakpoint and above), ensure sidebar is visible
+        if (window.innerWidth >= 640) { // 640px is Tailwind's sm breakpoint
+          sidebar.style.transform = 'translateX(0)';
+          isMenuOpen = false;
+        } else {
+          // On mobile, ensure sidebar is hidden unless menu is open
+          sidebar.style.transform = isMenuOpen ? 'translateX(0)' : 'translateX(-100%)';
+        }
+      }
+
+      mobileMenuButton.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (isMenuOpen && !sidebar.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+          toggleMenu();
+        }
+      });
+
+      // Close menu when clicking a link
+      const sidebarLinks = sidebar.querySelectorAll('a');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (isMenuOpen) {
+            toggleMenu();
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener('resize', handleResize);
+      // Initial check
+      handleResize();
+
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeText = document.querySelector('.theme-text');
+      const moonIcon = document.getElementById('moon-icon');
+      const sunIcon = document.getElementById('sun-icon');
+      const html = document.documentElement;
+      
+      // Check for saved theme preference or use system preference
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        html.classList.add('dark');
+        themeText.textContent = 'Light mode';
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+      } else {
+        html.classList.remove('dark');
+        themeText.textContent = 'Dark mode';
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+      }
+
+      // Toggle theme
+      themeToggle.addEventListener('click', () => {
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          themeText.textContent = 'Dark mode';
+          moonIcon.classList.remove('hidden');
+          sunIcon.classList.add('hidden');
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          themeText.textContent = 'Light mode';
+          moonIcon.classList.add('hidden');
+          sunIcon.classList.remove('hidden');
+        }
+      });
+
+      // Search functionality
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+      const resultsContainer = searchResults.querySelector('div');
+      
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      function performSearch(query) {
+        if (!query.trim()) {
+          searchResults.classList.add('hidden');
+          return;
+        }
+
+        const searchTerm = query.toLowerCase();
+        const results = searchablePosts.filter(post => 
+          post.title.toLowerCase().includes(searchTerm) ||
+          post.description?.toLowerCase().includes(searchTerm)
+        );
+
+        if (results.length > 0) {
+          resultsContainer.innerHTML = results.map(post => `
+            <a href="/blog/${post.slug}" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-red-400">
+              <div class="font-medium">${post.title}</div>
+              <div class="text-xs text-slate-400">${post.category}</div>
+            </a>
+          `).join('');
+          searchResults.classList.remove('hidden');
+        } else {
+          resultsContainer.innerHTML = `
+            <div class="px-4 py-2 text-sm text-slate-400">
+              No results found
+            </div>
+          `;
+          searchResults.classList.remove('hidden');
+        }
+      }
+
+      const debouncedSearch = debounce(performSearch, 300);
+
+      searchInput.addEventListener('input', (e) => {
+        debouncedSearch(e.target.value);
+      });
+
+      // Close search results when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+          searchResults.classList.add('hidden');
+          searchInput.value = '';
+        }
+      });
+
+      // Close search results when pressing Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchResults.classList.add('hidden');
+          searchInput.value = '';
+          searchInput.blur();
+        }
+      });
+
+      // Clear search when input loses focus
+      searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+          searchInput.value = '';
+          searchResults.classList.add('hidden');
+        }, 200); // Small delay to allow clicking on results
+      });
+
+      // Dice icon animation
+      const diceIcons = [
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='128' cy='128' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='128' cy='128' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='128' cy='128' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/><circle cx='96' cy='128' r='12' fill='currentColor'/><circle cx='160' cy='128' r='12' fill='currentColor'/></svg>`
+      ];
+      const diceIconSpan = document.getElementById('dice-icon');
+      function setRandomDice() {
+        const idx = Math.floor(Math.random() * diceIcons.length);
+        diceIconSpan.innerHTML = diceIcons[idx];
+      }
+      setRandomDice();
+      const randomPostButton = document.getElementById('random-post-button');
+      randomPostButton.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * searchablePosts.length);
+        const randomPost = searchablePosts[randomIndex];
+        window.location.href = `/blog/${randomPost.slug}`;
+      });
+    })();</script> </body> </html>
