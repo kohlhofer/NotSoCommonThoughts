@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
+import { DiceOne, DiceTwo, DiceThree, DiceFour, DiceFive, DiceSix } from 'phosphor-icons';
 
 interface Props {
   title: string;
@@ -71,13 +72,22 @@ const isHome = currentPath === '/';
 
         <!-- Search Input -->
         <div class="mb-8">
-          <div class="relative">
+          <div class="relative flex items-center">
             <input
               type="text"
               id="search-input"
               placeholder="Search posts..."
               class="w-full bg-slate-800 text-white placeholder-slate-400 rounded-md px-4 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"
             />
+            <button
+              id="random-post-button"
+              class="ml-2 p-1.5 text-white rounded-md hover:text-red-400 focus:outline-none"
+              aria-label="Go to a random post"
+              title="Show random post"
+              type="button"
+            >
+              <span id="dice-icon"></span>
+            </button>
             <div id="search-results" class="absolute z-10 w-full mt-2 bg-slate-800 rounded-md shadow-lg hidden">
               <div class="py-2 max-h-96 overflow-y-auto">
                 <!-- Results will be populated here -->
@@ -323,6 +333,28 @@ const isHome = currentPath === '/';
           searchInput.value = '';
           searchResults.classList.add('hidden');
         }, 200); // Small delay to allow clicking on results
+      });
+
+      // Dice icon animation
+      const diceIcons = [
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='128' cy='128' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='128' cy='128' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='128' cy='128' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/></svg>`,
+        `<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><rect x='40' y='40' width='176' height='176' rx='24' stroke-width='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='96' cy='96' r='12' fill='currentColor'/><circle cx='160' cy='96' r='12' fill='currentColor'/><circle cx='96' cy='160' r='12' fill='currentColor'/><circle cx='160' cy='160' r='12' fill='currentColor'/><circle cx='96' cy='128' r='12' fill='currentColor'/><circle cx='160' cy='128' r='12' fill='currentColor'/></svg>`
+      ];
+      const diceIconSpan = document.getElementById('dice-icon');
+      function setRandomDice() {
+        const idx = Math.floor(Math.random() * diceIcons.length);
+        diceIconSpan.innerHTML = diceIcons[idx];
+      }
+      setRandomDice();
+      const randomPostButton = document.getElementById('random-post-button');
+      randomPostButton.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * searchablePosts.length);
+        const randomPost = searchablePosts[randomIndex];
+        window.location.href = `/blog/${randomPost.slug}`;
       });
     </script>
   </body>
