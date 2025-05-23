@@ -1,12 +1,14 @@
 ---
 title: "AI and the Rise of Judgement Over Technical Skill"
 description: "As AI removes technical barriers, judgement becomes the key differentiator."
-date: 2025-06-01
+date: 2025-05-20
 slug: ai-and-judgement
 tags: ["Artificial Intelligence"]
 ---
 
 *A version of this post was first published on [MapsAll](https://www.mapsall.com/blog/ai-and-judgement).*
+
+![Modular Synth](/images/modular-synth.jpeg)
 
 In 1995, musician and producer Brian Eno made a profound observation about computer sequencers that has become increasingly relevant in our AI-powered world:
 
@@ -45,3 +47,4 @@ As AI continues to evolve, we'll see more roles shift from technical execution t
 ## Conclusion
 
 Eno's observation from nearly 30 years ago has become a blueprint for thriving in the AI era. The question is no longer "Can you do it?" but "What should you do, and why?" As technical barriers continue to fall, our ability to exercise good judgement becomes our most valuable asset. 
+

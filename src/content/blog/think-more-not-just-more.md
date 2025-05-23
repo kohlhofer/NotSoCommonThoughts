@@ -1,7 +1,7 @@
 ---
 title: "Don't just do more, think more"
 description: "A personal reflection on how AI-driven productivity gains should be reinvested in thinking, not just doing."
-date: 2025-06-09
+date: 2025-05-21
 slug: think-more-not-just-more
 tags: ["bits", "Artificial Intelligence"]
 ---
