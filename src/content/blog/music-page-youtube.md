@@ -1,6 +1,6 @@
 ---
 title: "Building a Music Player: YouTube as a Backend"
-description: "How I built a music page that pulls from a YouTube playlist, fetches video backgrounds, and focuses on a nice audio/visual listening experience."
+description: "How I built a music player for kohlhofer.com that pulls from a YouTube playlist, fetches video backgrounds, and focuses on an integrated audio/visual listening experience."
 date: 2025-03-12
 slug: music-page-youtube
 tags: ["Music", "Code"]
