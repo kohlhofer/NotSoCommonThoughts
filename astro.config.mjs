@@ -5,11 +5,12 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import compress from 'vite-plugin-compression';
 import vercel from '@astrojs/vercel';
+import robots from 'astro-robots';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://notsocommonthoughts.com',
-  integrations: [tailwind(), mdx(), sitemap(), vercel()],
+  integrations: [tailwind(), mdx(), sitemap(), vercel(), robots()],
   markdown: {
     shikiConfig: {
       theme: 'github-dark',
