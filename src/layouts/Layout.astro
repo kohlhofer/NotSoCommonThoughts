@@ -8,7 +8,9 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Not So Common Thoughts - A blog about technology, AI, and more" } = Astro.props;
+const SITE_DESCRIPTION = 'A personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making.';
+
+const { title, description = SITE_DESCRIPTION } = Astro.props;
 
 // Get all categories from posts
 const posts = await getCollection('blog');

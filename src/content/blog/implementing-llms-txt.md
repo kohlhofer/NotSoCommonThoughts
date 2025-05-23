@@ -45,7 +45,7 @@ export const GET: APIRoute = async () => {
     return new Response(
         `# Not So Common Thoughts
 
-> A personal blog about software development, technology, and various programming insights.
+> Not So Common Thoughts is a personal blog exploring the intersection of design, technology, and human creativity.
 
 ## Blog Posts
 

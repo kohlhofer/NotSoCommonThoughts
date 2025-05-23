@@ -7,7 +7,7 @@ export async function GET(context) {
 
   return rss({
     title: 'Not So Common Thoughts',
-    description: 'A blog about technology, AI, and more',
+    description: 'Not So Common Thoughts is a personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making. The blog combines design insights with reflections on work, creativity, and the evolving relationship between humans and technology.',
     site: context.site,
     items: sortedPosts.map(post => ({
       title: post.data.title,

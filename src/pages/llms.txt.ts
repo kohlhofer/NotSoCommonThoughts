@@ -7,9 +7,7 @@ export const GET: APIRoute = async () => {
     return new Response(
         `# Not So Common Thoughts
 
-> A personal blog about software development, technology, and various programming insights.
-
-This blog contains articles about software development, programming practices, and technology insights.
+> Not So Common Thoughts is a personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making. The blog combines design insights with reflections on work, creativity, and the evolving relationship between humans and technology.
 
 ## Blog Posts
 
