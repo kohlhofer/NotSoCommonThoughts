@@ -13,7 +13,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap(), vercel(), robots()],
   markdown: {
     shikiConfig: {
-      theme: 'github-dark',
+      theme: 'github-dark-dimmed',
       wrap: true
     }
   },
