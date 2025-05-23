@@ -63,32 +63,23 @@ const isHome = currentPath === '/';
       <!-- Sidebar -->
       <aside id="sidebar" class="fixed sm:fixed sm:top-0 w-64 min-h-screen p-8 overflow-y-auto transform -translate-x-full sm:translate-x-0 transition-transform duration-200 ease-in-out z-20 bg-slate-900">
         <div class="mb-8">
-          <h1 class="text-2xl font-sans font-bold">
-            <a href="/" class="hover:text-red-400 transition-colors font-outfit embossed text-white">
-              {title}
+          <h1 class="text-2xl font-sans">
+            <a href="/" class="hover:text-red-400 transition-colors font-outfit embossed">
+              <span class="text-slate-300 font-normal">Not So </span><span class="text-red-400 font-bold">Common Thoughts</span>
             </a>
           </h1>
         </div>
 
         <!-- Search Input -->
-        <div class="mb-8">
+        <div class="mb-4">
           <div class="relative flex items-center">
             <input
               type="text"
               id="search-input"
               placeholder="Search posts..."
-              class="w-full bg-slate-800 text-white placeholder-slate-400 rounded-md px-4 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"
+              class="w-full bg-transparent text-white placeholder-slate-400 border-b border-slate-700 focus:border-red-400 px-0 py-1.5 text-sm focus:outline-none transition-colors"
             />
-            <button
-              id="random-post-button"
-              class="ml-2 p-1.5 text-white rounded-md hover:text-red-400 focus:outline-none"
-              aria-label="Go to a random post"
-              title="Show random post"
-              type="button"
-            >
-              <span id="dice-icon"></span>
-            </button>
-            <div id="search-results" class="absolute z-10 w-full mt-2 bg-slate-800 rounded-md shadow-lg hidden">
+            <div id="search-results" class="absolute z-10 w-full top-full mt-1 bg-slate-800 rounded-md shadow-lg hidden">
               <div class="py-2 max-h-96 overflow-y-auto">
                 <!-- Results will be populated here -->
               </div>
@@ -98,19 +89,6 @@ const isHome = currentPath === '/';
 
         <nav>
           <ul>
-            <li>
-              <a
-                href="/"
-                class:list={[
-                  'block text-sm flex justify-between items-center py-2',
-                  currentPath === '/'
-                    ? 'text-red-400'
-                    : 'text-slate-300 hover:text-red-400'
-                ]}
-              >
-                <span>Home</span>
-              </a>
-            </li>
             {formattedCategories.map(category => (
               <li>
                 <a
@@ -131,7 +109,7 @@ const isHome = currentPath === '/';
         </nav>
 
         <!-- Theme Toggle -->
-        <div class="mt-12">
+        <div class="mt-12 flex items-center gap-4">
           <button
             id="theme-toggle"
             class="flex items-center gap-1.5 text-xs text-slate-300 hover:text-red-400 transition-colors"
@@ -143,7 +121,17 @@ const isHome = currentPath === '/';
             <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
             </svg>
-            <span class="theme-text">Dark mode</span>
+            <span class="theme-text">Theme</span>
+          </button>
+          <button
+            id="random-post-button"
+            class="text-xs text-slate-300 hover:text-red-400 transition-colors flex items-center gap-1.5"
+            aria-label="Go to a random post"
+            title="Show random post"
+            type="button"
+          >
+            <span id="dice-icon"></span>
+            <span>Random</span>
           </button>
         </div>
       </aside>

@@ -52,17 +52,3 @@ body {
 .font-outfit {
   font-family: 'Outfit', sans-serif;
 }
-
-.embossed {
-  background: linear-gradient(135deg, #ef4444, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.dark .embossed {
-  background: linear-gradient(135deg, #f87171, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-} 
