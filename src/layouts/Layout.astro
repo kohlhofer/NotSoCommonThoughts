@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { DiceOne, DiceTwo, DiceThree, DiceFour, DiceFive, DiceSix } from 'phosphor-icons';
+import { GoogleAnalytics } from 'astro-analytics';
 
 interface Props {
   title: string;
@@ -46,6 +47,7 @@ const isHome = currentPath === '/';
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <GoogleAnalytics id="G-DTND00MKLK" />
   </head>
   <body class="min-h-screen bg-slate-900 dark:bg-slate-900">
     <div class="flex min-h-screen">
@@ -143,20 +145,18 @@ const isHome = currentPath === '/';
       <div class="flex-1 sm:ml-64 flex flex-col min-h-screen">
         <!-- Main Content -->
         <main class="flex-1">
-          <div class="bg-white dark:bg-slate-900 rounded-bl-3xl shadow-lg min-h-[80vh]">
+          <div class="bg-white dark:bg-slate-800 rounded-bl-xl shadow-2xl min-h-[80vh]">
             <slot />
           </div>
         </main>
 
         <!-- Footer -->
-        <footer class="px-8 py-4 bg-slate-900">
-          <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center">
-              <p class="text-xs text-slate-400 font-serif">
-                © {new Date().getFullYear()} {title} by <a href="https://kohlhofer.com/about" class="text-red-400 hover:text-red-300 transition-colors">A. Kohlhofer</a>. All rights reserved.
-              </p>
-              <a href="/rss.xml" class="text-red-400 hover:text-red-300 transition-colors">RSS</a>
-            </div>
+        <footer class="pr-8 py-4 bg-slate-900">
+          <div class="flex justify-between items-center">
+            <p class="text-xs text-slate-400 font-serif">
+              © {new Date().getFullYear()} {title} by <a href="https://kohlhofer.com/about" class="text-red-400 hover:text-red-300 transition-colors">A. Kohlhofer</a>. All rights reserved.
+            </p>
+            <a href="/rss.xml" class="text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded-sm transition-colors">RSS</a>
           </div>
         </footer>
       </div>
