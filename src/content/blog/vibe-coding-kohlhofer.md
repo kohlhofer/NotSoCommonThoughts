@@ -6,7 +6,7 @@ slug: vibe-coding-kohlhofer
 tags: ["Design", "Code", "Artificial Intelligence"]
 ---
 
-_**Edit (June 2024):** Since writing this, "vibe coding" has become a mainstay term. I still think it's a terrible name—but the approach and speed it describes are here to stay._
+_**Edit (May 2025):** Since writing this, "vibe coding" has become a mainstay term. I still think it's a terrible name—but the approach and speed it describes are here to stay._
 
 I built the new version [kohlhofer.com](https://kohlhofer.com) in just a few days, and the process felt less like a solo project and more like collaborating with a high-performing team—only much faster. Some people call this "vibe coding"—letting intuition, rapid iteration, and AI support drive the entire creation process. I don't love the term (it's not mine), but it does capture the spirit of how quickly and fluidly things came together.
 
