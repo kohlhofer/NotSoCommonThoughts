@@ -3,7 +3,7 @@ title: "Building a Music Player: YouTube as a Backend"
 description: "How I built a music player for kohlhofer.com that pulls from a YouTube playlist, fetches video backgrounds, and focuses on an integrated audio/visual listening experience."
 date: 2025-03-12
 slug: music-page-youtube
-tags: ["Music", "Code"]
+tags: ["Music", "Code", "Projects"]
 ---
 
 The [music page](https://kohlhofer.com/music) on my site is a simple but effective way to share my electronic music. Instead of uploading tracks or managing files, I just maintain a dedicated playlist on YouTube. The site pulls in the latest videos from that playlist automatically.

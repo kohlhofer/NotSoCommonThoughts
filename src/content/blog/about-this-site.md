@@ -1,12 +1,12 @@
 ---
 title: "About this Site"
-description: "I asked AI to tell me what Not So Common THoughts is all about."
+description: "I asked AI to tell me what Not So Common Thoughts is all about."
 date: 2025-05-23
 slug: about-this-site
-tags: ["little-bits"]
+tags: ["little-bits", "Projects"]
 ---
 
-*I asked an AI to analyze the content and create a description:*
+*I asked an AI to analyze Not So Common Thoughts and create a description:*
 
 > Not So Common Thoughts is a personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making.
 

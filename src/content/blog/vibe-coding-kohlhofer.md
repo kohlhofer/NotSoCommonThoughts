@@ -3,7 +3,7 @@ title: "Vibe Coding kohlhofer.com: Creation at the Speed of Thought"
 description: "How I built kohlhofer.com trying out a new approach to design and software development."
 date: 2025-02-10
 slug: vibe-coding-kohlhofer
-tags: ["Design", "Code", "Artificial Intelligence"]
+tags: ["Design", "Code", "Artificial Intelligence", "Projects"]
 ---
 
 _**Edit (May 2025):** Since writing this, "vibe coding" has become a mainstay term. I still think it's a terrible name—but the approach and speed it describes are here to stay._
