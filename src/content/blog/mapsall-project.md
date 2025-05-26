@@ -3,7 +3,7 @@ title: "MapsAll.com: Mindmapping with AI"
 description: "The journey of creating a mind mapping tool that evolved from experimental prototypes to a full-featured product."
 date: 2025-05-25
 slug: mapsall-project
-tags: ["Projects", "Design"]
+tags: ["Projects", "Design", "Artificial Intelligence"]
 ---
 
 What started as a D3 prototype turned into my daily thinking tool. [MapsAll.com](https://mapsall.com) is where AI meets spatial thinking—a mind mapping platform that helps me (and now others) make sense of everything from meeting notes to strategy docs.
