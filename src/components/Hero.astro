@@ -11,10 +11,10 @@
           <line x1="375" y1="60" x2="385" y2="60" stroke="currentColor" stroke-width="1" />
           <line x1="390" y1="60" x2="400" y2="60" stroke="currentColor" stroke-width="1" />
           
-          <!-- Small ticks (1-10) -->
-          {Array.from({ length: 11 }).map((_, i) => {
+          <!-- Small ticks (1-5) -->
+          {Array.from({ length: 5 }).map((_, i) => {
             const num = i + 1;
-            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
+            const x = 10 + (Math.log10(num) / Math.log10(30)) * 340;
             return (
               <>
                 <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
@@ -23,22 +23,10 @@
             );
           })}
 
-          <!-- Medium ticks (15-50) -->
-          {Array.from({ length: 8 }).map((_, i) => {
-            const num = 15 + i * 5;
-            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
-            return (
-              <>
-                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
-                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
-              </>
-            );
-          })}
-
-          <!-- Large ticks (60-90) -->
-          {Array.from({ length: 4 }).map((_, i) => {
-            const num = 60 + i * 10;
-            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
+          <!-- Medium ticks (5-30) -->
+          {Array.from({ length: 6 }).map((_, i) => {
+            const num = 5 + i * 5;
+            const x = 10 + (Math.log10(num) / Math.log10(30)) * 340;
             return (
               <>
                 <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
@@ -50,32 +38,32 @@
 
         <!-- Prime Number Loops -->
         <g class="text-slate-300 dark:text-slate-600">
-          {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime) => {
-            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 340;
+          {[2,3,5,7,11,13,17,19,23,29].map((prime, index, primes) => {
+            const x = 10 + (Math.log10(prime) / Math.log10(30)) * 340;
+            // Calculate height based on Goldbach's conjecture (number of ways to write as sum of two primes)
+            const goldbachCount = primes.filter(p => p < prime && primes.includes(prime - p)).length;
+            const height = 10 + (goldbachCount * 2); // Scale the height based on number of ways
+            
             return (
-              <path
-                d={`M${x},${60 - 10} A10,10 0 1,1 ${x},${60 + 10} A10,10 0 1,1 ${x},${60 - 10}`}
-                stroke="currentColor"
-                stroke-width="1.5"
-                fill="none"
-                class="opacity-70"
-              />
-            );
-          })}
-        </g>
-
-        <!-- Special Prime Dots -->
-        <g>
-          {[13, 19, 31, 43, 61, 73, 83].map((prime) => {
-            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 340;
-            return (
-              <circle
-                cx={x}
-                cy="60"
-                r="3"
-                fill="red"
-                class="opacity-80"
-              />
+              <>
+                <path
+                  d={`M${x},${60 - height} A${height},${height} 0 1,1 ${x},${60 + height} A${height},${height} 0 1,1 ${x},${60 - height}`}
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                  class="opacity-70"
+                />
+                {/* Connect to next prime with an arch if it exists */}
+                {index < primes.length - 1 && (
+                  <path
+                    d={`M${x},${60} Q${(x + (10 + (Math.log10(primes[index + 1]) / Math.log10(30)) * 340)) / 2},${60 - 60} ${10 + (Math.log10(primes[index + 1]) / Math.log10(30)) * 340},${60}`}
+                    stroke="currentColor"
+                    stroke-width="1"
+                    fill="none"
+                    class="opacity-50"
+                  />
+                )}
+              </>
             );
           })}
         </g>
@@ -130,32 +118,32 @@
 
         <!-- Prime Number Loops -->
         <g class="text-slate-300 dark:text-slate-600">
-          {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime) => {
+          {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime, index, primes) => {
             const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
+            // Calculate height based on Goldbach's conjecture (number of ways to write as sum of two primes)
+            const goldbachCount = primes.filter(p => p < prime && primes.includes(prime - p)).length;
+            const height = 10 + (goldbachCount * 2); // Scale the height based on number of ways
+            
             return (
-              <path
-                d={`M${x},${60 - 10} A10,10 0 1,1 ${x},${60 + 10} A10,10 0 1,1 ${x},${60 - 10}`}
-                stroke="currentColor"
-                stroke-width="1.5"
-                fill="none"
-                class="opacity-70"
-              />
-            );
-          })}
-        </g>
-
-        <!-- Special Prime Dots -->
-        <g>
-          {[13, 19, 31, 43, 61, 73, 83].map((prime) => {
-            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
-            return (
-              <circle
-                cx={x}
-                cy="60"
-                r="3"
-                fill="red"
-                class="opacity-80"
-              />
+              <>
+                <path
+                  d={`M${x},${60 - height} A${height},${height} 0 1,1 ${x},${60 + height} A${height},${height} 0 1,1 ${x},${60 - height}`}
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                  class="opacity-70"
+                />
+                {/* Connect to next prime with an arch if it exists */}
+                {index < primes.length - 1 && (
+                  <path
+                    d={`M${x},${60} Q${(x + (10 + (Math.log10(primes[index + 1]) / Math.log10(99)) * 740)) / 2},${60 - 60} ${10 + (Math.log10(primes[index + 1]) / Math.log10(99)) * 740},${60}`}
+                    stroke="currentColor"
+                    stroke-width="1"
+                    fill="none"
+                    class="opacity-50"
+                  />
+                )}
+              </>
             );
           })}
         </g>
