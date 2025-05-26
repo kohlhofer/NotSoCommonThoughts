@@ -1,83 +1,165 @@
+<div class="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+  <div class="pt-12 pb-0">
+    <div class="flex items-center">
+      <!-- Mobile version (narrower viewBox) -->
+      <svg class="w-full md:hidden" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <!-- Number Line -->
+        <g class="text-slate-300 dark:text-slate-600">
+          <line x1="10" y1="60" x2="350" y2="60" stroke="currentColor" stroke-width="1" />
+          <!-- Continuation dashes -->
+          <line x1="360" y1="60" x2="370" y2="60" stroke="currentColor" stroke-width="1" />
+          <line x1="375" y1="60" x2="385" y2="60" stroke="currentColor" stroke-width="1" />
+          <line x1="390" y1="60" x2="400" y2="60" stroke="currentColor" stroke-width="1" />
+          
+          <!-- Small ticks (1-10) -->
+          {Array.from({ length: 11 }).map((_, i) => {
+            const num = i + 1;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-      <div class="flex items-center">
-        <svg class="w-full" viewBox="0 0 800 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <!-- Number Line -->
-          <g class="text-slate-300 dark:text-slate-600">
-            <line x1="10" y1="60" x2="750" y2="60" stroke="currentColor" stroke-width="1" />
-            <!-- Continuation dashes -->
-            <line x1="760" y1="60" x2="770" y2="60" stroke="currentColor" stroke-width="1" />
-            <line x1="775" y1="60" x2="785" y2="60" stroke="currentColor" stroke-width="1" />
-            <line x1="790" y1="60" x2="800" y2="60" stroke="currentColor" stroke-width="1" />
-            
-            <!-- Small ticks (1-10) -->
-            {Array.from({ length: 11 }).map((_, i) => {
-              const num = i + 1;
-              const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
-              return (
-                <>
-                  <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
-                  <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
-                </>
-              );
-            })}
+          <!-- Medium ticks (15-50) -->
+          {Array.from({ length: 8 }).map((_, i) => {
+            const num = 15 + i * 5;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
 
-            <!-- Medium ticks (15-50) -->
-            {Array.from({ length: 8 }).map((_, i) => {
-              const num = 15 + i * 5;
-              const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
-              return (
-                <>
-                  <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
-                  <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
-                </>
-              );
-            })}
+          <!-- Large ticks (60-90) -->
+          {Array.from({ length: 4 }).map((_, i) => {
+            const num = 60 + i * 10;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 340;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
+        </g>
 
-            <!-- Large ticks (60-90) -->
-            {Array.from({ length: 4 }).map((_, i) => {
-              const num = 60 + i * 10;
-              const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
-              return (
-                <>
-                  <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
-                  <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
-                </>
-              );
-            })}
-          </g>
+        <!-- Prime Number Loops -->
+        <g class="text-slate-300 dark:text-slate-600">
+          {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime) => {
+            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 340;
+            return (
+              <path
+                d={`M${x},${60 - 10} A10,10 0 1,1 ${x},${60 + 10} A10,10 0 1,1 ${x},${60 - 10}`}
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                class="opacity-70"
+              />
+            );
+          })}
+        </g>
 
-          <!-- Prime Number Loops -->
-          <g class="text-slate-300 dark:text-slate-600">
-            {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime) => {
-              const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
-              return (
-                <path
-                  d={`M${x},${60 - 10} A10,10 0 1,1 ${x},${60 + 10} A10,10 0 1,1 ${x},${60 - 10}`}
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                  class="opacity-70"
-                />
-              );
-            })}
-          </g>
+        <!-- Special Prime Dots -->
+        <g>
+          {[13, 19, 31, 43, 61, 73, 83].map((prime) => {
+            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 340;
+            return (
+              <circle
+                cx={x}
+                cy="60"
+                r="3"
+                fill="red"
+                class="opacity-80"
+              />
+            );
+          })}
+        </g>
+      </svg>
 
-          <!-- Special Prime Dots -->
-          <g>
-            {[13, 19, 31, 43, 61, 73, 83].map((prime) => {
-              const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
-              return (
-                <circle
-                  cx={x}
-                  cy="60"
-                  r="3"
-                  fill="red"
-                  class="opacity-80"
-                />
-              );
-            })}
-          </g>
-        </svg>
-      </div>
+      <!-- Desktop version (original wider viewBox) -->
+      <svg class="w-full hidden md:block" viewBox="0 0 800 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <!-- Number Line -->
+        <g class="text-slate-300 dark:text-slate-600">
+          <line x1="10" y1="60" x2="750" y2="60" stroke="currentColor" stroke-width="1" />
+          <!-- Continuation dashes -->
+          <line x1="760" y1="60" x2="770" y2="60" stroke="currentColor" stroke-width="1" />
+          <line x1="775" y1="60" x2="785" y2="60" stroke="currentColor" stroke-width="1" />
+          <line x1="790" y1="60" x2="800" y2="60" stroke="currentColor" stroke-width="1" />
+          
+          <!-- Small ticks (1-10) -->
+          {Array.from({ length: 11 }).map((_, i) => {
+            const num = i + 1;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
+
+          <!-- Medium ticks (15-50) -->
+          {Array.from({ length: 8 }).map((_, i) => {
+            const num = 15 + i * 5;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
+
+          <!-- Large ticks (60-90) -->
+          {Array.from({ length: 4 }).map((_, i) => {
+            const num = 60 + i * 10;
+            const x = 10 + (Math.log10(num) / Math.log10(99)) * 740;
+            return (
+              <>
+                <line x1={x} y1="45" x2={x} y2="75" stroke="currentColor" stroke-width="1" />
+                <text x={x} y="90" text-anchor="middle" class="text-xs fill-current">{num}</text>
+              </>
+            );
+          })}
+        </g>
+
+        <!-- Prime Number Loops -->
+        <g class="text-slate-300 dark:text-slate-600">
+          {[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97].map((prime) => {
+            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
+            return (
+              <path
+                d={`M${x},${60 - 10} A10,10 0 1,1 ${x},${60 + 10} A10,10 0 1,1 ${x},${60 - 10}`}
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                class="opacity-70"
+              />
+            );
+          })}
+        </g>
+
+        <!-- Special Prime Dots -->
+        <g>
+          {[13, 19, 31, 43, 61, 73, 83].map((prime) => {
+            const x = 10 + (Math.log10(prime) / Math.log10(99)) * 740;
+            return (
+              <circle
+                cx={x}
+                cy="60"
+                r="3"
+                fill="red"
+                class="opacity-80"
+              />
+            );
+          })}
+        </g>
+      </svg>
     </div>
+  </div>
+</div>
