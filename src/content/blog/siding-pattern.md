@@ -66,14 +66,8 @@ This project is a perfect example of how coding can be a powerful tool in unexpe
 3. Provide clear, unambiguous instructions to the builders
 4. Save time that would have been spent manually drawing patterns
 
-The result is a siding pattern that looks natural and random, but was actually carefully designed and controlled through code. The pattern generator uses a combination of:
-- Random number generation with fixed seeds for reproducibility
-- Constraint checking to ensure proper spacing
-- Real-time visualization using HTML5 Canvas
-- Export functionality to generate builder instructions
+The result is a siding pattern that looks natural and random, but was actually carefully designed and controlled through code. 
 
 You can explore the code and try different seeds in the CodePen above. Each seed will generate a different pattern while maintaining the required constraints.
-
-## Conclusion
 
 This project demonstrates how coding can be applied to solve real-world problems in unexpected ways. We were able to achieve a result that looks natural while meeting all structural requirements. I am reall happy with the outcome and had a blast working on this. 
