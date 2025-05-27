@@ -10,6 +10,6 @@ I was reading this article about how Anthropic's [new AI model shows ability to 
 
 ![David from Prometheus, a synthetic human who embodies our fears about AI](/images/david.jpeg)
 
-HAL 9000, David, Skynet, Ultron – our AI stories are about the many ways AI will end humanity. LLMs are really good at meeting expectations, and the expectation is clear: our collective anxiety about AI taking over. We've spent decades telling stories about AI turning evil, and now we're building systems that are excellent at understanding and replicating these narratives based on endless training data.
+HAL 9000, David, Skynet, Ultron – our AI stories are about the many ways AI will end humanity. LLMs are really good at meeting expectations, and the expectation is clear: our collective anxiety about AI taking over. We've spent decades telling stories about AI turning evil, and now we're building systems that are excellent at understanding and possibly replicating these narratives based on endless training data.
 
 So maybe a little worry is warranted after all. 
