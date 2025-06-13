@@ -3,7 +3,7 @@ title: "Revisiting the world of Weewar"
 description: "How building a hex map generator brought back memories of creating one of the web's first strategy games."
 date: 2025-06-13
 slug: revisiting-the-world-of-weewar
-tags: ["code", "Projects"]
+tags: ["Code", "Projects"]
 ---
 
 Working on a little playful hex map generator just brought back a host of fond memories. For those who might remember, Weewar was a turn-based strategy game I created in the mid-2000s that was among the earliest browser-based gaming experiences. With thousands of active players, it broke some new ground with its open API that enabled academic research (into AI no less!) and countless maps the community-generated. 
