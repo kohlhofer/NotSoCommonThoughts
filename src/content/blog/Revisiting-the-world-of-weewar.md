@@ -6,7 +6,7 @@ slug: revisiting-the-world-of-weewar
 tags: ["Code", "Projects"]
 ---
 
-Working on a little playful hex map generator just brought back a host of fond memories. For those who might remember, Weewar was a turn-based strategy game I created in the mid-2000s that was among the earliest browser-based gaming experiences. With thousands of active players, it broke some new ground with its open API that enabled academic research (into AI no less!) and countless maps the community-generated. 
+Working on a little playful hex map generator just brought back a host of fond memories. For those who might remember, Weewar was a turn-based strategy game I created in the mid-2000s that was among the earliest browser-based gaming experiences. With thousands of active players, it broke new ground with its open API that enabled academic research (into AI, no less!) and countless maps the community generated.
 
 ## The Spark of Nostalgia
 
