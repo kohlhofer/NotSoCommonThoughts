@@ -40,7 +40,7 @@ const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(p => p.slug !== post.slug && (p.data.tags || []).some(tag => categories.includes(tag)))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+  .slice(0, 4);
 ---
 
 <Layout title="Not So Common Thoughts">

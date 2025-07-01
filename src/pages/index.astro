@@ -88,7 +88,7 @@ const chronologicalPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.d
 
       <!-- Categories View -->
       <div id="categories-view" class="tab-content">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-0 lg:gap-x-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-0 md:gap-x-12">
           {/* Left column */}
           <div>
             {leftCategories.map(([category, uniquePosts], index) => {
@@ -146,7 +146,7 @@ const chronologicalPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.d
 
       <!-- Chronological View -->
       <div id="chronological-view" class="tab-content hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-0 lg:gap-x-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-0 md:gap-x-12">
           {chronologicalPosts.map((post, index) => (
             <div class="mb-12 sm:mb-16">
               <PostListItem post={post} />
