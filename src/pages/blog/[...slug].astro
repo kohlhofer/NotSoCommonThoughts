@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import PostListItem from '../../components/PostListItem.astro';
+import BlogHero from '../../components/BlogHero.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -44,33 +45,25 @@ const relatedPosts = allPosts
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="p-8 sm:p-16">
-    <article class="max-w-2xl">
-      <header class="mb-8 pr-8 sm:pr-0">
-        <h1 class="text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4" style="line-height:1.2">
-          {post.data.title}
-        </h1>
-        <div class="text-sm text-slate-600 dark:text-slate-400">
-          Posted {getRelativeTime(post.data.date)} in {categories.map((cat, i) => {
-            const catName = cat.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-            return <>
-              <a href={`/${cat}`} class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors">{catName}</a>
-              {i < categories.length - 1 ? ' · ' : ''}
-            </>;
-          })}
-        </div>
-      </header>
-      <div class="prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-red-600 dark:prose-a:text-red-400 prose-a:no-underline hover:prose-a:underline prose-p:font-serif prose-li:font-serif prose-headings:text-slate-900 dark:prose-headings:text-slate-100 prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-strong:text-slate-900 dark:prose-strong:text-slate-100 prose-code:text-slate-900 dark:prose-code:text-slate-100 prose-blockquote:text-slate-600 dark:prose-blockquote:text-slate-400 prose-ul:text-slate-600 dark:prose-ul:text-slate-400 prose-ol:text-slate-600 dark:prose-ol:text-slate-400 prose-li:text-slate-600 dark:prose-li:text-slate-400 max-w-none">
-        <Content />
-      </div>
-      <div class="flex justify-center my-12">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16" />
-        </svg>
-      </div>
+  <!-- Hero Section -->
+  <BlogHero post={post} />
+  
+  <!-- Article Content -->
+  <div class="max-w-4xl mx-auto px-8 pb-16">
+    <article class="prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-red-600 dark:prose-a:text-red-400 prose-a:no-underline hover:prose-a:underline prose-p:font-serif prose-li:font-serif prose-headings:text-slate-900 dark:prose-headings:text-slate-100 prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-strong:text-slate-900 dark:prose-strong:text-slate-100 prose-code:text-slate-900 dark:prose-code:text-slate-100 prose-blockquote:text-slate-600 dark:prose-blockquote:text-slate-400 prose-ul:text-slate-600 dark:prose-ul:text-slate-400 prose-ol:text-slate-600 dark:prose-ol:text-slate-400 prose-li:text-slate-600 dark:prose-li:text-slate-400 max-w-none">
+      <Content />
     </article>
+    
+    <!-- Divider -->
+    <div class="flex justify-center my-12">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16" />
+      </svg>
+    </div>
+    
+    <!-- Related Posts -->
     {relatedPosts.length > 0 && (
-      <section class="max-w-2xl mt-16">
+      <section class="mt-16">
         <div class="mb-6 pb-2 border-b border-slate-200 dark:border-slate-700">
           <h2 class="text-lg font-serif text-slate-900 dark:text-slate-100">More posts</h2>
         </div>

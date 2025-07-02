@@ -60,7 +60,7 @@ const isHome = currentPath === '/';
   <body class="min-h-screen bg-white dark:bg-slate-800">
     <div class="flex min-h-screen">
       <!-- Header with Logo -->
-      <header class="fixed top-0 left-0 z-30 p-4">
+      <header class="fixed top-0 left-0 z-20 p-4">
         <div id="header-logo" class="rounded-lg p-4 transition-all duration-200">
           <h1 class="text-xl font-sans">
             <a href="/" class="hover:text-red-400 transition-colors font-outfit embossed">
@@ -85,7 +85,7 @@ const isHome = currentPath === '/';
       </button>
 
       <!-- Sidebar -->
-      <aside id="sidebar" class="fixed top-0 right-0 w-64 min-h-screen p-8 pt-16 overflow-y-auto transform translate-x-full transition-transform duration-200 ease-in-out z-20 bg-slate-900">
+      <aside id="sidebar" class="fixed top-0 right-0 w-64 min-h-screen p-8 pt-16 overflow-y-auto transform translate-x-full transition-transform duration-200 ease-in-out z-30 bg-slate-900">
         <!-- Search Input -->
         <div class="mb-4">
           <div class="relative flex items-center">
@@ -159,7 +159,7 @@ const isHome = currentPath === '/';
       <div class="flex-1 flex flex-col min-h-screen">
         <!-- Main Content -->
         <main class="flex-1">
-          <div class="min-h-[80vh] max-w-4xl mx-auto px-8 pt-24 sm:pt-20">
+          <div class="min-h-[80vh] max-w-4xl mx-auto px-4 sm:px-8 pt-24 sm:pt-20">
             <slot />
           </div>
         </main>
