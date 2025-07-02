@@ -1,6 +1,6 @@
 ---
 title: "Are We Intelligent?"
-description: "Challenging the debate about the intelligence in AI by examining our own."
+description: "While others were affirming that AIs could not truly think or even understand, I found myself wondering if I was any different."
 date: 2025-06-29
 slug: are-we-intelligent
 tags: ["Artificial Intelligence"]
