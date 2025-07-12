@@ -35,15 +35,11 @@ Great design can move us as deeply as great art. It can reshape how we see the w
 
 ## The Liberation of Purpose
 
-Understanding this distinction is liberating. As designers, we don't need to apologize for or transcend our service to purpose—it's what gives our work its power. Our creativity is channeled through constraints, our innovation sparked by problems to solve, our success measured by how well we serve others' needs.
+Understanding this distinction liberates us as designers. We don't need to transcend our service to purpose—it's the very essence of our craft. Our creativity thrives within constraints, our innovation emerges from problems to solve, our success measured by how well we serve others' needs.
 
-This is not a limitation but a source of strength. The designer's challenge is not to break free from purpose, but to find creative, meaningful, and sometimes unexpected ways to fulfill it.
+For years, my website carried this simple statement: "I am a designer by heart and by trade. Luckily design applies everything." Look around you—virtually everything human-made that surrounds us has been designed. From the chair you're sitting in to the words you're reading, from the cup you're drinking from to the city outside your window. Each object, each interface, each system was created to serve a purpose beyond itself.
 
-Art asks "What do I need to express?"
-Design asks "What does this need to serve?"
-
-Both questions can lead to profound answers. But they are fundamentally different questions, leading to fundamentally different kinds of creation.
-
-For years, my website carried this simple statement: "I am a designer by heart and trade. Luckily design is everything." And there's a profound truth in that. Look around you—virtually everything human-made that surrounds us has been designed. From the chair you're sitting in to the words you're reading, from the cup you're drinking from to the city outside your window. Each object, each interface, each system was created to serve a purpose beyond itself.
-
-That's the beauty and reach of design—it shapes our entire built world. And in that way, while art can transcend purpose, design *is* purpose made manifest.
+That's the beauty and reach of design—it shapes 
+our entire built world. And in that way, while 
+art can transcend purpose, design *is* purpose 
+made manifest.
