@@ -1,7 +1,7 @@
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
 
-const posts = await getCollection('blog');
+const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
 
 export const GET: APIRoute = async () => {
     return new Response(

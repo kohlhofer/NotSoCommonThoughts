@@ -3,7 +3,7 @@ title: "Are We Intelligent?"
 description: "While others were affirming that AIs could not truly think or even understand, I found myself wondering if I was any different."
 date: 2025-06-29
 slug: are-we-intelligent
-tags: ["Artificial Intelligence"]
+tags: ["Reflections","Artificial Intelligence"]
 ---
 
 The more I interact with Large Language Models, the more I question my own intelligence. It's a strange sensation that I tried to articulate during a dinner with friends in San Francisco a few years ago. While others were affirming that AIs could not truly think or even understand, I found myself wondering if I was any different. After all, if we dismiss LLMs for "just" predicting patterns and matching expectations, what exactly do we think we're doing?

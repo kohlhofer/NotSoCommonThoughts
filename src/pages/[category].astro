@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import PostListItem from '../components/PostListItem.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
   // Get all unique tags from all posts
   const categories = [...new Set(posts.flatMap(post => post.data.tags || ['uncategorized']))];
   

@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import PostListItem from '../components/PostListItem.astro';
 
 // Get all blog posts
-const posts = await getCollection('blog');
+const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
 
 // Get all unique categories from tags, and sort categories by the date of their most recent post (oldest first)
 const categoryMap = new Map();

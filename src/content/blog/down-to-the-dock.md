@@ -4,6 +4,7 @@ description: "A quiet descent into the thick stillness of a midsummer noon."
 date: 2025-07-04
 slug: down-to-the-dock
 tags: ["Figments"]
+unlisted: true
 ---
 
 Leaving the cool of the house. Into the small shade of the concrete deck. Most of it bakes in the sun. The heat is stifling. The water looks nearly flat. The ever-present wind is absent today.

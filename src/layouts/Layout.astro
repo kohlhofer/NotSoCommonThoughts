@@ -13,7 +13,7 @@ const SITE_DESCRIPTION = 'A personal blog exploring the intersection of design, 
 const { title, description = SITE_DESCRIPTION } = Astro.props;
 
 // Get all categories from posts
-const posts = await getCollection('blog');
+const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
 const categories = new Set(posts.flatMap(post => post.data.tags || []));
 
 // Format category names for display and count posts
