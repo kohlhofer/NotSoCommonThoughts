@@ -37,7 +37,7 @@ Great design can move us as deeply as great art. It can reshape how we see the w
 
 Understanding this distinction liberates us as designers. We don't need to transcend our service to purpose—it's the very essence of our craft. Our creativity thrives within constraints, our innovation emerges from problems to solve, our success measured by how well we serve others' needs.
 
-For years, my website carried this simple statement: "I am a designer by heart and by trade. Luckily design applies everything." Look around you—virtually everything human-made that surrounds us has been designed. From the chair you're sitting in to the words you're reading, from the cup you're drinking from to the city outside your window. Each object, each interface, each system was created to serve a purpose beyond itself.
+For years, my website carried this simple statement: "I am a designer by heart and by trade. Luckily design applies to everything." Look around you—virtually everything human-made that surrounds us has been designed. From the chair you're sitting in to the words you're reading, from the cup you're drinking from to the city outside your window. Each object, each interface, each system was created to serve a purpose beyond itself.
 
 That's the beauty and reach of design—it shapes 
 our entire built world. And in that way, while 
