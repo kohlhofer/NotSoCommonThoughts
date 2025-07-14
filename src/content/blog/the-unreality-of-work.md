@@ -4,7 +4,6 @@ description: "On the growing disconnect between our daily routines and a world i
 date: 2025-07-02
 slug: the-unreality-of-work
 tags: ["Reflections"]
-unlisted: true
 ---
 
 There's something deeply unsettling about being comfortable when you shouldn't be.
@@ -13,17 +12,13 @@ During the early days of COVID, I watched as friends and colleagues were suddenl
 
 I should have been grateful, and I was. But I was also troubled.
 
-The contrast was jarring. While others were experiencing genuine hardship and loss, my daily routine barely changed. I continued to sit at my desk, attend meetings, review designs, manage projects—all while the world outside was in crisis. It made work feel like a pretend activity, disconnected from the state of the world.
+The contrast was jarring. While others were experiencing genuine hardship and loss, my daily routine barely changed. I continued to sit at my desk, attend meetings, review designs, manage projects—all while the world outside was in crisis. It made work feel surreal, disconnected from the state of the world.
 
-How could I justify spending hours on a design review when people were dying? When systems were failing? When the very fabric of society seemed to be unraveling?
+How do we balance our professional responsibilities with our awareness of global challenges? When does focusing on work feel like turning away from reality?
 
-## The Pretend Game
+## The Challenge of Context
 
-Work became a kind of theater. We'd log into Zoom, discuss quarterly goals, plan sprints, debate technical decisions—all while pretending that everything was normal. The meetings felt increasingly surreal, like we were actors in a play about productivity while the audience was dying.
-
-I found myself asking: What does my design work accomplish in the face of global crisis? What does any of our work accomplish?
-
-The answer, of course, was that it mattered to the people who needed our products, to the companies that employed us, to the economy that was struggling to stay afloat. But that felt like a rationalization, not a genuine answer.
+Work became a study in compartmentalization. We'd log into Zoom, discuss quarterly goals, plan sprints, debate technical decisions—all while trying to maintain focus despite the weight of world events. The meetings felt increasingly like exercises in maintaining normalcy in abnormal times.
 
 ## Fast Forward
 
@@ -33,14 +28,14 @@ Knowledge work, the economy, education, healthcare, governance—all of it is be
 
 ## The Discomfort of Comfort
 
-The most troubling part is that I don't know how to do differently. I don't know how to respond to this sense of unreality. 
+The most challenging part is staying meaningfully connected to the world while maintaining our effectiveness at work. How do we keep our awareness of global events from paralyzing us, while also not letting our work completely insulate us from reality?
 
-My responsibility to my children makes it prohibitive to just give in to despair or to abandon the stability that our family relies on. I can't simply walk away from my work, no matter how disconnected it feels, because I have people depending on me. The very comfort that troubles me is also what I'm obligated to maintain.
+My commitment to my family and my teams requires maintaining stability, even when that work feels small against the backdrop of global events. The very comfort that troubles me is also what I'm obligated to maintain.
 
-The worst part is that we barely talk about it. In our professional lives, there's a silent, uncomfortable agreement to maintain the facade—to discuss quarterly goals and sprint planning as if everything is normal. Nobody forces us to do this. We all just know, without saying it, that we're not supposed to acknowledge the disconnect, to question whether any of this matters.
+Perhaps what's missing is more open dialogue about this tension. In our professional lives, we rarely discuss how to balance immediate responsibilities with broader awareness. Nobody forces this silence. It's just an unspoken agreement to focus on the task at hand.
 
 ## The Uncertainty
 
 This isn't a positive post. I don't have answers. But I do have questions. And sometimes, in the midst of all this pretending, that feels like the most honest thing I can offer.
 
-What makes it all worse is that a great many people seem to either genuinely don't see any of this—or worse, actively cheer it all on. 
+What makes it worse to me still, is that a great many people seem to either genuinely don't see any of this—or worse, actively cheer it all on. 

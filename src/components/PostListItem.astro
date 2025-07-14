@@ -20,14 +20,8 @@ if (!image) {
 
 const postImage = useGenerativeThumbnail ? null : (image || firstInlineImage);
 
-// Get category letters (up to 2)
-const categoryLetters = (tags || [])
-  .slice(0, 2)
-  .map(tag => tag.charAt(0).toUpperCase())
-  .join('');
-
-// If no categories, use first letter of title
-const placeholderText = categoryLetters || title.charAt(0).toUpperCase();
+// Use first letter of title for placeholder
+const placeholderText = title.charAt(0).toUpperCase();
 
 // Format tag names
 const formattedTags = (tags || []).map(tag => ({
