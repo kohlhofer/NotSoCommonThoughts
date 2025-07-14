@@ -42,9 +42,9 @@ const formattedTags = (tags || []).map(tag => ({
 
 <article class="group relative mt-1.5">
   <div class="flex gap-4">
-    <div class="shrink-0 w-32 overflow-hidden">
+    <div class="shrink-0 w-32">
       {postImage ? (
-        <a href={`/blog/${post.slug}`} class="block relative rounded-lg bg-slate-50">
+        <a href={`/blog/${post.slug}`} class="block relative rounded-lg bg-slate-50 overflow-hidden transition-transform duration-300 group-hover:scale-105">
           <img 
             src={postImage} 
             alt={title}
@@ -52,11 +52,11 @@ const formattedTags = (tags || []).map(tag => ({
           />
         </a>
       ) : (
-        <div class="w-full pb-[75%] relative rounded-lg bg-slate-50">
+        <a href={`/blog/${post.slug}`} class="block w-full pb-[75%] relative rounded-lg bg-slate-50 overflow-hidden transition-transform duration-300 group-hover:scale-105">
           <span class="text-4xl text-slate-700/90 absolute inset-0 flex items-center justify-center tracking-wider" style="font-family: 'Architects Daughter', cursive;">
             {placeholderText}
           </span>
-        </div>
+        </a>
       )}
     </div>
     <div class="flex flex-col flex-grow min-w-0">
