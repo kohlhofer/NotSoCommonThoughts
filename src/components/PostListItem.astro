@@ -41,8 +41,8 @@ const formattedTags = (tags || []).map(tag => ({
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
 <article class="group relative mt-1.5">
-  <div class="flex gap-4">
-    <div class="shrink-0 w-32">
+  <div class="flex gap-2 sm:gap-4">
+    <div class="shrink-0 w-20 sm:w-32">
       {postImage ? (
         <a href={`/blog/${post.slug}`} class="block relative rounded-lg bg-slate-50 overflow-hidden transition-transform duration-300 group-hover:scale-105">
           <img 
@@ -53,7 +53,7 @@ const formattedTags = (tags || []).map(tag => ({
         </a>
       ) : (
         <a href={`/blog/${post.slug}`} class="block w-full pb-[75%] relative rounded-lg bg-slate-50 overflow-hidden transition-transform duration-300 group-hover:scale-105">
-          <span class="text-4xl text-slate-700/90 absolute inset-0 flex items-center justify-center tracking-wider" style="font-family: 'Architects Daughter', cursive;">
+          <span class="text-2xl sm:text-4xl text-slate-700/90 absolute inset-0 flex items-center justify-center tracking-wider" style="font-family: 'Architects Daughter', cursive;">
             {placeholderText}
           </span>
         </a>
@@ -63,18 +63,18 @@ const formattedTags = (tags || []).map(tag => ({
       <div class="flex items-center text-xs text-slate-500">
         <time datetime={date.toISOString()}>{formatDate(date)}</time>
       </div>
-      <h2 class="mt-1 text-lg font-semibold tracking-tight text-slate-800 dark:text-slate-100 truncate">
+      <h2 class="mt-1 text-base sm:text-lg font-semibold tracking-tight text-slate-800 dark:text-slate-100">
         <a href={`/blog/${post.slug}`} class="hover:text-red-600 dark:hover:text-red-400 transition-colors">
           {title}
         </a>
       </h2>
-      <p class="mt-1 text-base leading-6 text-slate-600 dark:text-slate-400 line-clamp-2">{description}</p>
+      <p class="mt-1 text-sm sm:text-base leading-5 sm:leading-6 text-slate-600 dark:text-slate-400">{description}</p>
       {formattedTags.length > 0 && (
-        <div class="flex gap-1.5 mt-3 flex-wrap">
+        <div class="flex gap-1.5 mt-2 sm:mt-3 flex-wrap">
           {formattedTags.map(tag => (
             <a 
               href={`/${tag.slug}`}
-              class="inline-block px-2 py-0.5 text-xs font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-slate-800 border border-red-200 dark:border-slate-600 rounded hover:bg-red-100 dark:hover:bg-slate-700 transition-colors"
+              class="inline-block px-1.5 sm:px-2 py-0.5 text-xs font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-slate-800 border border-red-200 dark:border-slate-600 rounded hover:bg-red-100 dark:hover:bg-slate-700 transition-colors"
             >
               {tag.name}
             </a>
