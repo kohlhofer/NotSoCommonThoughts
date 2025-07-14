@@ -2,6 +2,7 @@
 title: "Revisiting the world of Weewar"
 description: "How building a hex map generator brought back memories of creating one of the web's first strategy games."
 date: 2025-06-13
+useGenerativeThumbnail: true
 slug: revisiting-the-world-of-weewar
 tags: ["Code", "Projects"]
 ---

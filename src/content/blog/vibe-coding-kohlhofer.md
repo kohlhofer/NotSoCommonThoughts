@@ -3,6 +3,7 @@ title: "Vibe Coding kohlhofer.com: Creation at the Speed of Thought"
 description: "How I built kohlhofer.com trying out a new approach to design and software development."
 date: 2025-02-10
 slug: vibe-coding-kohlhofer
+useGenerativeThumbnail: true
 tags: ["Design", "Code", "Artificial Intelligence", "Projects"]
 ---
 

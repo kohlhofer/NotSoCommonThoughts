@@ -2,6 +2,7 @@
 title: "Visualizing Chaos: The Lorenz Attractor"
 description: "A fun exploration of chaos theory through code, creating an aesthetic visualization of the Lorenz attractor using P5.js."
 date: 2025-02-23
+useGenerativeThumbnail: true
 slug: lorenz-attractor
 tags: ["Projects", "Design", "Code"]
 ---

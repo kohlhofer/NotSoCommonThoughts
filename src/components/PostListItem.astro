@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, date, image, tags } = post.data;
+const { title, description, date, image, tags, useGenerativeThumbnail } = post.data;
 
 // Extract the first image from the post content if no frontmatter image
 let firstInlineImage = '';
@@ -18,7 +18,7 @@ if (!image) {
   }
 }
 
-const postImage = image || firstInlineImage;
+const postImage = useGenerativeThumbnail ? null : (image || firstInlineImage);
 
 // Get category letters (up to 2)
 const categoryLetters = (tags || [])
