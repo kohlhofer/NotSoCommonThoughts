@@ -1,7 +1,7 @@
 ---
 title: "The Unreality of Work"
 description: "On the growing disconnect between our daily routines and a world in crisis."
-date: 2025-07-02
+date: 2025-06-02
 slug: the-unreality-of-work
 tags: ["Reflections"]
 ---
