@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import PostListItem from '../components/PostListItem.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
@@ -15,14 +16,17 @@ export async function getStaticPaths() {
     );
     const sortedPosts = categoryPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
     
+    // Get latest featured post for this category
+    const latestFeaturedPost = sortedPosts.find(post => post.data.featured);
+    
     return {
       params: { category },
-      props: { posts: sortedPosts, category }
+      props: { posts: sortedPosts, category, latestFeaturedPost }
     };
   });
 }
 
-const { posts, category } = Astro.props;
+const { posts, category, latestFeaturedPost } = Astro.props;
 const categoryName = category
   .split('-')
   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -30,25 +34,35 @@ const categoryName = category
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="pt-8 sm:pt-12 pb-8 sm:pb-16">
-    <!-- Hero Section -->
-    <div class="max-w-4xl mx-auto px-8 mb-16">
-      <div class="text-center">
-        <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4">
-          {categoryName}
-        </h1>
-        <p class="text-slate-600 dark:text-slate-400 text-lg">
-          {posts.length} post{posts.length === 1 ? '' : 's'} in this category
-        </p>
+  <!-- Category Header -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8 sm:mb-16">
+      <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4">
+        {categoryName}
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 text-lg">
+        {posts.length} post{posts.length === 1 ? '' : 's'} in this category
+      </p>
+    </div>
+  </div>
+
+  {latestFeaturedPost && (
+    <div class="w-full max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="bg-slate-50 dark:bg-[#1a1f2e] rounded-lg py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <FeaturedPost post={latestFeaturedPost} />
       </div>
     </div>
+  )}
 
-    <!-- Posts List -->
-    <div class="max-w-2xl mx-auto px-8">
+  <!-- Posts List -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-12 sm:mb-16">
+    <div class="max-w-2xl mx-auto">
       <div class="space-y-6 sm:space-y-8">
-        {posts.map(post => (
-          <PostListItem post={post} />
-        ))}
+        {posts
+          .filter(post => post.slug !== latestFeaturedPost?.slug)
+          .map(post => (
+            <PostListItem post={post} />
+          ))}
       </div>
     </div>
   </div>

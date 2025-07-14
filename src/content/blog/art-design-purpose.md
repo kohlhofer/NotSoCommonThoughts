@@ -3,7 +3,8 @@ title: "Art, Design, and the Question of Purpose"
 description: "On the fundamental difference between art and design: one serves itself, the other must serve others."
 date: 2025-07-12
 slug: art-design-purpose
-tags: ["Design", "Reflections"]
+tags: ["Design"]
+featured: true
 ---
 
 A friend reminded me that commerce shadows both art and design—and that design can reach the emotional depths we reserve for 'fine art.'

@@ -4,6 +4,7 @@ description: "As AI removes technical barriers, judgement becomes the key differ
 date: 2025-05-20
 slug: ai-and-judgement
 tags: ["Artificial Intelligence"]
+featured: true
 ---
 
 *A version of this post was first published on [MapsAll](https://www.mapsall.com/blog/ai-and-judgement).*

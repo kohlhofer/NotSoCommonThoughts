@@ -4,6 +4,7 @@ description: "A personal reflection on how AI-driven productivity gains should b
 date: 2025-05-21
 slug: think-more-not-just-more
 tags: ["little-bits", "Artificial Intelligence"]
+featured: true
 ---
 
 For as long as I can remember, I've made it a point to carve out time for thinking—real, undistracted thinking. It's a habit that has shaped my work and my life, even before AI started transforming the way we get things done.

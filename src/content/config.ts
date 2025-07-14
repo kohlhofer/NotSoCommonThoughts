@@ -12,6 +12,7 @@ const blog = defineCollection({
     draft: z.boolean().optional().default(false),
     unlisted: z.boolean().optional().default(false),
     useGenerativeThumbnail: z.boolean().optional().default(false),
+    featured: z.boolean().optional().default(false),
   }),
 });
 

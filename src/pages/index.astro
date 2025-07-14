@@ -2,37 +2,51 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import PostListItem from '../components/PostListItem.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
 import type { CollectionEntry } from 'astro:content';
 
 // Get all blog posts and sort by date
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Get latest featured post
+const latestFeaturedPost = posts.find(post => post.data.featured);
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="w-full pt-6 sm:pt-12 pb-12 sm:pb-24">
-    <div class="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
-      <!-- Hero Section -->
-      <div class="text-center mb-8 sm:mb-16">
-        <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4 sm:mb-6">
-          Not So Common Thoughts
-        </h1>
-        <blockquote class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-serif italic max-w-3xl mx-auto">
-          "The question then is, 'Of all the things you can now do, which do you choose to do?'"
-        </blockquote>
-        <p class="text-sm text-slate-500 dark:text-slate-500 mt-4">
-          — Brian Eno
-        </p>
-      </div>
+  <!-- Hero Section -->
+  <div class="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="text-center mb-8 sm:mb-16">
+      <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4 sm:mb-6">
+        Not So Common Thoughts
+      </h1>
+      <blockquote class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-serif italic max-w-3xl mx-auto">
+        "The question then is, 'Of all the things you can now do, which do you choose to do?'"
+      </blockquote>
+      <p class="text-sm text-slate-500 dark:text-slate-500 mt-4">
+        — Brian Eno
+      </p>
+    </div>
+  </div>
 
-      <!-- Posts List -->
-      <div class="w-full max-w-3xl mx-auto">
-        <div class="space-y-6 sm:space-y-12">
-          {posts.map((post: CollectionEntry<'blog'>) => (
+  {latestFeaturedPost && (
+    <div class="w-full max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="bg-slate-50 dark:bg-[#1a1f2e] rounded-lg py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <FeaturedPost post={latestFeaturedPost} />
+      </div>
+    </div>
+  )}
+
+  <!-- Posts List -->
+  <div class="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 mt-12 mb-12 sm:mb-16">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="space-y-6 sm:space-y-12">
+        {posts
+          .filter(post => post.slug !== latestFeaturedPost?.slug)
+          .map((post: CollectionEntry<'blog'>) => (
             <PostListItem post={post} />
           ))}
-        </div>
       </div>
     </div>
   </div>
