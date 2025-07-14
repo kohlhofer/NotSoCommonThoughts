@@ -1,30 +1,86 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../utils';
 
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const { title, description, date } = post.data;
+const { title, description, date, image, tags } = post.data;
+
+// Extract the first image from the post content if no frontmatter image
+let firstInlineImage = '';
+if (!image) {
+  const imageMatch = post.body.match(/!\[.*?\]\((.*?)\)/);
+  if (imageMatch) {
+    firstInlineImage = imageMatch[1];
+  }
+}
+
+const postImage = image || firstInlineImage;
+
+// Get category letters (up to 2)
+const categoryLetters = (tags || [])
+  .slice(0, 2)
+  .map(tag => tag.charAt(0).toUpperCase())
+  .join('');
+
+// If no categories, use first letter of title
+const placeholderText = categoryLetters || title.charAt(0).toUpperCase();
+
+// Format tag names
+const formattedTags = (tags || []).map(tag => ({
+  slug: tag,
+  name: tag.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+}));
 ---
 
-<article class="group">
-  <div class="flex flex-col">
-    <h2 class="text-xl font-serif text-slate-900 dark:text-slate-100 mb-2">
-      <a href={`/blog/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-        {title}
-      </a>
-    </h2>
-    <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 mb-2 font-serif">
-      {description}
-    </p>
-    <time datetime={date.toISOString()} class="text-sm font-normal text-slate-500 dark:text-slate-400">
-      {date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      })}
-    </time>
+<article class="group relative mt-1.5">
+  <div class="flex gap-4">
+    <div class="shrink-0 w-32 overflow-hidden">
+      {postImage ? (
+        <a href={`/blog/${post.slug}`} class="block relative rounded-lg bg-slate-50">
+          <img 
+            src={postImage} 
+            alt={title}
+            class="w-full mix-blend-multiply opacity-95"
+          />
+        </a>
+      ) : (
+        <div class="w-full pb-[75%] relative rounded-lg bg-slate-50">
+          <span class="text-4xl text-slate-700/90 absolute inset-0 flex items-center justify-center tracking-wider" style="font-family: 'Architects Daughter', cursive;">
+            {placeholderText}
+          </span>
+        </div>
+      )}
+    </div>
+    <div class="flex flex-col flex-grow min-w-0">
+      <div class="flex items-center text-xs text-slate-500">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+      </div>
+      <h2 class="mt-1 text-lg font-semibold tracking-tight text-slate-800 dark:text-slate-100 truncate">
+        <a href={`/blog/${post.slug}`} class="hover:text-red-600 dark:hover:text-red-400 transition-colors">
+          {title}
+        </a>
+      </h2>
+      <p class="mt-1 text-base leading-6 text-slate-600 dark:text-slate-400 line-clamp-2">{description}</p>
+      {formattedTags.length > 0 && (
+        <div class="flex gap-1.5 mt-3 flex-wrap">
+          {formattedTags.map(tag => (
+            <a 
+              href={`/${tag.slug}`}
+              class="inline-block px-2 py-0.5 text-xs font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-slate-800 border border-red-200 dark:border-slate-600 rounded hover:bg-red-100 dark:hover:bg-slate-700 transition-colors"
+            >
+              {tag.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   </div>
 </article> 
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+</style> 
