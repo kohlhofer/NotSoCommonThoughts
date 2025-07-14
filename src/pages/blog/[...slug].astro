@@ -39,7 +39,12 @@ const categoryName = category
 
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(p => p.slug !== post.slug && (p.data.tags || []).some(tag => categories.includes(tag)))
+  .filter(p => 
+    // Exclude current post and unlisted posts, and only include posts that share tags
+    p.slug !== post.slug && 
+    !p.data.unlisted && 
+    (p.data.tags || []).some(tag => categories.includes(tag))
+  )
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 4);
 ---
