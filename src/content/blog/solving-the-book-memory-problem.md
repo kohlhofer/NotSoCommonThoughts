@@ -15,6 +15,8 @@ Over time, I’ve read books in every format: physical shelves, Kindle downloads
 
 So this weekend I built [kohlhofer.com/books](http://kohlhofer.com/books) as personal repository to catalog my reading.
 
+![My book collection website](/images/books.png)
+
 ## The Technical Approach
 
 Rather than manually entering everything, I leaned on automation. For physical books, I photographed my shelves and used AI to transcribe the titles and authors. To my surprise, it handled obscured spines and unusual fonts with decent accuracy. I’m still working through all my shelves, but the approach is proving effective.
