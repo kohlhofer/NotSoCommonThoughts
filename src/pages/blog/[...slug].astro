@@ -49,7 +49,7 @@ const relatedPosts = allPosts
   .slice(0, 4);
 ---
 
-<Layout title="Not So Common Thoughts">
+<Layout title={`${post.data.title} - NSCT`} description={post.data.description}>
   <!-- Hero Section -->
   <BlogHero post={post} />
   
