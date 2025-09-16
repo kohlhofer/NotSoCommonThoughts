@@ -1,6 +1,6 @@
 ---
 title: "Project Tree 2025"
-description: "A visual representation of the projects I've built as of september, showing the volume and variety of experimentation that AI has enabled."
+description: "A visual representation of the projects I've built as of September, showing the volume and variety of experimentation that AI has enabled."
 date: 2025-09-15
 slug: project-tree-2025
 tags: ["Projects", "Reflections"]
@@ -8,14 +8,15 @@ featured: false
 unlisted: true
 ---
 
-Following up on [AI Unblocked My Learning](/blog/ai-unblocked-learning), here's a tree view of the projects, experiments, and explorations I have done to date. Tthis is what unblocked learning looks like in practice.
+Following up on [AI Unblocked My Learning](/blog/ai-unblocked-learning), here's a tree view of the projects, experiments, and explorations I have done to date. This is what unblocked learning looks like in practice.
 
 You can also see which ideas inspired others. There is even more that I decided not to pursue and there would be much more to mention if I were to indicate how all this connects to the much larger body of my daily work.
 
-Btw, MIDI Volume Control is the first dektop app i have ever created and I am using it every day all day long.
+By the way, MIDI Volume Control is the first desktop app I have ever created and I am using it every day all day long.
 
 ## 2025
 
+Each branch represents a project or experiment, with sub-branches showing related work.
 
 ├── [kohlhofer.com](https://kohlhofer.com) (Portfolio Site / Web)  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── [Music Page](https://kohlhofer.com/music) (Web)  
@@ -39,13 +40,11 @@ Btw, MIDI Volume Control is the first dektop app i have ever created and I am us
 
 ## The Numbers
 
-- **15+ projects** across web, desktop, and experimental domains
+- **15+ projects in 9 months** across web, desktop, and experimental domains
 - **Multiple technologies**: WebAssembly, D3.js, MIDI, AI integration
 - **Various purposes**: Personal tools, creative experiments, commercial ventures
 - **One year** of unblocked experimentation
 
 This is what happens when the friction of learning disappears. When you can go from idea to working prototype in hours instead of days. When the overhead of experimentation becomes negligible.
 
-The question remains: *"Of all the things you can now do, which do you choose to do?"*
-
-But at least now we can afford to ask it through action, not just theory.
+The question remains: *"Of all the things you can now do, which do you choose to do?"* But at least now we can afford to ask it through action, not just theory.
