@@ -34,7 +34,7 @@ Each branch represents a project or experiment, with sub-branches showing relate
 ├── MIDI Volume Control (Desktop App / macOS)   
 ├── [notsocommonthoughts.com](https://notsocommonthoughts.com) (Blog / Writing)  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── [Vignette Post](/blog/down-to-the-dock) (Writing)  
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [Crossings](/blog/crossings-silver-flash) (Short Story / Writing)  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [Crossings](https://kohlhofer.com/Crossings/) (Short Story / Writing)  
 └── AI JS App Prototype (Web / Experimental)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── No Chrome (Web)
 
