@@ -3,7 +3,7 @@ title: "AI Unblocked My Learning"
 description: "How AI has restored my ability to learn by doing, bringing back the joy of experimentation that growing responsibilities had made increasingly rare."
 date: 2025-09-08
 slug: ai-unblocked-learning
-tags: ["Artificial Intelligence", "Projects", "Reflections"]
+tags: ["Artificial Intelligence", "Reflections"]
 featured: true
 ---
 
