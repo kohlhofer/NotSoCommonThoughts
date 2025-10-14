@@ -40,4 +40,4 @@ I'm keeping both apps in active development. MIDI Volume Control will keep growi
 
 Ship, listen, respond, repeat—because the discipline that keeps big products aligned with customers is the same discipline that makes a tiny menu bar app worth using, and user feedback rules supreme at every scale.
 
-Menu Volume – System & Music is now [live on the Mac App Store](https://apps.apple.com/us/app/midi-volume-control/id6752268711). Give it a try, and let me know what you think. I'm listening.
+Menu Volume – System & Music is now [live on the Mac App Store](https://apps.apple.com/us/app/menu-volume-system-music/id6753698645). Give it a try, and let me know what you think. I'm listening.
