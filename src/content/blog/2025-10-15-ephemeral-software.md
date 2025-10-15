@@ -42,9 +42,9 @@ This doesn't mean software vanishes entirely—the infrastructure, the models, t
 
 ## A Different Kind of Transparency
 
-Transparent UI design tries to minimize the interface between you and your intent. Ephemeral software eliminates the concept of interface altogether. There's only what you're trying to accomplish and the computation that makes it possible.
+Transparent UI design tries to minimize the interface between you and your intent. Ephemeral software takes this further—interfaces still exist, but they're no longer rigid, persistent things. They manifest as part of the ephemeral software itself, appearing only to the degree necessary for the task at hand.
 
-The focus shifts entirely away from the software itself—its design, its features, its presence—toward the outcomes it enables. Code becomes truly invisible, not through clever design but through fundamental impermanence.
+The focus shifts entirely away from the software itself—its design, its features, its presence—toward the outcomes it enables. Code becomes truly invisible, not through clever design but through fundamental impermanence. And interfaces become fluid, forming only when purpose demands and dissolving once that purpose is served.
 
 ## No Longer Science Fiction
 
