@@ -3,7 +3,7 @@ title: "MIDI Volume Control: When the Solution Doesn't Exist, Build It"
 description: "How a simple need—controlling my Mac's volume with a MIDI controller—led to building my first desktop app, now available on the App Store."
 date: 2025-10-05
 slug: midivol-app-store
-tags: ["Projects"]
+tags: ["Projects", "Music"]
 featured: false
 ---
 
