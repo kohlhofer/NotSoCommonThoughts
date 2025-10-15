@@ -3,7 +3,7 @@ title: "How I Built a Serverless Chess Analytics Platform with Game Data in the 
 description: "Building a free chess game analysis tool that stores everything in the URL—no servers, no databases, just instant analytics you can share with a link."
 date: 2025-10-01
 slug: chess-analytics-in-the-url
-tags: ["Projects", "Code"]
+tags: ["Projects", "Code", "Chess"]
 featured: true
 ---
 

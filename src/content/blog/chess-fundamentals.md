@@ -2,7 +2,7 @@
 title: "Fundamental Chess Strategy & Evaluation"
 description: "A compact cheat sheet for intermediate players (1200+), especially after a break from play."
 date: 2025-07-27
-tags: ["learning"]
+tags: ["Chess"]
 featured: false
 unlisted: false
 ---

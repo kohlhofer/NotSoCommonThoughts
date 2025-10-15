@@ -4,6 +4,7 @@ description: "Turn any playlist into a customizable mixtape—no log-ins, no alg
 date: 2025-07-02
 slug: rock-or-pop
 tags: ["Projects", "Design", "Music"]
+featured: true
 ---
 
 I still buy and listen to tapes.
