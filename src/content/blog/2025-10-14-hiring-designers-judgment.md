@@ -3,7 +3,7 @@ title: "Hiring Designers Who Know Which Lever to Pull"
 description: "The three non-negotiables I expect from senior designers: relentless feedback, selling the work, and knowing when each skill should lead."
 date: 2025-10-14
 slug: hiring-designers-judgment
-tags: ["Design", "Little Bits"]
+tags: ["Design", "little-bits"]
 featured: false
 ---
 
