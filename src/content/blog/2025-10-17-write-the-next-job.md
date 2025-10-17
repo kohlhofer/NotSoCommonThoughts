@@ -23,7 +23,7 @@ Framing the job that way does more than prep them for the next jump. It forces c
 
 I ask them to reflect on what those bullet points on their future CV ought to be, and to ignore for that moment whatever may seem urgent or important. That forces a clarity of thought that is disconnected from the day-to-day and surfaces the gaps we need to close.
 
-My job is to build the environment where they can make the bullet points they identify genuinely true. We adjust scope, pull in partners, or hunt for the metrics we need. It might mean clearing space to own messy problems, lining up the execs who need to see the work, or defending the project long enough for the impact to register. The question shows up in future check-ins: is the bullet they named getting sharper or fuzzier?
+My job is to build the environment where they can make the bullet points they identify genuinely true. We adjust scope, pull in partners, or hunt for the metrics we need. It might mean clearing space to own messy problems, lining up the execs who need to see the work, or defending the project long enough for the impact to register. The question shows up in future check-ins: are the bullet points they named getting sharper or fuzzier?
 
 And to be clear: it is their work and their responsibility. I can coach and unblock, but they own the story they're writing.
 
