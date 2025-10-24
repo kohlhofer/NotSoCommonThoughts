@@ -2,22 +2,27 @@
 title: "Visualizing Chaos: The Lorenz Attractor"
 description: "A fun exploration of chaos theory through code, creating an aesthetic visualization of the Lorenz attractor using P5.js."
 date: 2025-02-23
-useGenerativeThumbnail: true
 slug: lorenz-attractor
 tags: ["Projects", "Design", "Code"]
 ---
 
-![Lorenz Attractor visualization](/images/lorenz-bit.jpg)
-
 ## A Primer on Chaos Theory
 
 Chaos theory studies how small changes in initial conditions can lead to vastly different outcomes - the famous "butterfly effect." The Lorenz attractor, discovered by meteorologist Edward Lorenz in 1963, is one of the most iconic examples of this phenomenon. It's a set of chaotic solutions to a simplified system of equations that model atmospheric convection.
+
+![Lorenz Attractor visualization](/images/lorenz-bit.jpg)
 
 What makes the Lorenz attractor fascinating is its "strange attractor" behavior - the system never repeats exactly the same path, yet it's confined to a specific region in space, creating an intricate, butterfly-like pattern that's both deterministic and unpredictable.
 
 ## CodePen and Aesthetic Visualization
 
 I created this visualization on [CodePen](https://codepen.io/kohlhofer/pen/ZExzGLK/6dcf9eed602926b0ea193420e56bd4e4), using P5.js to bring the mathematical concept to life. P5.js proved to be the perfect tool for this project - its simplicity and animation capabilities made it possible to create an interactive visualization with relatively few lines of code.
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="Lorenz Attractor Visualization" src="https://codepen.io/kohlhofer/embed/ZExzGLK/6dcf9eed602926b0ea193420e56bd4e4?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kohlhofer/pen/ZExzGLK">
+  Lorenz Attractor Visualization</a> by Alex Kohlhofer (<a href="https://codepen.io/kohlhofer">@kohlhofer</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 The result is a piece that captures both the mathematical beauty and the chaotic nature of the system. From there, I simply ported it to [kohlhofer.com/lorenz](https://kohlhofer.com/lorenz). You can read more about that process in [this post](https://kohlhofer.com/blog/vibe-coding-kohlhofer).
 
