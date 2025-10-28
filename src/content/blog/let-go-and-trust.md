@@ -3,7 +3,7 @@ title: "Let Go and Trust"
 description: "A reminder that excellence comes from trust, not control."
 date: 2025-03-02
 slug: let-go-and-trust
-tags: ["little-bits"]
+tags: ["little-bits", "Leadership"]
 ---
 
 This section from another post makes for a good reminder for myself: 

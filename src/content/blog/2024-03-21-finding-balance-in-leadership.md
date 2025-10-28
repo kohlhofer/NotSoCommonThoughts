@@ -3,7 +3,7 @@ title: "Finding Balance in Leadership"
 description: "The art of setting guardrails that empower rather than constrain."
 date: 2025-06-07
 slug: finding-balance-in-leadership
-tags: ["little-bits"]
+tags: ["little-bits", "Leadership"]
 ---
 
 I had an interesting chat at work the other day about micro-management. It reminded me about this long held belief that much of leadership is really about setting guardrails and finding the right balance.

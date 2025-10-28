@@ -3,7 +3,7 @@ title: "Permission to Enjoy"
 description: "A reflection on seniority, freedom, responsibility, and the power of a mentor's simple advice."
 date: 2025-03-15
 slug: permission-to-enjoy
-tags: ["little-bits"]
+tags: ["little-bits", "Leadership"]
 ---
 
 A manager and mentor of mine once gave me advice that stuck: just do more of the things you enjoy. 

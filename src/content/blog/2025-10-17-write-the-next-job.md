@@ -3,7 +3,7 @@ title: "Let's Talk About Your Next Role"
 description: "Why I ask teammates to think about their CV and what they want it to look like five years from now."
 date: 2025-10-17
 slug: write-the-next-job
-tags: ["little-bits"]
+tags: ["little-bits", "Leadership"]
 featured: false
 unlisted: false
 ---
