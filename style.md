@@ -12,9 +12,10 @@ This guide distills shared patterns from the eight most recent posts:
 
 ### Voice & Tone
 - First-person, reflective, and candid; mix personal anecdotes with actionable takeaways.
+- Self-aware, composed, and grounded in experience—write from a place of having lived through the insight.
 - Confident but approachable—write as an experienced practitioner sharing lessons.
 - Use direct sentences and avoid fluff; most paragraphs sit at 1–3 sentences.
-- Tension between personal need and broader principle is a recurring hook.
+- Tension between personal need and broader principle is a recurring hook; bridge from known biases (like momentum) to deeper insight.
 - End with an open question or invitation to reflect whenever it fits.
 
 ### Structure
@@ -22,12 +23,12 @@ This guide distills shared patterns from the eight most recent posts:
 - Introductions lead with a decisive statement, observation, or problem before offering context.
 - Use `##` headings for major sections; titles are Title Case and specific.
 - Section count is flexible but each conveys a single idea (problem, approach, lesson, pattern).
-- Include summary-style subsections such as numbered or bulleted lists when explaining frameworks, principles, or data.
+- Avoid lists for engagement purposes; use them sparingly and only for true enumerations (actual lists of items, steps, or data points).
 - Close with a short reflection, call-to-action, or restated principle—no formal conclusion heading.
 
 ### Formatting Patterns
-- Mix short paragraphs with lists to keep pacing brisk.
-- Use bold for key concepts (`**Term**`) and italics for emphasis or quoted thoughts (`*“…”*`).
+- Keep pacing brisk with short, varied paragraphs; avoid listicle-style formatting.
+- Use bold for key concepts (`**Term**`) and italics for emphasis or quoted thoughts (`*"…"*`).
 - Inline links back to personal projects, prior posts, or external references; descriptive link text is preferred.
 - Images reinforce the story; use Markdown `![Alt text](/images/file.png)` or HTML `<img>` when width control matters.
 - Leverage tables or ASCII diagrams when summarizing structured information (see project-tree-2025.md).
