@@ -48,6 +48,11 @@ const isHome = currentPath === '/';
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTND00MKLK"></script>
     <script>
@@ -398,6 +403,19 @@ const isHome = currentPath === '/';
           const randomIndex = Math.floor(Math.random() * searchablePosts.length);
           const randomPost = searchablePosts[randomIndex];
           window.location.href = `/blog/${randomPost.slug}`;
+        });
+      });
+
+      // Add lazy loading to all images
+      document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.prose img');
+        images.forEach(img => {
+          if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+          }
+          if (!img.hasAttribute('decoding')) {
+            img.setAttribute('decoding', 'async');
+          }
         });
       });
     </script>

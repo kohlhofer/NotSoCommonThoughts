@@ -11,13 +11,32 @@ import robots from 'astro-robots';
 export default defineConfig({
   site: 'https://notsocommonthoughts.com',
   integrations: [tailwind(), mdx(), sitemap(), vercel(), robots()],
+  image: {
+    // Enable image optimization with sharp
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    remotePatterns: [{ protocol: "https" }],
+  },
   markdown: {
     shikiConfig: {
       theme: 'github-dark-dimmed',
       wrap: true
     }
   },
+  build: {
+    inlineStylesheets: 'auto',
+  },
   vite: {
+    build: {
+      cssCodeSplit: true,
+      minify: 'esbuild',
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
+    },
     plugins: [
       compress({
         algorithm: 'gzip',

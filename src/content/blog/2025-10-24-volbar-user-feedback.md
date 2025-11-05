@@ -13,7 +13,10 @@ Instead, two friends saw it in action, bought it on the spot, and then told me t
 
 I built the menu bar controls as a convenience. A bonus. A simple way to see and adjust system and Apple Music volume at a glance. Turns out that *was* the product for a whole group of people. The MIDI piece—the thing I started from—is still excellent for the much smaller crew who live with MIDI controllers (like me), but it's not the headline for everyone else.
 
-![Menu Volume – System & Music menu bar screenshot](/images/VolumeAppScreen.png)
+<picture>
+  <source srcset="/images/VolumeAppScreen.webp" type="image/webp" />
+  <img src="/images/VolumeAppScreen.png" alt="Menu Volume – System & Music menu bar screenshot" />
+</picture>
 
 
 ## Pivot in Real Time
@@ -30,7 +33,10 @@ Customer-centricity isn't theoretical for me; it's the operating system. As a se
 
 Menu Volume – System & Music exists because of that feedback loop. MIDI Volume Control still serves the musicians and producers who want full controller integration. Menu Volume handles everyone else. Both products are clearer versions of themselves now that they don't have to share the same story.
 
-![Menu Volume – System & Music icon in Icon Composer](/images/IconComposer.png)
+<picture>
+  <source srcset="/images/IconComposer.webp" type="image/webp" />
+  <img src="/images/IconComposer.png" alt="Menu Volume – System & Music icon in Icon Composer" />
+</picture>
 
 By the way, this was also an excuse to play with Apple's new Icon Composer. It made it easy and fun to dial in a liquid glass-compatible icon and export every size without touching the old tooling. See the screenshot above.
 

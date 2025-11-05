@@ -23,7 +23,12 @@ But I added two features that turned out to be more valuable than I expected. Fi
 
 It's my first desktop app. Ever. And I use it every single day, all day long.
 
-[![MIDI Volume Control menu bar interface](/images/midivol-screen.png)](https://kohlhofer.com/midiVol/)
+<a href="https://kohlhofer.com/midiVol/">
+  <picture>
+    <source srcset="/images/midivol-screen.webp" type="image/webp" />
+    <img src="/images/midivol-screen.png" alt="MIDI Volume Control menu bar interface" />
+  </picture>
+</a>
 
 ## Learning to Ship
 
