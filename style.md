@@ -28,7 +28,7 @@ This guide distills shared patterns from the eight most recent posts:
 
 ### Formatting Patterns
 - Keep pacing brisk with short, varied paragraphs; avoid listicle-style formatting.
-- Use bold for key concepts (`**Term**`) and italics for emphasis or quoted thoughts (`*"…"*`).
+- Use bold very sparingly for key phrases only—avoid single-word bolding. Bold should highlight critical concepts or turning points that need to stand out (e.g., `**the outputs became the goal**` or `**imposters who don't know they're imposters**`). Use italics for emphasis or quoted thoughts (`*"…"*`).
 - Inline links back to personal projects, prior posts, or external references; descriptive link text is preferred.
 - Images reinforce the story; use Markdown `![Alt text](/images/file.png)` or HTML `<img>` when width control matters.
 - Leverage tables or ASCII diagrams when summarizing structured information (see project-tree-2025.md).
