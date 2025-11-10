@@ -13,14 +13,14 @@ The design tries to capture and reflect that ethos. So does the process of makin
 
 <a href="https://fieldbw.com" target="_blank"><img src="/images/fieldbw/scren.png" alt="Field Bureau + Werkstatt site"></a>
 
-## Iteration Over Implementation
+## Bureau, Werkstatt, Field
 
-I started with an absolute minimal sketch from my journal. Just a rough version of the key elements—logo, concept, navigation. The rest happened through iteration.
+**Bureau:** I developed the key concept and captured it in a minimal sketch from my journal—logo, concept, navigation.
 
 ![Initial sketch](/images/fieldbw/sketch.jpeg)
 
-Initial implementation was quick thanks to AI. Then came the real work: spacing, typography scale, color values, image treatment. Design decisions that require looking, adjusting, looking again.
+**Werkstatt:** Initial implementation was quick thanks to AI. Then came the real work: spacing, typography scale, color values, image treatment. Design decisions that require looking, adjusting, looking again.
 
-Shout out to [John](https://www.johnwlong.com/) for a timely and impactful design critique.
+**Field:** A timely design critique with [John](https://www.johnwlong.com/) brought real-world perspective that refined the final result.
 
 I like it best on desktop (see screen) but it scales nicely to mobile too. Learn about [Field Bureau + Werkstatt](https://fieldbw.com).
