@@ -15,7 +15,7 @@ The design tries to capture and reflect that ethos. So does the process of makin
 
 ## Bureau, Werkstatt, Field
 
-**Bureau:** I developed the key concept and captured it in a minimal sketch from my journal—logo, concept, navigation.
+**Bureau:** I developed the key concept and captured it in a minimal (and tiny!) sketch in my journal. Just the essentials: logo, concept, navigation.
 
 ![Initial sketch](/images/fieldbw/sketch.jpeg)
 
