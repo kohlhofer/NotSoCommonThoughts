@@ -2,7 +2,7 @@
 title: "Embracing Interface Asymmetry"
 description: "Visual UIs and chat interfaces have opposite strengths. The asymmetry isn't a problem to fix; it's a pattern to embrace."
 date: 2025-11-04
-tags: ["design", "Artificial Intelligence"]
+tags: ["Design", "Artificial Intelligence"]
 featured: true
 ---
 
