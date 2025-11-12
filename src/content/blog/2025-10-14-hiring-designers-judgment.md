@@ -37,8 +37,8 @@ The right move might be to bring everyone together and realign the plan, or it m
 
 ## What I Bring to the Table
 
-When those skills are present, I can go all in on supporting them—removing blockers, sharing hard-won context, and opening rooms they need to influence. I can elevate their craft with sharper critiques, give them the space to run bigger experiments, and amplify their impact across the organization because [I trust their judgment](http://localhost:4321/blog/let-go-and-trust). That is the partnership I’m hiring for.
+When those skills are present, I can go all in on supporting them—removing blockers, sharing hard-won context, and opening rooms they need to influence. I can elevate their craft with sharper critiques, give them the space to run bigger experiments, and amplify their impact across the organization because [I trust their judgment](/blog/let-go-and-trust). That is the partnership I'm hiring for.
 
 Without them, I'd spend my time teaching behaviors that should have been forged through earlier teams, mentors, and hard projects. That's a bad trade for everyone.
 
-There's [plenty more](http://localhost:4321/blog/finding-balance-in-leadership) to forming a great design team—but being relentless about feedback, selling the idea, and choosing when to do which is not optional.
+There's [plenty more](/blog/finding-balance-in-leadership) to forming a great design team—but being relentless about feedback, selling the idea, and choosing when to do which is not optional.
