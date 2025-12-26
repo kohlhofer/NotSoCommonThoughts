@@ -23,12 +23,23 @@ const categories = post.data.tags || [];
 function getRelativeTime(date) {
   const now = new Date();
   const diff = Math.floor((now - date) / 1000);
-  if (diff < 60) return `${diff} second${diff === 1 ? '' : 's'} ago`;
+
+  // Handle future dates (timezone edge cases) - treat as "today"
+  if (diff < 0) return 'today';
+
+  if (diff < 60) return 'today';
   if (diff < 3600) return `${Math.floor(diff / 60)} minute${Math.floor(diff / 60) === 1 ? '' : 's'} ago`;
   if (diff < 86400) return `${Math.floor(diff / 3600)} hour${Math.floor(diff / 3600) === 1 ? '' : 's'} ago`;
-  if (diff < 2592000) return `${Math.floor(diff / 86400)} day${Math.floor(diff / 86400) === 1 ? '' : 's'} ago`;
-  if (diff < 31536000) return `${Math.floor(diff / 2592000)} month${Math.floor(diff / 2592000) === 1 ? '' : 's'} ago`;
-  return `${Math.floor(diff / 31536000)} year${Math.floor(diff / 31536000) === 1 ? '' : 's'} ago`;
+  if (diff < 2592000) {
+    const days = Math.floor(diff / 86400);
+    return days === 1 ? 'yesterday' : `${days} days ago`;
+  }
+  if (diff < 31536000) {
+    const months = Math.floor(diff / 2592000);
+    return `${months} month${months === 1 ? '' : 's'} ago`;
+  }
+  const years = Math.floor(diff / 31536000);
+  return `${years} year${years === 1 ? '' : 's'} ago`;
 }
 
 // Get the main category from tags
