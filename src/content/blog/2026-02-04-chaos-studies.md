@@ -4,11 +4,10 @@ description: "Turning a fascination with strange attractors into an immersive au
 date: 2026-02-04
 tags: ["Projects", "Music", "Design"]
 featured: true
-unlisted: true
 image: "/images/chaos-studies/playdate.jpeg"
 ---
 
-Rotate your view and the bass slides behind you. Zoom in and the particles sharpen while the edges soften. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
+Rotate your view and the bass slides behind you. Zoom in and the particles fill your screen. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
 
 What started as a [coding experiment with strange attractors](/blog/lorenz-attractor) is now available as [Chaos Studies](https://fieldbw.com/chaos-studies/) for iOS and macOS. An immersive experience that combines my interests in math, music, and art into a single interactive canvas.
 
@@ -32,7 +31,7 @@ Thousands of points trace paths through phase space. Each point starts hot—lit
 
 The recycling strategy took iteration to get right. Early versions replaced points randomly, which looked jittery. The final approach prioritizes replacing the coldest points first, creating smooth visual decay.
 
-Metal handles the rendering across multiple pipelines. A subtle depth-of-field effect keeps the focal point sharp while the periphery softens, adding dimensionality without distraction.
+Metal handles the rendering across multiple pipelines.
 
 <img src="/images/chaos-studies/iphone.jpeg" alt="Chaos Studies on iPhone" width="400">
 
