@@ -4,7 +4,7 @@ description: "Turning a fascination with strange attractors into an immersive au
 date: 2026-02-04
 tags: ["Projects", "Music", "Design"]
 featured: true
-image: "/images/chaos-studies/playdate.jpeg"
+image: "/images/chaos-studies/hero.png"
 ---
 
 Rotate your view and the bass slides behind you. Zoom in and the particles fill your screen. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
