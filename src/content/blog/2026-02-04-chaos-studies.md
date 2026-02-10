@@ -20,27 +20,39 @@ The first version of Chaos Studies was built for the [Playdate](https://play.dat
 
 Porting to iOS and macOS meant shedding those healthy constraints. More raw power. Full color. Room for more parallel spatial audio. Multi-touch. The Metal rendering pipeline. But the core idea remained the same: give someone direct, tactile control over a chaotic system and let them feel its behavior.
 
-## Sound That Moves Through Space
+## Nine Windows into Chaos
 
-Then there's the audio. Each sound in Chaos Studies is positioned in three-dimensional space, corresponding to what's happening on screen. As you manipulate the attractor, rotating your view, zooming in and out, the soundscape shifts around you.
+The app features nine strange attractors, each with its own character. The iconic Lorenz attractor traces its butterfly wings. Rössler spirals in toroidal bands. Halvorsen exhibits striking symmetry. Chen extends Lorenz into more complex territory. Each attractor required its own tuning—differential equation timestep, zoom range, center point—iterated until it felt right. Fast enough to see the dynamics unfold, slow enough to follow individual particle paths.
 
-Some of the audio was pre-created but split into spatial tracks, composed on the [OP-XY](https://teenage.engineering/products/op-xy) by Teenage Engineering (who also helped Panic design the Playdate hardware). Other sounds are synthesized dynamically in response to the attractor's behavior. **The sounds are the system made audible.** Headphones reveal the full effect: audio that orbits, converges, and drifts just like the particles do.
+## Particles with Memory
+
+Thousands of points trace paths through phase space. Each point starts hot—literally rendered in red—and gradually cools as it ages, creating trails that show where the system has been while emphasizing where it's going. When points grow cold enough, they drift outward and fade, replaced by fresh particles that continue the integration.
+
+The recycling strategy took iteration to get right. Early versions replaced points randomly, which looked jittery. The final approach prioritizes replacing the coldest points first, creating smooth visual decay.
+
+Metal handles the rendering with four distinct pipelines: one for the main point cloud, one for a geodesic reference sphere, one for the cursor showing the active integration point, and one for the geometric sphere that appears during the implosion animation. A subtle depth-of-field effect keeps the focal point sharp while the periphery softens, adding dimensionality without distraction.
 
 <img src="/images/chaos-studies/iphone.jpeg" alt="Chaos Studies on iPhone" width="400">
 
-## Art for Art's Sake
+## Sound That Moves Through Space
 
-There's no goal. No score. No puzzle to solve. Chaos Studies exists purely as an experience. Something to sink into, manipulate, and watch unfold. It's the kind of project that might never have existed without the freedom that AI-assisted development provides: the ability to explore ideas quickly enough that "just for the joy of it" becomes a reasonable justification.
+At its core is the cursor synthesizer—a real-time oscillator highlighting the current particle as it traces through phase space. Velocity controls the bass frequency (deliberately matching the Playdate version), vertical position adds harmonics, and a low-pass filter opens up with faster movement. The stereo field tracks your horizontal position.
 
-Most of the effort was spent refining the experience. Iterating. Honing. **The freedom that AI affords you to explore doesn't replace the discipline of refinement.** It just means you can afford to be ambitious about what you refine.
+Layered over this are seven music stems, each positioned in 3D space: tings float above, pad drones sit below, percussion anchors the front, bass line to the right, cello behind. As you rotate the camera, the stems pan and attenuate based on their new positions relative to your viewpoint. Headphones reveal the full effect—rotating the attractor literally rotates the soundscape around you.
+
+The stems were composed on the OP-XY by Teenage Engineering (who also helped Panic design the Playdate hardware). I split the composition into spatial tracks specifically for this purpose.
+
+The explosion and implosion effects layer multiple synthesized sounds with careful timing—details that took tuning to make the visual experience feel visceral. Getting the mix right across tiny built-in speakers and expensive headphones took more iteration than I expected.
 
 <img src="/images/chaos-studies/ipad-dark-2.png" alt="Chaos Studies on iPad">
+
+## Art for Art's Sake
+
+There's no goal. No score. No puzzle to solve. Chaos Studies exists purely as an experience—[art that doesn't need to serve a purpose beyond itself](/blog/art-design-purpose). Something to sink into, manipulate, and watch unfold. It's the kind of project that might never have existed without the ability to explore ideas quickly enough that "just for the joy of it" becomes a reasonable justification. But that freedom doesn't replace the discipline of refinement—it just means you can afford to be ambitious about what you refine.
 
 ## A Convergence of Interests
 
 Chaos Studies sits at an intersection. It harkens back to creating visceral experiences in the game industry. It taps into my knowledge of electronic music and sound synthesis. It draws on design at large and the craft of interactive software. And it touches on math and the philosophical implications of chaos.
-
-I only just experimented with making native apps like [MIDI Volume Control](/blog/midivol-app-store), and this feels like a logical next step. I am excited to take it further still. Sometimes the projects you build are preparation for the projects you don't know you're building yet. Chaos Studies feels like that. A convergence I couldn't have planned.
 
 ## Try It
 
