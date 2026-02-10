@@ -8,6 +8,8 @@ unlisted: true
 image: "/images/chaos-studies/playdate.jpeg"
 ---
 
+Rotate your view and the bass slides behind you. Zoom in and the particles sharpen while the edges soften. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
+
 What started as a [coding experiment with strange attractors](/blog/lorenz-attractor) is now available as [Chaos Studies](https://fieldbw.com/chaos-studies/) for iOS and macOS. An immersive experience that combines my interests in math, music, and art into a single interactive canvas.
 
 <a href="https://fieldbw.com/chaos-studies/" target="_blank"><img src="/images/chaos-studies/hero.png" alt="Chaos Studies"></a>
@@ -22,7 +24,7 @@ Porting to iOS and macOS meant shedding those healthy constraints. More raw powe
 
 ## Nine Windows into Chaos
 
-The app features nine strange attractors, each with its own character. The iconic Lorenz attractor traces its butterfly wings. Rössler spirals in toroidal bands. Halvorsen exhibits striking symmetry. Chen extends Lorenz into more complex territory. Each attractor required its own tuning—differential equation timestep, zoom range, center point—iterated until it felt right. Fast enough to see the dynamics unfold, slow enough to follow individual particle paths.
+The app features nine strange attractors, each with its own character. The iconic Lorenz is restless, tracing its familiar butterfly wings. Rössler feels meditative, spiraling in toroidal bands. Halvorsen is architectural, exhibiting striking crystalline symmetry. Chen extends Lorenz into more turbulent territory. Each attractor required its own tuning until it felt right. Fast enough to see the dynamics unfold, slow enough to follow individual particle paths.
 
 ## Particles with Memory
 
@@ -30,7 +32,7 @@ Thousands of points trace paths through phase space. Each point starts hot—lit
 
 The recycling strategy took iteration to get right. Early versions replaced points randomly, which looked jittery. The final approach prioritizes replacing the coldest points first, creating smooth visual decay.
 
-Metal handles the rendering with four distinct pipelines: one for the main point cloud, one for a geodesic reference sphere, one for the cursor showing the active integration point, and one for the geometric sphere that appears during the implosion animation. A subtle depth-of-field effect keeps the focal point sharp while the periphery softens, adding dimensionality without distraction.
+Metal handles the rendering across multiple pipelines. A subtle depth-of-field effect keeps the focal point sharp while the periphery softens, adding dimensionality without distraction.
 
 <img src="/images/chaos-studies/iphone.jpeg" alt="Chaos Studies on iPhone" width="400">
 
@@ -57,3 +59,5 @@ Chaos Studies sits at an intersection. It harkens back to creating visceral expe
 ## Try It
 
 Chaos Studies is available on [the App Store](https://fieldbw.com/chaos-studies/) for iPhone, iPad, and Mac. Put on headphones. Manipulate the chaos. Let the sound move around you.
+
+In a world optimized for engagement metrics and endless algorithmic feeds, software that simply asks you to slow down and explore feels like a breath of fresh air.
