@@ -31,5 +31,3 @@ The shape was always there. The old implementation had just obscured it.
 This is what working with malleable material feels like. Clay doesn't resist. You can push it around, see what happens, pull it back if it doesn't work. The cost of exploration drops to nearly zero.
 
 But the discipline remains. Knowing when to stop removing. Recognizing when you've found the essential form. That judgment doesn't come from the AI. It comes from years of craft, applied to a radically different process.
-
-What would your work look like if you started with too much and carved your way to clarity?

@@ -16,7 +16,7 @@ This guide distills shared patterns from the eight most recent posts:
 - Confident but approachable—write as an experienced practitioner sharing lessons.
 - Use direct sentences and avoid fluff; most paragraphs sit at 1–3 sentences.
 - Tension between personal need and broader principle is a recurring hook; bridge from known biases (like momentum) to deeper insight.
-- End with an open question or invitation to reflect whenever it fits.
+- Do not always end with a question. A strong closing statement often works better than a rhetorical question.
 
 ### Structure
 - Front matter follows: title, description, date, slug (optional), tags array, featured flag, `unlisted` when needed.

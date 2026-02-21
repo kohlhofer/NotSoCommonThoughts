@@ -5,6 +5,7 @@ date: 2025-10-15
 tags: ["Artificial Intelligence", "Code", "Reflections"]
 featured: true
 unlisted: false
+useGenerativeThumbnail: true
 ---
 There's a narrative emerging around Apple's new liquid glass and similar interfaces: that **UIs are becoming ephemeral**, floating at the periphery, appearing only when needed and fading away when done. It's a compelling vision of unobtrusive design. But it misses the deeper shift.
 

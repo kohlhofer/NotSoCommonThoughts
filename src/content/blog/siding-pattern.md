@@ -4,6 +4,7 @@ description: "How I used code to create a natural-looking random pattern for boa
 date: 2025-01-19
 slug: siding-pattern
 tags: ["Design","Code", "Projects"]
+useGenerativeThumbnail: true
 ---
 
 I always wanted to build a house and had a life long fascination with architecture. When the opportunity finally came to build our own home, I found myself facing an interesting challenge: I wanted to create something more interesting than the traditional board and batten siding pattern, while still using the cost-effective fiber cement panels that are standard in modern construction. The goal was to create a pattern that would look natural and random while meeting the specific structural requirements of these practical, durable materials.

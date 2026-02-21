@@ -5,6 +5,7 @@ date: 2025-11-11
 tags: ["Design", "Reflections"]
 featured: false
 image: "/images/scifi.png"
+useGenerativeThumbnail: true
 ---
 
 The best science fiction worlds feel inevitable. Not because they're familiar, but because they're coherent. Pick one impossible thing—teleportation, immortality, telepathy—and trace every consequence. The world builds itself from that single change.
