@@ -12,7 +12,7 @@ The process feels closer to sculpting than construction.
 
 ## Starting with Clay
 
-You give the AI context. Lots of it. The problem space, the constraints, examples of what you're after. It generates something fairly complete. Not perfect, but substantial. A block of marble with a figure somewhere inside.
+[You give the AI context. Lots of it.](/blog/2026-02-21-context-repository) The problem space, the constraints, examples of what you're after. It generates something fairly complete. Not perfect, but substantial. A block of marble with a figure somewhere inside.
 
 Then the real work begins. Not adding more, but removing. Stripping unnecessary UI elements. Tightening the interaction until it feels inevitable. **You're not building toward a vision. You're revealing it.**
 
