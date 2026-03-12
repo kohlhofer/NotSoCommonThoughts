@@ -22,7 +22,7 @@ Ideas need time to breathe. They need to arrive half-formed and sit for a while.
 
 For the record: this is not about whispering to the AI. Voice-as-input for AI has its own merits and is widely popular with developers. This is something different.
 
-Voice recording is new for me as a thinking tool. I've always been a writer—capture everything in text, process it, turn it into something. But I've noticed that the act of typing pulls me into editing mode. I start structuring before the thought is fully formed. The tool imposes its own pace.
+Voice recording is new for me as a thinking tool. I've always been a writer—capture everything in text, process it, turn it into something. But I've noticed that the act of typing pulls me into editing mode. I start structuring before the thought is fully formed. The tool imposes its own pace. (Even [seeing words transcribed in real time](/blog/2026-03-11-dont-watch-the-words) has the same effect.)
 
 Speaking is different. When I record a thought, I'm not organizing it. I'm not formatting it. I'm just externalizing it—getting it out of my head and into the world before my internal editor can intervene. The capture happens at the speed of thinking, not the speed of processing.
 
@@ -40,7 +40,7 @@ The immediate feedback loop that makes AI so powerful is exactly what makes it e
 
 What I'm describing is an intentionally async relationship with AI. Capture now. Let the machine process on its own time. Think at human speed, and let AI do its thing—but on your terms, not its.
 
-This isn't about rejecting AI. It's about refusing to let it set the pace. The capture layer should be calm, immediate, low-friction. No screens if possible. No feedback loops. Just: record the signal.
+I'm not rejecting AI. I'm refusing to let it set the pace. The capture layer should be calm, immediate, low-friction. No screens if possible. No feedback loops. Just: record the signal.
 
 The processing layer can be as sophisticated as it needs to be. Transcription. Summarization. Organization. Integration with the tools you already use. All of it can happen—just without demanding your presence or attention. You don't need to be in the loop for the machine to do its work.
 

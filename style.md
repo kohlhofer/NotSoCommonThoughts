@@ -46,6 +46,16 @@ This guide distills shared patterns from the eight most recent posts:
 - Maintain conversational clarity—jargon is fine when contextualized.
 - Avoid filler transitions; let bold statements open sections.
 
+### Banned Phrases
+Do not use these. They are cliché, performative, or both:
+- "doing the heavy lifting"
+- "the real question is"
+- "here's the thing nobody is talking about"
+- "that's the real story"
+- "what most people miss"
+- "this is where it gets interesting"
+- "it's not about ___, it's about ___"
+
 ### Images & Media
 - Place hero images near the top if they anchor the story; supplement deeper in the post when supporting details.
 - Use captions implicitly via surrounding text—no standalone caption format observed.
