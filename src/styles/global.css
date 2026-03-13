@@ -83,6 +83,11 @@ body {
   font-weight: 400;
 }
 
+.prose strong {
+  font-weight: 500;
+  color: inherit;
+}
+
 .font-outfit {
   font-family: 'Outfit', sans-serif;
 }

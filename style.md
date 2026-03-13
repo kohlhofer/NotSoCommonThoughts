@@ -56,6 +56,15 @@ Do not use these. They are cliché, performative, or both:
 - "this is where it gets interesting"
 - "it's not about ___, it's about ___"
 
+### Banned Patterns
+Avoid framing sentences that announce a point instead of making it. These read as styled platitudes:
+- "The choice comes down to…"
+- "The discipline here is…"
+- "This is what X looks like."
+- "The key takeaway is…"
+- "The bottom line is…"
+Just state the thing directly. If a sentence starts by labeling what it's about to say, cut the label.
+
 ### Images & Media
 - Place hero images near the top if they anchor the story; supplement deeper in the post when supporting details.
 - Use captions implicitly via surrounding text—no standalone caption format observed.
