@@ -16,7 +16,7 @@ I've [written about this before](/blog/2026-03-11-capture-at-human-speed)—the 
 
 But that same feedback loop becomes a superpower when it's focused. Five or six agents working different angles of the same problem, all returning results you can absorb because they're all about the one thing you're locked into. You don't context-switch. You stay in the zone. The speed that was exhausting across many topics becomes energizing within one.
 
-This is the difference between **collaboration** and **delegation**. And recognizing which mode you're in changes everything.
+This is the difference between **collaboration** and **delegation**.
 
 ## Collaboration Means Staying in the Loop
 
@@ -46,4 +46,4 @@ Judgment, taste, synthesis across ambiguous constraints—those demand collabora
 
 Well-defined, context-rich work that doesn't require real-time decisions—delegate it. Break the loop. Let it run. Spend your attention elsewhere.
 
-The same mechanism that makes AI exhausting is what makes it powerful. The difference is whether you're riding the feedback loop or being pulled apart by six of them at once.
+The difference is whether you're riding the feedback loop or being pulled apart by six of them at once.
