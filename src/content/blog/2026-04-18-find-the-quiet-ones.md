@@ -16,4 +16,3 @@ This is a much better use of your time. A single conversation with someone who s
 
 And once you start looking for this in your own environment, you find the quiet ones. People who don't post about their process. People who don't optimize in public. They just do consistently excellent work, and nobody is writing threads about them because they're too busy being good at what they do.
 
-They're usually drowned out by the noise. But they're there.
