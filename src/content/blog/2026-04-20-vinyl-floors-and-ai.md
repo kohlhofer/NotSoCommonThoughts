@@ -6,7 +6,7 @@ tags: ["Design", "Artificial Intelligence", "Reflections"]
 featured: false
 ---
 
-It took me some time to figure out why most modern houses feel off. Not modernist houses — those tend to be honest about what they are. I mean the standard new-build suburban home. Everything looks fine. Clean lines, neutral tones, nothing obviously wrong. But you walk in and something doesn't sit right.
+Most modern houses feel off. Not modernist houses — those tend to be honest about what they are. I mean the standard new-build suburban home. Everything looks fine. Clean lines, neutral tones, nothing obviously wrong. But you walk in and something doesn't sit right.
 
 The materials are lying.
 
@@ -21,7 +21,5 @@ AI can produce text, code, designs that look structurally correct. The format is
 Not always. When grounded in real context and directed by someone who knows what they're after, AI produces genuine work. But left to its defaults, it produces the equivalent of a model home: everything in its place, nothing out of place, and nothing that feels like anyone actually lives there.
 
 The tell is the same in both cases. You can't always point to the specific thing that's wrong. You just feel it. The coherence is missing — that quality of a thing being what it actually is, all the way through.
-
-When I [built our house](/blog/siding-pattern), I spent hours getting the siding pattern right. Real materials, real constraints, real decisions about how things meet and age. That attention to authenticity is the same thing that separates AI work that lands from AI work that just fills space.
 
 Use real materials. In houses and in everything else.
