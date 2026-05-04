@@ -194,11 +194,11 @@
       "$value": {
         "colorSpace": "srgb",
         "components": [
-          0.008,
-          0.518,
-          0.78
+          0.027,
+          0.349,
+          0.522
         ],
-        "hex": "#0284c7"
+        "hex": "#075985"
       }
     },
     "prose-link-dark": {

@@ -34,7 +34,7 @@ body {
 }
 
 .prose a {
-  @apply text-primary-600 dark:text-primary-400;
+  @apply text-primary-800 dark:text-primary-400;
 }
 
 /* Code block styles */
@@ -47,7 +47,7 @@ body {
 }
 
 .prose code {
-  @apply text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded;
+  @apply text-primary-800 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded;
 }
 
 /* Table styles */

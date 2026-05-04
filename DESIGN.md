@@ -36,7 +36,7 @@ colors:
 
   # Prose accent — sky blue, used for prose links and inline code only.
   # Currently residual from the Tailwind config "primary" scale; see "Don'ts".
-  prose-link-light: "#0284c7"
+  prose-link-light: "#075985"
   prose-link-dark: "#38bdf8"
 
 typography:
