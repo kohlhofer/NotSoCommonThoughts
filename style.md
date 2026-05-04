@@ -1,3 +1,5 @@
+> **Companion document:** [`DESIGN.md`](./DESIGN.md) at the repo root is the canonical source for the *visual* identity (colors, typography, components). This file covers *writing* voice and structure only.
+
 ## Not So Common Thoughts — Writing Style Guide (Derived Oct 14, 2025)
 
 This guide distills shared patterns from the eight most recent posts:

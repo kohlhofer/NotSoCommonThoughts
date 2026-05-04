@@ -4,9 +4,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "npm run design:lint",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "design:lint": "design.md lint DESIGN.md",
+    "design:export": "design.md export --format dtcg DESIGN.md > design.tokens.json && design.md export --format tailwind DESIGN.md > tailwind.theme.json"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",
@@ -22,6 +25,7 @@
     "vite-plugin-compression": "^0.5.1"
   },
   "devDependencies": {
+    "@google/design.md": "^0.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
