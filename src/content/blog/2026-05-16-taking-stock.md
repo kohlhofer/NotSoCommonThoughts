@@ -4,7 +4,6 @@ description: "A renewal notice marked a year of writing here and on LinkedIn. A 
 date: 2026-05-16
 tags: ["Reflections", "Projects"]
 featured: false
-unlisted: true
 ---
 
 A domain renewal notice for ~~Not So~~ Common Thoughts landed in my inbox. It marked a year since I started [posting here](/blog/about-this-site/), so I took a moment to look at the numbers and reflect on the year behind them.
