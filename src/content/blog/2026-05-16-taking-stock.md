@@ -11,7 +11,7 @@ A domain renewal notice for ~~Not So~~ Common Thoughts landed in my inbox. It ma
 
 Over the year the blog drew 21,223 readers and 34,589 page views across forty-four posts. A few of those posts drew an outsized readership. [An essay on AI and judgement](/blog/ai-and-judgement) caught the Hacker News front page and ran away with it for a weekend. The rest settle into a steady trickle, that essay still drawing a few a year later.
 
-I started putting some thoughts on LinkedIn around the same time. Fifty-one posts there over the same window, 101,795 impressions in total. Same shape as the blog. A handful outran everything else ([one on hiring designers](/blog/2025-10-14-hiring-designers-judgment), a couple on working with AI), then a long run of posts still pulling a thousand or two each before the tail thins out below that.
+I started putting some thoughts on LinkedIn around the same time. Fifty-one posts there over the same window, 101,795 impressions in total. Same shape as the blog. A handful outran everything else ([one on hiring designers](/blog/hiring-designers-judgment/), a couple on working with AI), then a long run of posts still pulling a thousand or two each before the tail thins out below that.
 
 | The year | May 16, 2025 → May 16, 2026 |
 |---|---|
