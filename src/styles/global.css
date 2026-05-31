@@ -60,7 +60,9 @@ body {
    Long-form reading set in Inter (matching the kohlhofer essays),
    terracotta links, warm code tiles. The sky-blue scale is retired. */
 .prose {
-  @apply max-w-none;
+  /* Width is controlled by the article wrapper (max-w-2xl); the typography
+     plugin's own max-width is neutralized in tailwind.config. Do NOT re-add
+     max-width here — this rule is unlayered and would override the utility. */
   color: var(--fg);
   font-size: 1.1875rem;
   line-height: 1.65;
