@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '../utils';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -12,11 +11,9 @@ const { title, description, image, useGenerativeThumbnail } = post.data;
 // If useGenerativeThumbnail is true, we never show an image
 let postImage = null;
 if (!useGenerativeThumbnail) {
-  // Try to get image from frontmatter first
   if (image) {
     postImage = image;
   } else {
-    // Try to find first actual image in content
     const imageMatch = post.body.match(/!\[.*?\]\((.*?)\)/);
     if (imageMatch) {
       postImage = imageMatch[1];
@@ -25,47 +22,38 @@ if (!useGenerativeThumbnail) {
 }
 ---
 
-<div class="text-center mb-6">
-  <span class="text-sm font-medium text-red-600 dark:text-red-400">
-    Featured Post
-  </span>
-</div>
+<article>
+  <p class="eyebrow mb-4 text-accent">Featured</p>
 
-<div class={`grid grid-cols-1 ${postImage ? 'sm:grid-cols-[1fr_2fr]' : ''} gap-12`}>
-  {postImage && (
-    <!-- Image Column -->
+  <div class={`grid grid-cols-1 ${postImage ? 'sm:grid-cols-[2fr_1fr] sm:gap-10' : ''} gap-6 items-start`}>
     <div>
-      <a href={`/blog/${post.slug}/`} class="block group">
-        <div class="overflow-hidden rounded">
-          <img
-            src={postImage}
-            alt={title}
-            class="w-full h-auto transition-transform group-hover:scale-105"
-          />
-        </div>
+      <a href={`/blog/${post.slug}/`} class="group block">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight leading-tight text-ink group-hover:text-accent transition-colors text-balance">
+          {title}
+        </h2>
       </a>
-    </div>
-  )}
 
-  <!-- Content Column -->
-  <div>
-    <a href={`/blog/${post.slug}/`} class="group">
-      <h2 class="text-3xl font-serif text-slate-900 dark:text-slate-100 mb-4 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
-        {title}
-      </h2>
-    </a>
-    
-    <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">
-      {description}
-    </p>
-    
-    <div>
-      <a 
-        href={`/blog/${post.slug}/`} 
-        class="inline-flex items-center px-5 py-2.5 text-base font-medium text-white bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 rounded-lg transition-colors"
+      <p class="mt-4 text-lg leading-relaxed text-muted">
+        {description}
+      </p>
+
+      <a
+        href={`/blog/${post.slug}/`}
+        class="group mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-strong transition-colors"
       >
         Read post
+        <svg class="doorway-arrow w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
       </a>
     </div>
+
+    {postImage && (
+      <a href={`/blog/${post.slug}/`} class="block overflow-hidden rounded-lg">
+        <img
+          src={postImage}
+          alt={title}
+          class="w-full h-auto"
+        />
+      </a>
+    )}
   </div>
-</div> 
+</article>

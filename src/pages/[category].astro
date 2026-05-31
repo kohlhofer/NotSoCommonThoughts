@@ -6,19 +6,15 @@ import FeaturedPost from '../components/FeaturedPost.astro';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
-  // Get all unique tags from all posts
   const categories = [...new Set(posts.flatMap(post => post.data.tags || ['uncategorized']))];
-  
+
   return categories.map(category => {
-    // Include posts that have this tag anywhere in their tags array
-    const categoryPosts = posts.filter(post => 
+    const categoryPosts = posts.filter(post =>
       (post.data.tags || ['uncategorized']).includes(category)
     );
     const sortedPosts = categoryPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-    
-    // Get latest featured post for this category
     const latestFeaturedPost = sortedPosts.find(post => post.data.featured);
-    
+
     return {
       params: { category },
       props: { posts: sortedPosts, category, latestFeaturedPost }
@@ -34,36 +30,34 @@ const categoryName = category
 ---
 
 <Layout title="Not So Common Thoughts">
-  <!-- Category Header -->
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8 sm:mb-16">
-      <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4">
+  <div class="w-full max-w-2xl mx-auto">
+    <!-- Category Header -->
+    <header class="pt-8 sm:pt-12 pb-10 sm:pb-12">
+      <p class="eyebrow mb-4">Category</p>
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-ink">
         {categoryName}
       </h1>
-      <p class="text-slate-600 dark:text-slate-400 text-lg">
-        {posts.length} post{posts.length === 1 ? '' : 's'} in this category
+      <p class="mt-4 text-muted">
+        {posts.length} post{posts.length === 1 ? '' : 's'}
       </p>
-    </div>
-  </div>
+    </header>
 
-  {latestFeaturedPost && (
-    <div class="w-full max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="bg-slate-50 dark:bg-[#1a1f2e] rounded-lg py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    {latestFeaturedPost && (
+      <div class="border-t border-line pt-12 sm:pt-14">
         <FeaturedPost post={latestFeaturedPost} />
       </div>
-    </div>
-  )}
+    )}
 
-  <!-- Posts List -->
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-12 sm:mb-16">
-    <div class="max-w-2xl mx-auto">
-      <div class="space-y-6 sm:space-y-8">
+    <!-- Posts List -->
+    <section class="border-t border-line mt-12 sm:mt-14 pt-10 pb-8">
+      <p class="eyebrow mb-8">Posts</p>
+      <div class="space-y-10 sm:space-y-12">
         {posts
           .filter(post => post.slug !== latestFeaturedPost?.slug)
           .map(post => (
             <PostListItem post={post} />
           ))}
       </div>
-    </div>
+    </section>
   </div>
-</Layout> 
+</Layout>

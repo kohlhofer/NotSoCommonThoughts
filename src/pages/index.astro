@@ -15,45 +15,34 @@ const latestFeaturedPost = posts.find(post => post.data.featured);
 ---
 
 <Layout title="Not So Common Thoughts">
-  <!-- Hero Section -->
-  <div class="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
-    <div class="text-center mb-8 sm:mb-16">
-      <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-slate-100 mb-4 sm:mb-6">
-        <span class="line-through">Not So</span> Common Thoughts
-      </h1>
-      <blockquote class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-serif italic max-w-3xl mx-auto">
-        "The question then is, 'Of all the things you can now do, which do you choose to do?'"
-      </blockquote>
-      <p class="text-sm text-slate-500 dark:text-slate-500 mt-4">
-        — Brian Eno
+  <div class="w-full max-w-2xl mx-auto">
+    <!-- Hero -->
+    <header class="pt-8 sm:pt-12 pb-12 sm:pb-16">
+      <p class="eyebrow mb-5">
+        <s class="text-subtle">Not So</s> Common Thoughts
       </p>
-    </div>
-  </div>
+      <blockquote class="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold tracking-tight leading-[1.1] text-balance text-ink">
+        “The question then is, ‘Of all the things you can now do, which do you choose to do?’”
+      </blockquote>
+      <p class="mt-6 text-sm text-muted">— Brian Eno</p>
+    </header>
 
-  {latestFeaturedPost && (
-    <div class="w-full max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="bg-slate-50 dark:bg-[#1a1f2e] rounded-lg py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    {latestFeaturedPost && (
+      <div class="border-t border-line pt-12 sm:pt-14">
         <FeaturedPost post={latestFeaturedPost} />
       </div>
-    </div>
-  )}
+    )}
 
-  <!-- Posts List -->
-  <div class="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 mt-12 mb-12 sm:mb-16">
-    <div class="w-full max-w-3xl mx-auto">
-      <div class="space-y-6 sm:space-y-12">
+    <!-- Posts List -->
+    <section class="border-t border-line mt-12 sm:mt-14 pt-10 pb-8">
+      <p class="eyebrow mb-8">Writing</p>
+      <div class="space-y-10 sm:space-y-12">
         {posts
           .filter(post => post.slug !== latestFeaturedPost?.slug)
           .map((post: CollectionEntry<'blog'>) => (
             <PostListItem post={post} />
           ))}
       </div>
-    </div>
+    </section>
   </div>
 </Layout>
-
-<style>
-  .bg-grid-white {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-  }
-</style>
