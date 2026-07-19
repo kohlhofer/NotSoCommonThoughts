@@ -36,6 +36,11 @@ const searchablePosts = posts.map(post => ({
 // Get current path for highlighting active link
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/';
+
+// Declared canonical. The Search Console property is `sc-domain:`, so it covers
+// both protocols and www/non-www — without this, Google picks a canonical per
+// page on its own and can split signals across variants.
+const canonicalURL = new URL(currentPath, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -46,6 +51,7 @@ const isHome = currentPath === '/';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <!-- Self-hosted Inter -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-variable.woff2" crossorigin />
