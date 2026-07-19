@@ -27,9 +27,18 @@ const categoryName = category
   .split('-')
   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
   .join(' ');
+
+// Every category page used to share the site-wide title and description, so a
+// search result for any of them read "Not So Common Thoughts" with a generic
+// blurb — nothing identifying which archive it was. Search Console had these
+// ranking as high as position 3 with a 0% click-through.
+const pageTitle = `${categoryName} - NSCT`;
+const pageDescription =
+  `Writing on ${categoryName} — ${posts.length} post${posts.length === 1 ? '' : 's'} ` +
+  `by A. Kohlhofer on design, technology, and the human side of creative work.`;
 ---
 
-<Layout title="Not So Common Thoughts">
+<Layout title={pageTitle} description={pageDescription}>
   <div class="w-full max-w-2xl mx-auto">
     <!-- Category Header -->
     <header class="pt-8 sm:pt-12 pb-10 sm:pb-12">
