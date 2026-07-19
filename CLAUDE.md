@@ -1,6 +1,8 @@
 # Not So Common Thoughts
 
-Personal blog by A. Kohlhofer, built with Astro 5 + Tailwind v3, deployed on Vercel.
+Personal blog by A. Kohlhofer, built with Astro 5 + Tailwind v3, deployed to **GitHub Pages** via `.github/workflows/deploy.yml` on push to `main`. The custom domain comes from `public/CNAME`.
+
+> Note: `astro.config.mjs` still loads the `@astrojs/vercel` adapter, but nothing is served from Vercel — DNS points at GitHub Pages and the adapter only does dead work each build. Removing it is safe but untested.
 
 ## Design System
 
@@ -24,4 +26,16 @@ The brand currently has two accent colors: **red-400** for site chrome (sidebar,
 
 ## Build
 
-`npm run build` runs the design lint first (via `prebuild`), then `astro build`. A failing lint blocks the build — both locally and on Vercel.
+`npm run build` runs the design lint first (via `prebuild`), then `astro build`. A failing lint blocks the build — both locally and in the GitHub Pages deploy workflow.
+
+## Search Console
+
+`scripts/gsc.mjs` reads Google Search Console for this property. Zero dependencies (Node's built-in `fetch` + `crypto`), authenticated by a service account whose key lives at `~/.config/nsct-gsc/key.json` — outside the repo, never committed. `.gsc-site` pins the property.
+
+```
+node scripts/gsc.mjs query --dim page      # what's ranking
+node scripts/gsc.mjs inspect <url>         # why a page is or isn't indexed
+node scripts/gsc.mjs sitemaps              # submitted sitemap health
+```
+
+The API's only writes are sitemap submit/delete. Indexing requests, removals, and disavow are UI-only — real fixes belong in this repo (canonical tags, structured data, redirects, content).
