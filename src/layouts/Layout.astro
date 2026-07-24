@@ -5,11 +5,16 @@ import { getCollection } from 'astro:content';
 interface Props {
   title: string;
   description?: string;
+  // Absolute or root-relative path to a share image. Post pages pass their own;
+  // everything else falls back to the branded default card.
+  image?: string;
+  // 'article' for posts, 'website' for everything else — drives og:type.
+  ogType?: 'website' | 'article';
 }
 
 const SITE_DESCRIPTION = 'A personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making.';
 
-const { title, description = SITE_DESCRIPTION } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image, ogType = 'website' } = Astro.props;
 
 // Get all categories from posts
 const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
@@ -41,6 +46,14 @@ const isHome = currentPath === '/';
 // both protocols and www/non-www — without this, Google picks a canonical per
 // page on its own and can split signals across variants.
 const canonicalURL = new URL(currentPath, Astro.site);
+
+// Share image: the page's own if it has one, otherwise the branded default
+// card at public/images/og-default.png. Resolved to an absolute URL because
+// Open Graph scrapers do not follow root-relative paths. Only the default
+// card has known dimensions — a per-post image is left for scrapers to
+// measure rather than asserting a size that might be wrong.
+const usingDefaultOgImage = !image;
+const ogImageURL = new URL(image ?? '/images/og-default.png', Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -52,6 +65,24 @@ const canonicalURL = new URL(currentPath, Astro.site);
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph — the site emitted none, so every share rendered as a bare link -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Not So Common Thoughts" />
+    <meta property="og:image" content={ogImageURL} />
+    {usingDefaultOgImage && <meta property="og:image:width" content="1200" />}
+    {usingDefaultOgImage && <meta property="og:image:height" content="630" />}
+    <meta property="og:image:alt" content={title} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
     <title>{title}</title>
     <!-- Self-hosted Inter -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-variable.woff2" crossorigin />

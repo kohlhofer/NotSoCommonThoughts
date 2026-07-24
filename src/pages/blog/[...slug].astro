@@ -16,6 +16,15 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
+// Share image, mirroring how PostListItem derives a thumbnail: the frontmatter
+// image, else the first inline image in the body, else the branded default the
+// Layout falls back to. Generative-thumbnail posts have no static image, so
+// they use the default too.
+const firstInlineImage = post.body.match(/!\[.*?\]\((.*?)\)/)?.[1];
+const ogImage = post.data.useGenerativeThumbnail
+  ? undefined
+  : post.data.image ?? firstInlineImage;
+
 // Get all categories from tags
 const categories = post.data.tags || [];
 
@@ -30,7 +39,7 @@ const relatedPosts = allPosts
   .slice(0, 4);
 ---
 
-<Layout title={`${post.data.title} - NSCT`} description={post.data.description}>
+<Layout title={`${post.data.title} - NSCT`} description={post.data.description} image={ogImage} ogType="article">
   <!-- Post header -->
   <BlogHero post={post} />
 
