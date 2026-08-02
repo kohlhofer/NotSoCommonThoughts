@@ -53,6 +53,6 @@ It's a statement about how we interact with digital media. It's about slowing do
 
 The cassette metaphor works because it's universal—everyone understands the concept of a mixtape, the care that goes into selecting tracks, the personal nature of sharing music and the literal linearity of tape. 
 
-Rock or Pop? is live at [rockorpop.com](https://rockorpop.com). Try making your own mixtape and share it with someone who matters.
+Rock or Pop? is live at [rockorpop.com](https://rockorpop.com). Try making your own mixtape and share it with someone who matters. There's a fuller write-up over at [Field Bureau + Werkstatt](https://fieldbw.com/rock-or-pop/), alongside the [documentation](https://fieldbw.com/docs/rock-or-pop/getting-started).
 
 What's your cassette aesthetic? Are you a classic TDK person, or do you prefer the neon vibes?
