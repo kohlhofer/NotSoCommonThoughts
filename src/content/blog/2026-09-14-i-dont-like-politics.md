@@ -1,5 +1,5 @@
 ---
-title: "I Don't Like Politics"
+title: "I Don't Like Office Politics"
 description: "A leader once called my younger self an idiot for saying I didn't like politics. A lesson ensued."
 date: 2026-09-14
 tags: ["Leadership", "Reflections"]
