@@ -39,7 +39,7 @@ const relatedPosts = allPosts
   .slice(0, 4);
 ---
 
-<Layout title={`${post.data.title} - NSCT`} description={post.data.description} image={ogImage} ogType="article">
+<Layout title={`${post.data.title} - NSCT`} description={post.data.description} image={ogImage} ogType="article" noindex={post.data.unlisted}>
   <!-- Post header -->
   <BlogHero post={post} />
 
