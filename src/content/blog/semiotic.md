@@ -4,7 +4,7 @@ description: "Four-colour e-ink can't show photos, so I gave a PicPak frame new 
 date: 2026-09-14
 slug: semiotic
 tags: ["Projects", "Design", "Code", "Hardware"]
-image: /images/semiotic/mode-5.png
+image: /images/semiotic/device.jpg
 unlisted: true
 ---
 
@@ -16,9 +16,7 @@ Colour e-ink draws flat colour well and mixed colour badly. A photograph comes o
 
 I kept the panel and went looking for something it is good at.
 
-<!-- placeholder for the photo of the device: add public/images/semiotic/device.jpg, then uncomment
-![The PicPak frame running Semiotic](/images/semiotic/device.jpg)
--->
+![The PicPak frame on a wall, running Semiotic's Atmospheric Conditions screen: a yellow thermal placard, 86 degrees, and the next twelve hours as a row of hazard signs](/images/semiotic/device.jpg)
 
 ## Taking It Over
 
