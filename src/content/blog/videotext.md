@@ -1,11 +1,10 @@
 ---
 title: "Videotext: An E-Paper Wall Anyone Can Write To"
 description: "A teletext-style e-paper wall my family and my agents can put a page on, and why a slow, flat-colour panel and a format from 1984 suit each other."
-date: 2026-09-14
+date: 2026-09-15
 slug: videotext
 tags: ["Projects", "Design", "Code", "Hardware"]
 image: /images/videotext/screen-dark.png
-unlisted: true
 ---
 
 There is a small e-paper display on our wall now that looks like videotext from 1984. It shows one page at a time, big letters, seven colours, and it takes half a minute to change. Anyone in the house can put a page on it, and so can my coding agents. Building it was fun, living with it feels good, and the family likes it too. Most of that comes down to the format.
