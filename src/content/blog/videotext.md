@@ -37,17 +37,23 @@ I chose teletext because its limits are the panel's limits. I like the look too.
 
 I started it to explore the hardware and the videotext idea. Since then it has shown, among other things, the weather, the headlines on a Sunday night, a countdown to the autumn equinox with the sun's path drawn in block characters, a reminder, a notice for whoever comes home next, and a chart someone wanted to look at for a while. Anything that fits on a page of 50 by 18 characters can go up.
 
-The board does all of it on its own. It joins the WiFi and runs its own MCP server and HTTP API, so one `claude mcp add` connects Claude Code, and any other MCP client or a `curl` from a laptop works the same way. Four tools: show a page, preview one, read what's up, clear it. Every call returns a PNG of what the wall will draw, so an agent can check its work before committing to a 30-second refresh.
-
-The format helps the agents as much as the panel. The title is one double-height line, the body is 14 rows, colour carries meaning (red needs a person, yellow is attention, green is fine, blue is information), and the sender chooses words rather than positions. Inside those limits an agent produces a readable page on the first try.
-
 A page survives reboots and power cuts, and if several arrive during a refresh the board draws only the newest once it's done. The wall can't interrupt anyone.
 
 ![A videotext screen titled Sunday night headlines, with a block-character globe beside the top story and eight numbered headlines](/images/videotext/screen-news.png)
 
+## A Standalone MCP Server
+
+There is nothing to run on a computer. The board joins the WiFi and runs its own MCP server and HTTP API, so any agent on the network with the key can use it. One `claude mcp add` connects Claude Code, and other MCP clients or a `curl` from a laptop work the same way. Pressing the button on the side of the board puts the address, the key and that command on the wall.
+
+The first version was a Node relay on a computer serving pages to a board that polled it. It worked, but it meant one more process to keep alive. The second version moved everything onto the board.
+
+An agent learns the layout and markup rules from the MCP server when it connects, so it needs no other setup. Four tools: show a page, preview one, read what's up, clear it. Every call returns a PNG of what the wall will draw, so an agent can check its work before committing to a 30-second refresh.
+
+The format is easy for an agent to write. The title is one double-height line, the body is 14 rows, colour carries meaning (red needs a person, yellow is attention, green is fine, blue is information), and the sender chooses words rather than positions. Inside those limits an agent produces a readable page on the first try.
+
 ## The Build
 
-It's firmware for the [Soldered Inkplate 6COLOR](https://docs.soldered.com/inkplate/6color/overview/), a 600 by 448 panel with an ESP32 behind it, drawn in the [Bedstead](https://bjh21.me.uk/bedstead/) font, which is built on the Mullard SAA5050 character set that drew the original pages. The first version was a Node relay on a computer serving pages to a board that polled it. It worked, but it meant one more process to keep alive. The second version moved everything onto the board. I wrote most of it with Claude Code in three days.
+It's firmware for the [Soldered Inkplate 6COLOR](https://docs.soldered.com/inkplate/6color/overview/), a 600 by 448 panel with an ESP32 behind it, drawn in the [Bedstead](https://bjh21.me.uk/bedstead/) font, which is built on the Mullard SAA5050 character set that drew the original pages. I wrote most of it with Claude Code in three days.
 
 The firmware, the setup guide and a Claude Code skill that tells an agent when the wall is worth using are at [github.com/kohlhofer/inkplate](https://github.com/kohlhofer/inkplate), MIT licensed. It's a personal project, shared as it is for anyone with the same board. Back up your flash before you replace it; the README says how.
 
