@@ -15,17 +15,17 @@ There is a small e-paper display on our wall now that looks like videotext from 
 
 Videotext (Ceefax or Teletext, depending on where you grew up) travelled in the spare lines of the television signal. A page was 24 rows of 40 characters, seven colours plus black, and blocky graphics where a picture was needed. You typed a three-digit page number on the remote and then you waited while the carousel of pages came round to yours. A few seconds, sometimes most of a minute. Then the page sat there until you asked for another.
 
-If you used it, you remember the waiting. I think more now about the people who wrote for it. A page held a few hundred bytes, so the weather page was the weather, the news index was eight headlines, and whoever wrote it had to decide what mattered before typing a word. The grid did the layout for them.
+If you used it, you remember the waiting. I appreciate the limitations of that system and how deliberate you have to be to convey information with it. A page held a few hundred bytes, so the weather page was the weather, the news index was eight headlines, and whoever wrote it had to decide what mattered before typing a word. The grid did the layout for them.
 
 It was slow, it never interrupted, and you went to it when you wanted something.
 
-## The Panel Wants the Same Things
+## A Screen With the Same Limits
 
-Colour e-paper has the same limits. The seven-colour panels take about 30 seconds for a full refresh, flashing through it, and they draw flat colour well and mixed colour badly. A photograph comes out muddy and dithered. A gradient falls apart. Anything designed for a phone looks wrong on them, because everything designed for a phone assumes millions of colours and instant redraws.
+The e-ink display naturally shares the same limitations. The seven-colour panels take about 30 seconds for a full refresh, flashing through it, and they draw flat colour well and mixed colour badly. A photograph comes out muddy and dithered. A gradient falls apart. Anything designed for a phone looks wrong on them, because everything designed for a phone assumes millions of colours and instant redraws.
 
 Most e-ink dashboards shrink a web page onto the panel anyway, muddy photos and all.
 
-Videotext never asks the panel for any of that. Seven flat colours are the palette. Big letters on a fixed grid read from across the room and need no anti-aliasing. Block characters make charts and little pictures line up without blending. A format built around pages that sit still for a while is comfortable on a screen that can only change every half minute. The limits of 1984 and the limits of this panel are close enough that the old format fits the new screen with no adjustment.
+Videotext has none of that. Seven flat colours are the palette. Big letters on a fixed grid read from across the room and need no anti-aliasing. Block characters make charts and little pictures line up without blending. A format built around pages that sit still for a while is comfortable on a screen that can only change every half minute. The limits of 1984 and the limits of this panel are close enough that the old format fits the new screen with no adjustment.
 
 I chose teletext because its limits are the panel's limits. I like the look too.
 
