@@ -446,6 +446,10 @@ Powered by `@tailwindcss/typography`'s `prose`, overridden in `global.css`:
 - `prose strong` → weight 600.
 - `prose blockquote` → muted text, terracotta left border, not italic.
 - `prose table` → hairline borders, zebra rows on `--surface`.
+- `prose img`, `prose video` → full column width, `rounded-lg` (8px). Video carries a poster
+  frame and plays silently on loop; it is a moving illustration, never something to listen to.
+- `prose figure` → no margin of its own beyond the figure's; `figcaption` is `text-sm`, muted,
+  centred under the media, for a caption that adds something the picture cannot say by itself.
 
 ### Footer
 

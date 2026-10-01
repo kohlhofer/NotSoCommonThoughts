@@ -73,8 +73,26 @@ body {
   color: var(--fg);
 }
 
-.prose img {
+.prose img,
+.prose video {
   border-radius: 8px;
+}
+
+.prose video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prose figure {
+  margin: 1.75em 0;
+}
+
+.prose figcaption {
+  margin-top: 0.6em;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--fg-muted);
 }
 
 .prose a {
