@@ -414,6 +414,10 @@ Two flavors. "Common Thoughts" / "COMMON THOUGHTS" in terracotta; "<s>Not So</s>
 
 The strikethrough is **part of the brand**. Never display "Not So" un-struck.
 
+### Favicon
+
+The canonical wordmark reduced to its initials: "CT" in Inter 700 at `-0.03em`, paper (`#f9f9f7`) on a terracotta (`#c8502d`) tile. The glyphs are outlined paths, since an SVG favicon cannot load web fonts. The tile carries its own contrast, so one icon serves light and dark tab bars without a media query. The strikethrough is left out on purpose because it does not survive at 16px: a struck "C" reads as a euro sign. `favicon.svg` uses a 7/32 corner radius; `apple-touch-icon.png` is full bleed because iOS applies its own mask; `favicon.ico` (16 + 32) covers crawlers and old browsers.
+
 ### Sidebar
 
 Fixed right, `w-64`, `bg-paper`, `border-l border-line`, `p-8 pt-16`. Off-canvas by default; slides in with `translate-x-full → translate-x-0` over 200ms. Closes on outside click, on link click, and on Escape. Contains: stacked wordmark, search input (transparent with terracotta bottom-border on focus), an "Categories" eyebrow + category nav, theme toggle, random-post button.
