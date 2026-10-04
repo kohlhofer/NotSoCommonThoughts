@@ -47,10 +47,16 @@ typography:
     letterSpacing: "-0.01em"
   statement:
     fontFamily: Inter
-    fontSize: 2.75rem
+    fontSize: 3.25rem
     fontWeight: "600"
-    lineHeight: "1.1"
-    letterSpacing: "-0.025em"
+    lineHeight: "1.05"
+    letterSpacing: "-0.03em"
+  kicker:
+    fontFamily: Inter
+    fontSize: 1.25rem
+    fontWeight: "400"
+    lineHeight: "1.4"
+    letterSpacing: "-0.01em"
   title:
     fontFamily: Inter
     fontSize: 3rem
@@ -159,6 +165,18 @@ components:
   statement:
     textColor: "{colors.on-light}"
     typography: "{typography.statement}"
+
+  hero-kicker:
+    textColor: "{colors.on-light-muted}"
+    typography: "{typography.kicker}"
+
+  hero-band-light:
+    backgroundColor: "{colors.surface-light}"
+    textColor: "{colors.on-light}"
+
+  hero-band-dark:
+    backgroundColor: "{colors.surface-dark}"
+    textColor: "{colors.on-dark}"
 
   eyebrow-label:
     textColor: "{colors.on-light-muted}"
@@ -351,7 +369,7 @@ The palette is built on a **warm neutral** ramp and a single **terracotta** acce
 - **On-*-subtle (`#8a8a85` / `#8a8a88`)** — Dates, counts, the struck "Not So", the faintest metadata.
 - **Accent (`#c8502d` light / `#ec8a5f` dark)** — The single accent. Wordmark "Common Thoughts", the strikethrough, prose links, inline code, category active/hover, "Read post →", footer dot-bullets, CTA fill. Terracotta is the brand voice.
 - **Accent-strong (`#a8431f` / `#f0a07e`)** — Hover state on already-accented elements (and the CTA hover fill).
-- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results.
+- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results, and the home hero band.
 - **Dividers (`#e3e2dc` / `#2a2a28`)** — The hairline rules that separate hero, featured, list, and footer. Structure comes from these 1px lines, not from boxes.
 
 The implementation uses CSS custom properties (`--bg`, `--fg`, `--fg-muted`, `--accent`, `--border`, …) defined in `global.css` and flipped under `.dark`. Tailwind exposes them as semantic color tokens (`paper`, `ink`, `muted`, `subtle`, `accent`, `accent-strong`, `line`, `surface`), so components use `text-ink` / `bg-paper` / `text-accent` and stay theme-aware without `dark:` variants.
@@ -364,7 +382,8 @@ One self-hosted variable face does all the work: **Inter**, preloaded as `inter-
 
 - Body and prose: weight 400, comfortable line-height (1.6 chrome / 1.65 prose). Prose is set at `1.1875rem`, matching the kohlhofer essays.
 - Headings (`h1`–`h6`, and prose headings): weight 600 with tight tracking (`-0.015em` to `-0.025em`). Size and tracking carry the hierarchy.
-- Display statements (home hero, post titles): weight 600, `-0.025em` tracking, `text-balance`, line-height ~1.1.
+- Display statements: weight 600, `text-balance`. Post titles use `-0.025em` tracking and line-height ~1.1; the home hero question is a size up (`3.25rem` on large screens) with `-0.03em` tracking and line-height 1.05.
+- Kicker: the muted `1.25rem` weight-400 line that leads into the home hero statement. Never thin weights for display: weights below 400 read as condensed hairlines at display sizes.
 - Inline `<strong>`: weight 600.
 - Links: terracotta, underlined at `3px` offset / `1px` thickness, thickening to `2px` on hover. Chrome links shift color only.
 - Wordmark: weight 700. "Common Thoughts" in terracotta; "Not So" struck through in subtle neutral. The compact form (top-left) is one line; the canonical form (sidebar) stacks "COMMON / THOUGHTS" in bold uppercase.
@@ -383,10 +402,10 @@ The site keeps its **off-canvas right sidebar** for navigation, search, theme to
 - **Page gutters** — `px-4` mobile, `px-8` small and up.
 - **Top padding** — `pt-20` mobile, `pt-24` desktop. A consistent breath below the fixed top-left wordmark.
 - **Sidebar** — Fixed `w-64` on the right, `bg-paper` with a `border-l border-line`, off-screen by default (`translate-x-full`), slides in over the content. The menu button (top-right) is the entry point.
-- **Hero** — Pure typography. The home page opens with an eyebrow wordmark and the Brian Eno epigraph set as a large balanced statement — no illustration. (The former prime-number illustration has been retired.)
+- **Hero** — Pure typography. The home page opens with the Brian Eno epigraph split in two: the lead-in "The question then is," as a muted kicker, and the question itself as the page's headline in the statement style, attributed with an eyebrow label. It sits on a flat `surface` band that runs edge to edge from the top of the page, behind the wordmark, so it reads as the site's masthead rather than as a post. No illustration. (The former prime-number illustration has been retired.)
 - **Footer** — Theme-aware paper with a `border-t border-line`. Three columns on desktop: a copyright line, an "Explore" list with terracotta dot-bullets, and a "Feeds & Data" list.
 
-There are no gradients, no background washes, and no decorative imagery in the chrome.
+There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the home hero band: flat `surface`, full width, home page only.
 
 ## Elevation & Depth
 

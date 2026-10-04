@@ -31,6 +31,9 @@
         "statement": [
           "Inter"
         ],
+        "kicker": [
+          "Inter"
+        ],
         "title": [
           "Inter"
         ],
@@ -75,11 +78,19 @@
           }
         ],
         "statement": [
-          "2.75rem",
+          "3.25rem",
           {
-            "lineHeight": "1.1",
-            "letterSpacing": "-0.025em",
+            "lineHeight": "1.05",
+            "letterSpacing": "-0.03em",
             "fontWeight": "600"
+          }
+        ],
+        "kicker": [
+          "1.25rem",
+          {
+            "lineHeight": "1.4",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "400"
           }
         ],
         "title": [

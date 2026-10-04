@@ -15,17 +15,24 @@ const latestFeaturedPost = posts.find(post => post.data.featured);
 ---
 
 <Layout title="Not So Common Thoughts">
-  <div class="w-full max-w-2xl mx-auto">
-    <!-- Hero -->
-    <header class="pt-8 sm:pt-12 pb-12 sm:pb-16">
-      <blockquote class="text-[1.875rem] sm:text-[2.25rem] lg:text-[2.75rem] font-thin tracking-tight leading-[1.2] text-balance text-ink">
-        The question then is, ‘Of all the things you can now do, which do you choose to do?’
-      </blockquote>
-      <p class="mt-6 text-sm text-muted">— Brian Eno</p>
+  <!-- Hero: a full-width surface band that cancels the layout's padding and runs up behind the wordmark -->
+  <div class="-mx-4 sm:-mx-8 -mt-20 sm:-mt-24 px-4 sm:px-8 bg-surface">
+    <header class="w-full max-w-2xl mx-auto pt-28 sm:pt-36 pb-12 sm:pb-16">
+      <figure>
+        <blockquote>
+          <p class="mb-3 text-xl tracking-[-0.01em] text-muted">The question then is,</p>
+          <p class="text-[1.875rem] sm:text-[2.5rem] lg:text-[3.25rem] font-semibold tracking-[-0.03em] leading-[1.05] text-balance text-ink">
+            Of all the things you can now do, which do you choose to do?
+          </p>
+        </blockquote>
+        <figcaption class="eyebrow mt-6">Brian Eno</figcaption>
+      </figure>
     </header>
+  </div>
 
+  <div class="w-full max-w-2xl mx-auto">
     {latestFeaturedPost && (
-      <div class="border-t border-line pt-12 sm:pt-14">
+      <div class="pt-12 sm:pt-14">
         <FeaturedPost post={latestFeaturedPost} />
       </div>
     )}

@@ -335,15 +335,31 @@
       "$value": {
         "fontFamily": "Inter",
         "fontSize": {
-          "value": 2.75,
+          "value": 3.25,
           "unit": "rem"
         },
         "fontWeight": 600,
         "letterSpacing": {
-          "value": -0.025,
+          "value": -0.03,
           "unit": "em"
         },
-        "lineHeight": 1.1
+        "lineHeight": 1.05
+      }
+    },
+    "kicker": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 1.25,
+          "unit": "rem"
+        },
+        "fontWeight": 400,
+        "letterSpacing": {
+          "value": -0.01,
+          "unit": "em"
+        },
+        "lineHeight": 1.4
       }
     },
     "title": {
