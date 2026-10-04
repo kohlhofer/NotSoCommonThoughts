@@ -40,26 +40,31 @@ const pageDescription =
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <div class="w-full max-w-2xl mx-auto">
-    <!-- Category Header -->
-    <header class="pt-8 sm:pt-12 pb-10 sm:pb-12">
-      <p class="eyebrow mb-4">Category</p>
-      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-ink">
+  <!-- Page-header band, as on the home page and posts -->
+  <div class="-mx-4 sm:-mx-8 -mt-20 sm:-mt-24 px-4 sm:px-8 bg-surface">
+    <header class="max-w-2xl mx-auto pt-28 sm:pt-36 pb-12 sm:pb-14">
+      <a href="/" class="inline-flex items-center gap-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-accent hover:text-accent-strong transition-colors">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+        All thoughts
+      </a>
+      <h1 class="mt-4 text-[1.875rem] sm:text-[2.5rem] lg:text-[3.25rem] font-semibold tracking-[-0.03em] leading-[1.05] text-balance text-ink">
         {categoryName}
       </h1>
-      <p class="mt-4 text-muted">
-        {posts.length} post{posts.length === 1 ? '' : 's'}
+      <p class="eyebrow mt-6">
+        Category<span class="px-2 text-line-strong" aria-hidden="true">·</span>{posts.length} post{posts.length === 1 ? '' : 's'}
       </p>
     </header>
+  </div>
 
+  <div class="w-full max-w-2xl mx-auto">
     {latestFeaturedPost && (
-      <div class="border-t border-line pt-12 sm:pt-14">
+      <div class="pt-12 sm:pt-14">
         <FeaturedPost post={latestFeaturedPost} />
       </div>
     )}
 
     <!-- Posts List -->
-    <section class="border-t border-line mt-12 sm:mt-14 pt-10 pb-8">
+    <section class:list={['pb-8', latestFeaturedPost ? 'border-t border-line mt-12 sm:mt-14 pt-10' : 'pt-12 sm:pt-14']}>
       <p class="eyebrow mb-8">Posts</p>
       <div class="space-y-10 sm:space-y-12">
         {posts

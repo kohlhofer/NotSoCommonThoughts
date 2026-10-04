@@ -369,7 +369,7 @@ The palette is built on a **warm neutral** ramp and a single **terracotta** acce
 - **On-*-subtle (`#8a8a85` / `#8a8a88`)** — Dates, counts, the struck "Not So", the faintest metadata.
 - **Accent (`#c8502d` light / `#ec8a5f` dark)** — The single accent. Wordmark "Common Thoughts", the strikethrough, prose links, inline code, category active/hover, "Read post →", footer dot-bullets, CTA fill. Terracotta is the brand voice.
 - **Accent-strong (`#a8431f` / `#f0a07e`)** — Hover state on already-accented elements (and the CTA hover fill).
-- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results, and the page-header band on the home page and posts.
+- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results, and the page-header band on the home page, posts and category pages.
 - **Dividers (`#e3e2dc` / `#2a2a28`)** — The hairline rules that separate hero, featured, list, and footer. Structure comes from these 1px lines, not from boxes.
 
 The implementation uses CSS custom properties (`--bg`, `--fg`, `--fg-muted`, `--accent`, `--border`, …) defined in `global.css` and flipped under `.dark`. Tailwind exposes them as semantic color tokens (`paper`, `ink`, `muted`, `subtle`, `accent`, `accent-strong`, `line`, `surface`), so components use `text-ink` / `bg-paper` / `text-accent` and stay theme-aware without `dark:` variants.
@@ -404,9 +404,10 @@ The site keeps its **off-canvas right sidebar** for navigation, search, theme to
 - **Sidebar** — Fixed `w-64` on the right, `bg-paper` with a `border-l border-line`, off-screen by default (`translate-x-full`), slides in over the content. The menu button (top-right) is the entry point.
 - **Hero** — Pure typography. The home page opens with the Brian Eno epigraph split in two: the lead-in "The question then is," as a muted kicker, and the question itself as the page's headline in the statement style, attributed with an eyebrow label. It sits on a flat `surface` band that runs edge to edge from the top of the page, behind the wordmark, so it reads as the site's masthead rather than as a post. On scroll the band and the wordmark stay put while the content scrolls over them as an opaque paper sheet with a hairline top edge (`.band-sticky`, `.wordmark-pinned`). Only when motion is allowed and the viewport is at least 700px tall; otherwise the page scrolls normally. Home page only: on posts there is no heading in the content to carry the context once the band is covered. No illustration. (The former prime-number illustration has been retired.)
 - **Post header** — The same edge-to-edge `surface` band from the top of the page. Inside the reading column: the "All thoughts" back link, the title at the statement scale, the description as a muted `1.25rem` standfirst, then one eyebrow-style meta row with the absolute date and reading time on the left and the categories on the right. Dates are absolute because the site is static: a relative date freezes at build time.
+- **Category header** — The same band without the scroll-over: the back link, the category name at the statement scale, and one eyebrow row reading "Category · N posts".
 - **Footer** — Theme-aware paper with a `border-t border-line`, its content aligned to the reading column (`max-w-2xl`). Three columns on desktop: a copyright line, an "Explore" list with terracotta dot-bullets, and a "Feeds & Data" list.
 
-There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the page-header band: flat `surface`, full width, behind the home hero and post headers only.
+There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the page-header band: flat `surface`, full width, behind the home hero, post headers and category headers only.
 
 ## Elevation & Depth
 
