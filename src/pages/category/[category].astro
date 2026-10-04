@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import PostListItem from '../components/PostListItem.astro';
-import FeaturedPost from '../components/FeaturedPost.astro';
+import Layout from '../../layouts/Layout.astro';
+import PostListItem from '../../components/PostListItem.astro';
+import FeaturedPost from '../../components/FeaturedPost.astro';
+import { categorySlug } from '../../utils';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
     const latestFeaturedPost = sortedPosts.find(post => post.data.featured);
 
     return {
-      params: { category },
+      params: { category: categorySlug(category) },
       props: { posts: sortedPosts, category, latestFeaturedPost }
     };
   });

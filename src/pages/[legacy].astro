@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import { categoryUrl } from '../utils';
+
+// Category pages used to live at the tag's raw name (/Projects,
+// /Artificial%20Intelligence). Each old URL now redirects to its
+// /category/<slug>/ page. GitHub Pages has no server-side redirects, so these
+// are the same meta-refresh pages Astro writes for static redirects, which
+// search engines treat as permanent. astro.config.mjs keeps them out of the
+// sitemap.
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
+  const tags = [...new Set(posts.flatMap(post => post.data.tags || []))];
+  return tags.map(tag => ({ params: { legacy: tag }, props: { target: categoryUrl(tag) } }));
+}
+
+const { target } = Astro.props;
+const absolute = new URL(target, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting to {target}</title>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={absolute} />
+  </head>
+  <body>
+    <a href={target}>This page has moved to {absolute}</a>
+  </body>
+</html>

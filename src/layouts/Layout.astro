@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
+import { categoryUrl } from '../utils';
 
 interface Props {
   title: string;
@@ -183,10 +184,10 @@ const ogImageURL = new URL(image ?? '/images/og-default.png', Astro.site);
             {formattedCategories.map(category => (
               <li>
                 <a
-                  href={`/${category.slug}`}
+                  href={categoryUrl(category.slug)}
                   class:list={[
                     'flex justify-between items-center py-1.5 text-sm transition-colors',
-                    currentPath === `/${category.slug}`
+                    currentPath.replace(/\/$/, '') === categoryUrl(category.slug).replace(/\/$/, '')
                       ? 'text-accent'
                       : 'text-muted hover:text-accent'
                   ]}

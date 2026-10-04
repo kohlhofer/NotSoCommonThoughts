@@ -10,7 +10,18 @@ import robots from 'astro-robots';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://notsocommonthoughts.com',
-  integrations: [tailwind(), mdx(), sitemap(), vercel(), robots()],
+  integrations: [
+    tailwind(),
+    mdx(),
+    sitemap({
+      // Single-segment root URLs are the legacy category redirects
+      // (src/pages/[legacy].astro) and the 404 page; neither belongs in the
+      // sitemap. Real pages live at /, /blog/… and /category/….
+      filter: (page) => !/^https:\/\/notsocommonthoughts\.com\/[^/]+\/?$/.test(page),
+    }),
+    vercel(),
+    robots(),
+  ],
   image: {
     // Enable image optimization with sharp
     service: {

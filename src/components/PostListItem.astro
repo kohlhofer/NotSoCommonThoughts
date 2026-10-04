@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '../utils';
+import { formatDate, categoryUrl } from '../utils';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -42,7 +42,7 @@ const formattedTags = (tags || []).map(tag => ({
           {formattedTags.map((tag, i) => (
             <>
               {i > 0 && <span class="text-line-strong">·</span>}
-              <a href={`/${tag.slug}`} class="hover:text-accent transition-colors">{tag.name}</a>
+              <a href={categoryUrl(tag.slug)} class="hover:text-accent transition-colors">{tag.name}</a>
             </>
           ))}
         </div>
