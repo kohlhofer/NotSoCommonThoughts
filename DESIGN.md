@@ -402,7 +402,7 @@ The site keeps its **off-canvas right sidebar** for navigation, search, theme to
 - **Page gutters** — `px-4` mobile, `px-8` small and up.
 - **Top padding** — `pt-20` mobile, `pt-24` desktop. A consistent breath below the fixed top-left wordmark.
 - **Sidebar** — Fixed `w-64` on the right, `bg-paper` with a `border-l border-line`, off-screen by default (`translate-x-full`), slides in over the content. The menu button (top-right) is the entry point.
-- **Hero** — Pure typography. The home page opens with the Brian Eno epigraph split in two: the lead-in "The question then is," as a muted kicker, and the question itself as the page's headline in the statement style, attributed with an eyebrow label. It sits on a flat `surface` band that runs edge to edge from the top of the page, behind the wordmark, so it reads as the site's masthead rather than as a post. No illustration. (The former prime-number illustration has been retired.)
+- **Hero** — Pure typography. The home page opens with the Brian Eno epigraph split in two: the lead-in "The question then is," as a muted kicker, and the question itself as the page's headline in the statement style, attributed with an eyebrow label. It sits on a flat `surface` band that runs edge to edge from the top of the page, behind the wordmark, so it reads as the site's masthead rather than as a post. On scroll the band and the wordmark stay put while the content scrolls over them as an opaque paper sheet with a hairline top edge (`.band-sticky`, `.wordmark-pinned`). Only when motion is allowed and the viewport is at least 700px tall; otherwise the page scrolls normally. Home page only: on posts there is no heading in the content to carry the context once the band is covered. No illustration. (The former prime-number illustration has been retired.)
 - **Post header** — The same edge-to-edge `surface` band from the top of the page. Inside the reading column: the "All thoughts" back link, the title at the statement scale, the description as a muted `1.25rem` standfirst, then one eyebrow-style meta row with the absolute date and reading time on the left and the categories on the right. Dates are absolute because the site is static: a relative date freezes at build time.
 - **Footer** — Theme-aware paper with a `border-t border-line`. Three columns on desktop: a copyright line, an "Explore" list with terracotta dot-bullets, and a "Feeds & Data" list.
 
@@ -410,7 +410,7 @@ There are no gradients, no background washes, and no decorative imagery in the c
 
 ## Elevation & Depth
 
-Elevation is flat. No drop shadows, no glassmorphism, no layered surfaces. Separation comes from **hairline dividers** (`border-line`) and **position** (the fixed menu button, the sliding sidebar). The sidebar reads as separate because of its left border and slide-in position, not depth. Code blocks sit slightly apart via their own warm-dark tone and an 8px radius — no shadow.
+Elevation is flat. No drop shadows, no glassmorphism, no layered surfaces. The one layering is the home page's content sheet scrolling over the hero band, and it is drawn with a hairline, not a shadow. Separation comes from **hairline dividers** (`border-line`) and **position** (the fixed menu button, the sliding sidebar). The sidebar reads as separate because of its left border and slide-in position, not depth. Code blocks sit slightly apart via their own warm-dark tone and an 8px radius — no shadow.
 
 ## Shapes
 

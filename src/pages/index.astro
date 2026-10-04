@@ -14,9 +14,10 @@ const posts = (await getCollection('blog'))
 const latestFeaturedPost = posts.find(post => post.data.featured);
 ---
 
-<Layout title="Not So Common Thoughts">
-  <!-- Hero: a full-width surface band that cancels the layout's padding and runs up behind the wordmark -->
-  <div class="-mx-4 sm:-mx-8 -mt-20 sm:-mt-24 px-4 sm:px-8 bg-surface">
+<Layout title="Not So Common Thoughts" pinWordmark>
+  <!-- Hero: a full-width surface band that cancels the layout's padding and runs up behind the wordmark.
+       It stays put while the content sheet below scrolls over it (see .band-sticky). -->
+  <div class="band-sticky -mx-4 sm:-mx-8 -mt-20 sm:-mt-24 px-4 sm:px-8 bg-surface">
     <header class="w-full max-w-2xl mx-auto pt-28 sm:pt-36 pb-12 sm:pb-16">
       <figure>
         <blockquote>
@@ -30,6 +31,8 @@ const latestFeaturedPost = posts.find(post => post.data.featured);
     </header>
   </div>
 
+  <!-- Content sheet: opaque and full width so it covers the hero as it scrolls -->
+  <div class="relative z-10 -mx-4 sm:-mx-8 px-4 sm:px-8 bg-paper border-t border-line">
   <div class="w-full max-w-2xl mx-auto">
     {latestFeaturedPost && (
       <div class="pt-12 sm:pt-14">
@@ -48,5 +51,6 @@ const latestFeaturedPost = posts.find(post => post.data.featured);
           ))}
       </div>
     </section>
+  </div>
   </div>
 </Layout>

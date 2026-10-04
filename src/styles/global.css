@@ -198,6 +198,23 @@ body {
   color: var(--fg-muted);
 }
 
+/* The page-header band stays put while the content sheet scrolls over it.
+   Only where motion is welcome and the viewport is tall enough to show the
+   whole band; otherwise its lower part would sit under the sheet for good. */
+@media (prefers-reduced-motion: no-preference) and (min-height: 700px) {
+  .band-sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  /* The wordmark belongs to the home masthead: it stays put with the band and
+     sits under the content sheet (z-10), so the sheet covers it too. */
+  .wordmark-pinned {
+    position: fixed;
+    z-index: 5;
+  }
+}
+
 /* Doorway link: label + arrow that slides on hover */
 .doorway-arrow {
   transition: transform 0.18s ease;
