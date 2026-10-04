@@ -198,6 +198,13 @@ body {
   color: var(--fg-muted);
 }
 
+/* Keyboard focus: a terracotta ring, only when the browser judges focus came
+   from the keyboard. Inputs with their own focus border opt out locally. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* The page-header band stays put while the content sheet scrolls over it.
    Only where motion is welcome and the viewport is tall enough to show the
    whole band; otherwise its lower part would sit under the sheet for good. */

@@ -489,6 +489,7 @@ Fixed `top-4 right-4`, transparent, muted icon hovering to terracotta. The singl
 
 - Use the warm neutral ramp for everything non-accent. Reach for an adjacent neutral before introducing any other color.
 - Reserve terracotta for one role per element: a link, an active state, the wordmark accent, the CTA fill. It is the only hue.
+- Show keyboard focus with a 2px terracotta outline, offset 3px, on `:focus-visible` only. Never remove an outline without putting a visible focus state in its place.
 - Keep the strikethrough on "Not So" in the wordmark. Always. The strike is the brand.
 - Use Inter for everything; let the self-hosted variable face cover all weights.
 - Set headings at weight 600 with tight tracking — size and tracking do the work.
