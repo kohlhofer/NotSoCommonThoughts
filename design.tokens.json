@@ -367,15 +367,15 @@
       "$value": {
         "fontFamily": "Inter",
         "fontSize": {
-          "value": 3,
+          "value": 3.25,
           "unit": "rem"
         },
         "fontWeight": 600,
         "letterSpacing": {
-          "value": -0.025,
+          "value": -0.03,
           "unit": "em"
         },
-        "lineHeight": 1.08
+        "lineHeight": 1.05
       }
     },
     "heading-lg": {

@@ -94,10 +94,10 @@
           }
         ],
         "title": [
-          "3rem",
+          "3.25rem",
           {
-            "lineHeight": "1.08",
-            "letterSpacing": "-0.025em",
+            "lineHeight": "1.05",
+            "letterSpacing": "-0.03em",
             "fontWeight": "600"
           }
         ],

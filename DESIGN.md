@@ -59,10 +59,10 @@ typography:
     letterSpacing: "-0.01em"
   title:
     fontFamily: Inter
-    fontSize: 3rem
+    fontSize: 3.25rem
     fontWeight: "600"
-    lineHeight: "1.08"
-    letterSpacing: "-0.025em"
+    lineHeight: "1.05"
+    letterSpacing: "-0.03em"
   heading-lg:
     fontFamily: Inter
     fontSize: 1.875rem
@@ -369,7 +369,7 @@ The palette is built on a **warm neutral** ramp and a single **terracotta** acce
 - **On-*-subtle (`#8a8a85` / `#8a8a88`)** — Dates, counts, the struck "Not So", the faintest metadata.
 - **Accent (`#c8502d` light / `#ec8a5f` dark)** — The single accent. Wordmark "Common Thoughts", the strikethrough, prose links, inline code, category active/hover, "Read post →", footer dot-bullets, CTA fill. Terracotta is the brand voice.
 - **Accent-strong (`#a8431f` / `#f0a07e`)** — Hover state on already-accented elements (and the CTA hover fill).
-- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results, and the home hero band.
+- **Surface (`#f0efea` / `#1c1c1b`)** — Soft tile behind inline code and search results, and the page-header band on the home page and posts.
 - **Dividers (`#e3e2dc` / `#2a2a28`)** — The hairline rules that separate hero, featured, list, and footer. Structure comes from these 1px lines, not from boxes.
 
 The implementation uses CSS custom properties (`--bg`, `--fg`, `--fg-muted`, `--accent`, `--border`, …) defined in `global.css` and flipped under `.dark`. Tailwind exposes them as semantic color tokens (`paper`, `ink`, `muted`, `subtle`, `accent`, `accent-strong`, `line`, `surface`), so components use `text-ink` / `bg-paper` / `text-accent` and stay theme-aware without `dark:` variants.
@@ -382,7 +382,7 @@ One self-hosted variable face does all the work: **Inter**, preloaded as `inter-
 
 - Body and prose: weight 400, comfortable line-height (1.6 chrome / 1.65 prose). Prose is set at `1.1875rem`, matching the kohlhofer essays.
 - Headings (`h1`–`h6`, and prose headings): weight 600 with tight tracking (`-0.015em` to `-0.025em`). Size and tracking carry the hierarchy.
-- Display statements: weight 600, `text-balance`. Post titles use `-0.025em` tracking and line-height ~1.1; the home hero question is a size up (`3.25rem` on large screens) with `-0.03em` tracking and line-height 1.05.
+- Display statements: weight 600, `text-balance`. The home hero question and post titles share one scale: `1.875rem` on phones, `2.5rem` small, `3.25rem` large, `-0.03em` tracking, line-height 1.05.
 - Kicker: the muted `1.25rem` weight-400 line that leads into the home hero statement. Never thin weights for display: weights below 400 read as condensed hairlines at display sizes.
 - Inline `<strong>`: weight 600.
 - Links: terracotta, underlined at `3px` offset / `1px` thickness, thickening to `2px` on hover. Chrome links shift color only.
@@ -403,9 +403,10 @@ The site keeps its **off-canvas right sidebar** for navigation, search, theme to
 - **Top padding** — `pt-20` mobile, `pt-24` desktop. A consistent breath below the fixed top-left wordmark.
 - **Sidebar** — Fixed `w-64` on the right, `bg-paper` with a `border-l border-line`, off-screen by default (`translate-x-full`), slides in over the content. The menu button (top-right) is the entry point.
 - **Hero** — Pure typography. The home page opens with the Brian Eno epigraph split in two: the lead-in "The question then is," as a muted kicker, and the question itself as the page's headline in the statement style, attributed with an eyebrow label. It sits on a flat `surface` band that runs edge to edge from the top of the page, behind the wordmark, so it reads as the site's masthead rather than as a post. No illustration. (The former prime-number illustration has been retired.)
+- **Post header** — The same edge-to-edge `surface` band from the top of the page. Inside the reading column: the "All thoughts" back link, the title at the statement scale, the description as a muted `1.25rem` standfirst, then one eyebrow-style meta row with the absolute date and reading time on the left and the categories on the right. Dates are absolute because the site is static: a relative date freezes at build time.
 - **Footer** — Theme-aware paper with a `border-t border-line`. Three columns on desktop: a copyright line, an "Explore" list with terracotta dot-bullets, and a "Feeds & Data" list.
 
-There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the home hero band: flat `surface`, full width, home page only.
+There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the page-header band: flat `surface`, full width, behind the home hero and post headers only.
 
 ## Elevation & Depth
 
