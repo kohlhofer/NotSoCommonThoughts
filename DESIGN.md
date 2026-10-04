@@ -469,6 +469,7 @@ Powered by `@tailwindcss/typography`'s `prose`, overridden in `global.css`:
 - `prose pre` → `#1c1c1b` background, warm-white text, `rounded-lg`, `p-4`.
 - `prose h1`–`h6` → weight 600, tight tracking.
 - `prose strong` → weight 600.
+- `prose h2`, `prose h3` → a subtle `#` section link hung in the left margin, revealed on hover only where there is a fine pointer. Hidden from screen readers and the tab order.
 - `prose blockquote` → muted text, terracotta left border, not italic.
 - `prose table` → hairline borders, zebra rows on `--surface`.
 - `prose img`, `prose video` → full column width, `rounded-lg` (8px). Video carries a poster

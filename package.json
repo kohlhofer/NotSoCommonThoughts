@@ -12,6 +12,7 @@
     "design:export": "design.md export --format dtcg DESIGN.md > design.tokens.json && design.md export --format tailwind DESIGN.md > tailwind.theme.json"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.6",
     "@astrojs/mdx": "^4.2.6",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",

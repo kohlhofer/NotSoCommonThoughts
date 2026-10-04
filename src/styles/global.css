@@ -107,6 +107,35 @@ body {
   text-decoration-thickness: 2px;
 }
 
+/* Section links: a "#" hung in the left margin of h2 and h3, shown on hover
+   where there is a fine pointer. Prepended at build time (astro.config.mjs). */
+.prose h2,
+.prose h3 {
+  position: relative;
+  scroll-margin-top: 2rem;
+}
+
+.prose .heading-anchor {
+  position: absolute;
+  left: -1.1em;
+  color: var(--fg-subtle);
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .prose h2:hover .heading-anchor,
+  .prose h3:hover .heading-anchor {
+    opacity: 1;
+  }
+
+  .prose .heading-anchor:hover {
+    color: var(--accent);
+  }
+}
+
 /* Headings: size carries the hierarchy, weight stays restrained */
 .prose h1,
 .prose h2,
