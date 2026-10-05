@@ -22,6 +22,10 @@ The skill is picking the very next move so it leaves you with more good options 
 
 It is the chess version of [every decision being just another marker](/blog/every-decision-is-just-another-marker). The move isn't valuable because it wins immediately. It's valuable because it changes the position from which every future move will be made.
 
-Away from the board, the question is the same:
+## Roadmaps
+
+Most product roadmaps are written the ten-moves-ahead way: a dozen features in a fixed order across four quarters, each one assuming the ones before it landed as planned. By the third quarter the team is building a sequence chosen for a position that no longer exists.
+
+The chess version keeps the [direction](/blog/direction-before-speed) and holds the sequence loosely. A feature that teaches you what customers actually do, or makes the next three cheaper to build, slants the board. A feature that only fits the plan doesn't. Away from the board, the question is the same:
 
 Which choice right now leaves me the most good choices next?
