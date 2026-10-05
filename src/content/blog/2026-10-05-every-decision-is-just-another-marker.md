@@ -32,4 +32,11 @@ That framing treats decisions as either reversible or irreversible, and imagines
 
 A past decision is a marker on the road you've travelled. It tells you where you were and what you knew when you passed it. It doesn't tell you where to go next.
 
+<figure>
+  <img src="/images/every-decision-is-just-another-marker/life-paths.jpg"
+       alt="A hand-drawn chart split by a vertical line marked today. On the left, black lines labelled life paths closed to you branch out from a dot marked you're born, and one green line, your life path, winds through them to today. On the right, dozens of green lines labelled life paths open to you fan out from a dot marked your life, today."
+       width="1279" height="808" loading="lazy">
+  <figcaption>Tim Urban, <a href="https://x.com/waitbutwhy/status/1367871165319049221">Wait But Why</a>, 2021: "We think a lot about those black lines, forgetting that it's all still in our hands."</figcaption>
+</figure>
+
 Behind you is a road. Ahead is always an open field.
