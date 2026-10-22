@@ -1,6 +1,6 @@
 ---
-title: "RockOrPop.com: Turn Any YouTube Playlist into a Virtual Cassette"
-description: "Turn any playlist into a customizable mixtape—no log-ins, no algorithms, just intentional listening."
+title: "Rock or Pop: A Cassette Mixtape Maker for YouTube Playlists"
+description: "Rock or Pop turns any YouTube playlist into a cassette tape you can label, design and send as a single link. No log-ins, no algorithms, just intentional listening."
 date: 2025-07-02
 slug: rock-or-pop
 tags: ["Projects", "Design", "Music"]
@@ -9,50 +9,54 @@ featured: true
 
 I still buy and listen to tapes.
 
-There's something about the physicality of it—the way you have to commit to an album, the ritual of putting it in the player, the way you can't just skip around mindlessly. A friend once told me that listening to music on physical media like vinyl is paying homage to the artist. You commit to it, you have to get up and make a choice, you handle and appreciate the cover and art. It's an intentional act.
+There's something about the physicality of it. You commit to an album, you go through the ritual of putting it in the player, and you can't skip around mindlessly. A friend once told me that listening to music on physical media like vinyl is paying homage to the artist. You get up and make a choice, and you handle and appreciate the cover and the art. It's an intentional act.
 
 All of that is lost in a world of algorithmic streaming services.
 
-The inspiration for this project struck when I revisited an old analog cassette web component I'd built years earlier. There is something magical about that specific physical interface—the way the tape would spool, the satisfying click of the play button, the visual feedback of progress through a mixtape. I wondered if I could evoke that tactile, nostalgic feeling while sharing music online? (I had recently explored using YouTube APIs for sharing music on my [personal site](https://notsocommonthoughts.com/blog/music-page-youtube/).)
+The idea came when I revisited an old cassette web component I'd built years earlier. There is something magical about that interface: the way the tape spools, the click of the play button, the visible progress through a mixtape. I wondered whether I could bring that feeling to sharing music online. I had recently used the YouTube API for the [music page on my personal site](/blog/music-page-youtube/).
 
-## Turn a YouTube Playlist into a Digital Mixtape
+## A Mixtape From a YouTube Playlist
 
-The concept was straightforward: create a web app that transforms YouTube playlists into virtual cassette tapes. Users could customize their "mixtapes" with different cassette designs, colors, and backgrounds, then share them with friends. It's the digital equivalent of making someone a mixtape—personal, curated, and visually distinctive.
+[Rock or Pop](https://rockorpop.com) turns a YouTube playlist into a cassette tape. You paste the playlist's link, give the tape a name, and pick one of 5 covers, 10 shell colours and 24 backgrounds. Then you send the link. Whoever opens it gets the same tape, ready to play, with the spools winding from one side to the other as the tracks go by.
 
-Using YouTube as a backend has the added benefit that I don't have to deal with copyright and piracy issues myself. The platform handles all the licensing, and users can access virtually any song that's available on YouTube.
+It's the digital version of making someone a mixtape: personal, curated and visually distinct. The site has a guide to [making a digital mixtape](https://rockorpop.com/guides/make-a-digital-mixtape/), from picking a length to writing the label.
 
-The cassette interface isn't just a gimmick; it's a deliberate choice to slow down our consumption of music. Instead of mindlessly clicking through tracks, users engage with their playlists through a familiar, comforting interface that encourages intentional listening.
+Using YouTube as the backend means I don't have to deal with copyright or piracy myself. The platform handles the licensing, and almost any song on YouTube can go on a tape.
+
+## Tapes to Start With
+
+A few tapes are on the site to play as they are or to use as a starting point: a long [Boards of Canada](https://rockorpop.com/tapes/boards-of-canada/) playlist, [80s German Synth](https://rockorpop.com/tapes/80s-german-synth/), and [An Afternoon's Electronica](https://rockorpop.com/tapes/an-afternoons-electronica/), ten short tracks made on Teenage Engineering's OP-Z and OP-XY. Each one has its own page, and sharing it shows that cassette in the preview.
 
 ## The Domain
 
-It turned out I happened to have a fitting domain from years prior: [rockorpop.com](https://rockorpop.com). I had purchased it for a different project but it seems quite fitting as the simple question captures the essence of music discovery and personal taste.
+I happened to have a fitting domain from years before: [rockorpop.com](https://rockorpop.com). I bought it for a different project, but the simple question captures music discovery and personal taste well.
 
 ## Under the Hood
 
-The app uses React and TypeScript to integrate YouTube's API, managing state between player controls and cassette animations. Since it's a serverless static web app, social media previews are generated dynamically—each cassette configuration creates a unique Open Graph image for sharing.
+The app is React and TypeScript on top of YouTube's IFrame player. Every tape is encoded in its link: the cover, the shell, the background, the label, the playlist and the track it starts on. There is no database, no account and no backend, and when someone opens a shared tape they see exactly what the sender made.
 
-## The Social Aspect: Sharing Mixtapes
+Link previews were the hard part. The site is static, so every link gets the same HTML, and the services that draw previews don't run the app. A shared tape could only ever preview as the homepage. The curated tapes now have pages of their own with a picture of their cassette, and a tape you design yourself previews as the homepage.
 
-Every cassette configuration is encoded in the URL, making sharing as simple as copying a link. This approach eliminates the need for databases, user accounts, or complex backend systems. When someone opens a shared mixtape, they see exactly what the creator intended—the same design, the same playlist, the same vibe.
+In October 2026 I went back to it with Claude Code for a review. We fixed labels that broke on a percent sign, made the spools follow what the player is actually doing, and gave the homepage words a search engine can read.
 
-In a sense the technology itself is simplistic which seems quite fitting for the application.
+The technology is simple, which suits the thing.
 
 ## Design: The Art of Nostalgia
 
-The app features 5 cassette cover designs, 10 shell colors for personalization, 24 background styles to set the mood, and custom tape labels. They all are made to evoke specific emotions and memories, from the classic TDK-style covers to vibrant neon shells that feel distinctly 80s. I had a blast making it all.
+The covers, shells and backgrounds are made to bring back specific memories, from classic TDK-style covers to neon shells that feel distinctly 80s. I had a blast making them.
 
-![Neon cassette design](/images/tape_2.png)
+![A cassette with a neon-coloured cover](/images/tape_2.png)
 
-The cassette animations are more than just visual flair—they provide meaningful feedback about playback state. Tape spooling indicates progress through the playlist.
+The spools show progress too. As the playlist plays, one side empties and the other fills, so the tape tells you how far through the mix you are.
 
-I have strived to reduce the prominence of the video player while still being compliant with the YouTube terms of service. 
+I kept the video player as small as I could while staying within YouTube's terms of service.
 
-## Does anybody need this?
+## Does Anybody Need This?
 
-It's a statement about how we interact with digital media. It's about slowing down, being intentional, and creating experiences that feel human in an increasingly automated world.
+It's a statement about how we interact with digital media: slowing down, being intentional, and making things that feel human in an increasingly automated world.
 
-The cassette metaphor works because it's universal—everyone understands the concept of a mixtape, the care that goes into selecting tracks, the personal nature of sharing music and the literal linearity of tape. 
+The cassette works as a metaphor because everyone understands it. A mixtape means the care that goes into choosing the songs, the personal act of giving it to someone, and the literal linearity of tape.
 
-Rock or Pop? is live at [rockorpop.com](https://rockorpop.com). Try making your own mixtape and share it with someone who matters. There's a fuller write-up over at [Field Bureau + Werkstatt](https://fieldbw.com/rock-or-pop/), alongside the [documentation](https://fieldbw.com/docs/rock-or-pop/getting-started).
+[Make a tape](https://rockorpop.com) and send it to someone who matters. There's more about the project at [Field Bureau + Werkstatt](https://fieldbw.com/rock-or-pop/), alongside the [documentation](https://fieldbw.com/docs/rock-or-pop/getting-started).
 
-What's your cassette aesthetic? Are you a classic TDK person, or do you prefer the neon vibes?
+*Updated 22 October 2026: tape pages, a guide to making a mixtape, and fixes to sharing.*
