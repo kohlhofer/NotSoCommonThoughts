@@ -595,7 +595,7 @@ const svg = k.figureSvg({
     `<g data-layer="line">${tiles}</g>`,
     `<g data-part="probe">${screenProbe()}</g>`,
     screenArm(),
-    `<g data-part="plunger" transform="${k.translateAlong(P, [0, 0, BELT_Z + PLUNGER_UP])}">${plunger()}</g>`,
+    `<g data-part="plunger" transform="${k.translateAlong(P, [0, 0, BELT_Z + TILE_H + PLUNGER_UP])}">${plunger()}</g>`,
     pressHead(),
     hologram(),
     `<path data-part="needle" class="iso-line" data-tone="lit" data-free="start" d="${needleAt(0)}" style="stroke-width:1"/>`,
