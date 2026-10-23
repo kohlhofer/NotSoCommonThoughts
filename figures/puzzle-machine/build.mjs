@@ -971,10 +971,13 @@ const CSS = `.pm-led{fill:var(--anatomy-lit)}
 .pm-holo .pm-grid{fill:none;stroke:var(--anatomy-lit);stroke-width:.3;opacity:.35}
 .pm-holo .pm-frame{fill:var(--anatomy-lit);fill-opacity:.04;stroke:var(--anatomy-lit);stroke-width:.6;opacity:.8}
 .pm-glyph{fill:var(--anatomy-lit);font:9.5px/1 "Segoe UI Symbol","Apple Symbols",serif;opacity:.9}
-.pm-fs-row{display:flex;justify-content:flex-end;margin:4px 0 2px}
-.pm-fs{all:unset;display:inline-flex;align-items:center;gap:7px;cursor:pointer;padding:6px 2px;color:var(--anatomy-muted);font:12.5px/1 ui-sans-serif,system-ui,sans-serif}
+.pm-fs{all:unset;position:absolute;top:11px;right:13px;width:24px;height:24px;display:grid;place-items:center;cursor:pointer;color:var(--anatomy-muted);border-radius:4px}
 .pm-fs[hidden]{display:none}
 .pm-fs svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pm-fs .pm-fs-close{display:none}
+html:fullscreen .pm-fs .pm-fs-open{display:none}
+html:fullscreen .pm-fs .pm-fs-close{display:inline}
+body.pm-has-fs .iso-plate-corner[data-corner="title"]{right:24px}
 .pm-fs:hover{color:var(--anatomy-strong)}
 .pm-fs:focus-visible{outline:2px solid var(--anatomy-hi);outline-offset:2px;border-radius:4px}
 html:fullscreen body{min-height:100vh;display:flex;align-items:center;background:var(--anatomy-page)!important}
@@ -1006,7 +1009,7 @@ ${[0, 1, 2, 3].map((i) => `[data-src="${i}"] .pm-sym[data-s="${i}"]`).join(",")}
 @media (max-width:560px){.pm-feed{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
 const buttons = `<div class="pm-feed" role="group" aria-label="Feed the line">${BUTTONS.map(([name, rate], i) => `<button type="button" data-feed="${i}"${i === 3 ? ' class="pm-claude"' : ""}><svg class="pm-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="${SYMBOL_SVG[i]}"/></svg>${name}<span>${rate}</span></button>`).join("")}</div>`;
 // Full screen: shown only where the browser allows it (not on iPhone).
-const fullscreen = `<div class="pm-fs-row"><button type="button" class="pm-fs" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg><span>Full screen</span></button></div>`;
+const fullscreen = `<button type="button" class="pm-fs" hidden aria-label="Full screen" title="Full screen"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="pm-fs-open" d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/><path class="pm-fs-close" d="M6 2v4H2M14 6h-4V2M10 14v-4h4M2 10h4v4"/></svg></button>`;
 
 const body = k.plateHtml({
   fig: "Fig 1",
@@ -1045,8 +1048,9 @@ const REPORT_HEIGHT = `
 const fsButton = document.querySelector(".pm-fs");
 if (document.fullscreenEnabled) {
   fsButton.hidden = false;
+  document.body.classList.add("pm-has-fs");
   fsButton.addEventListener("click", () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(() => {}));
-  document.addEventListener("fullscreenchange", () => { fsButton.querySelector("span").textContent = document.fullscreenElement ? "Exit full screen" : "Full screen"; });
+  document.addEventListener("fullscreenchange", () => { const label = document.fullscreenElement ? "Exit full screen" : "Full screen"; fsButton.setAttribute("aria-label", label); fsButton.title = label; });
 }
 const report = () => parent.postMessage({ type: "puzzle-machine-height", height: Math.ceil(document.documentElement.getBoundingClientRect().height) }, "*");
 new ResizeObserver(report).observe(document.body);
