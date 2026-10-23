@@ -971,6 +971,15 @@ const CSS = `.pm-led{fill:var(--anatomy-lit)}
 .pm-holo .pm-grid{fill:none;stroke:var(--anatomy-lit);stroke-width:.3;opacity:.35}
 .pm-holo .pm-frame{fill:var(--anatomy-lit);fill-opacity:.04;stroke:var(--anatomy-lit);stroke-width:.6;opacity:.8}
 .pm-glyph{fill:var(--anatomy-lit);font:9.5px/1 "Segoe UI Symbol","Apple Symbols",serif;opacity:.9}
+.pm-fs-row{display:flex;justify-content:flex-end;margin:4px 0 2px}
+.pm-fs{all:unset;display:inline-flex;align-items:center;gap:7px;cursor:pointer;padding:6px 2px;color:var(--anatomy-muted);font:12.5px/1 ui-sans-serif,system-ui,sans-serif}
+.pm-fs[hidden]{display:none}
+.pm-fs svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pm-fs:hover{color:var(--anatomy-strong)}
+.pm-fs:focus-visible{outline:2px solid var(--anatomy-hi);outline-offset:2px;border-radius:4px}
+html:fullscreen body{min-height:100vh;display:flex;align-items:center;background:var(--anatomy-page)!important}
+html:fullscreen .iso-page{max-width:min(1500px,calc((100vh - 300px) * 1.8))!important;padding:24px 0}
+html:fullscreen .iso-legend{display:none}
 .pm-hit{fill:transparent;cursor:pointer}.pm-hit:hover{fill:var(--anatomy-lit);fill-opacity:.07}
 .pm-feed{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:14px 0 4px}
 .pm-feed button{all:unset;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;cursor:pointer;padding:14px 12px 12px;border:1px solid var(--anatomy-lo);border-radius:10px;color:var(--anatomy-strong);font:500 14px/1.25 ui-sans-serif,system-ui,sans-serif;text-align:left;transition:border-color .15s,background .15s}
@@ -996,6 +1005,8 @@ ${[0, 1, 2, 3].map((i) => `[data-src="${i}"] .pm-sym[data-s="${i}"]`).join(",")}
 @media (prefers-reduced-motion:reduce){.pm-feed button.pm-error{animation:none}}
 @media (max-width:560px){.pm-feed{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
 const buttons = `<div class="pm-feed" role="group" aria-label="Feed the line">${BUTTONS.map(([name, rate], i) => `<button type="button" data-feed="${i}"${i === 3 ? ' class="pm-claude"' : ""}><svg class="pm-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="${SYMBOL_SVG[i]}"/></svg>${name}<span>${rate}</span></button>`).join("")}</div>`;
+// Full screen: shown only where the browser allows it (not on iPhone).
+const fullscreen = `<div class="pm-fs-row"><button type="button" class="pm-fs" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg><span>Full screen</span></button></div>`;
 
 const body = k.plateHtml({
   fig: "Fig 1",
@@ -1008,7 +1019,7 @@ const body = k.plateHtml({
     { mark: "edge", label: "The brain on the bench: the LLM's own compositions, sent straight to the inspection head" },
     { mark: "flat", label: "Four trays: the pick spreads puzzles across cells" },
   ],
-  body: `<style>${CSS}</style><div class="iso-stage" tabindex="0" role="group" aria-label="The puzzle machine. Keys 1 to 3 drop a position from a hopper; 4 lets the LLM compose one.">${svg}</div>${buttons}`,
+  body: `<style>${CSS}</style><div class="iso-stage" tabindex="0" role="group" aria-label="The puzzle machine. Keys 1 to 3 drop a position from a hopper; 4 lets the LLM compose one.">${svg}</div>${buttons}${fullscreen}`,
 });
 
 // Built for embedding on this blog: the page follows the blog's theme (the
@@ -1031,6 +1042,12 @@ const THEME = `<script>(function () {
   } catch (e) {}
 })();</script>`;
 const REPORT_HEIGHT = `
+const fsButton = document.querySelector(".pm-fs");
+if (document.fullscreenEnabled) {
+  fsButton.hidden = false;
+  fsButton.addEventListener("click", () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(() => {}));
+  document.addEventListener("fullscreenchange", () => { fsButton.querySelector("span").textContent = document.fullscreenElement ? "Exit full screen" : "Full screen"; });
+}
 const report = () => parent.postMessage({ type: "puzzle-machine-height", height: Math.ceil(document.documentElement.getBoundingClientRect().height) }, "*");
 new ResizeObserver(report).observe(document.body);
 report();

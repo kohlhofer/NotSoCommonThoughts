@@ -13,7 +13,7 @@ The skill then has Claude build that object from dozens of small shaded parts in
 
 I asked it to draw the pipeline behind the [1,010 mate puzzles on dxc4](https://dxc4.com/puzzles). Press the buttons.
 
-<iframe id="puzzle-machine" src="/figures/puzzle-machine/index.html" title="The puzzle machine: an interactive drawing of how the puzzles are made and proven" style="display:block;width:100%;height:760px;border:0" loading="lazy"></iframe>
+<iframe id="puzzle-machine" src="/figures/puzzle-machine/index.html" title="The puzzle machine: an interactive drawing of how the puzzles are made and proven" style="display:block;width:100%;height:760px;border:0" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
 <script is:inline>
   window.addEventListener("message", function (event) {
     if (event.origin !== window.location.origin || !event.data || event.data.type !== "puzzle-machine-height") return;
