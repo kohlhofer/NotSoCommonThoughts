@@ -1008,8 +1008,6 @@ const body = k.plateHtml({
     { mark: "edge", label: "The brain on the bench: the LLM's own compositions, sent straight to the inspection head" },
     { mark: "flat", label: "Four trays: the pick spreads puzzles across cells" },
   ],
-  caption:
-    "puzzle-forge as a bench machine. Workers draw positions three ways and Stockfish's mate search screens each one. The survivors go to a brute-force solver that plays out every move for both sides and keeps a position only when one key mates against every defence. A pick step dedupes, allows any idea three times, spreads the puzzles across mate length, king position and kind of key, and proves each again. The LLM's own compositions skip the screen and go straight to the solver. 1,000 hunted and 10 composed make the 1,010 on dxc4.com. Pass and fail odds in the animation are illustrative.",
   body: `<style>${CSS}</style><div class="iso-stage" tabindex="0" role="group" aria-label="The puzzle machine. Keys 1 to 3 drop a position from a hopper; 4 lets the LLM compose one.">${svg}</div>${buttons}`,
 });
 

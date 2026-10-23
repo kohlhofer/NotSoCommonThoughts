@@ -31,7 +31,7 @@ The brain on the bench is the LLM composing a puzzle by hand: an idea, a key mov
 
 Everything passes the same head. The probe in front is Stockfish's mate search, a quick look for any short forced mate. The head behind it is the exact solver: one pin per defence, and a puzzle ships only when every pin lights. A second key that also mates, or one defence that escapes, sends the tile to the shredder. The LLM's compositions skip the probe but not the head.
 
-The trays at the end are the pick step. Puzzles are spread across kinds so no single idea crowds out the rest.
+The trays at the end are the pick step. It drops duplicates, allows any one idea three times, spreads the puzzles across mate length, where the black king stands and what kind of move the key is, and proves every one again.
 
 The pass and fail odds in the drawing are made up; the rest is how it works. The longer story, with the real numbers, is in [1,010 Checkmates, Each One Proven](/blog/proven-checkmates).
 
