@@ -37,7 +37,7 @@ The pass and fail odds in the drawing are made up; the rest is how it works. The
 
 ## The Build
 
-The first version had technical-drawing labels with leader lines. The skill lists those as an anti-pattern, and I asked for them anyway. They came out again, replaced by four buttons. Most of the work after that was draw order: stems that stood under their own heads, a tile hidden by the table it slid across, trays whose walls overlapped the wrong way.
+The first version ran on its own, in a loop. I wanted to play with it, so it became four buttons, each dropping a puzzle the moment you press. After that the changes were mostly about what is fun to watch and what reads at a glance: a counter on every source, shredder and tray, a shape on each tile so you can tell where it came from, feeder belts so a busy line backs up instead of jamming, and a lid that flashes red when a feeder is full. The press became an inspection head with a hologram over it, the bins became shredders that throw sparks, and the LLM got a token tank once the hoppers had their compute cables and the brain had nothing.
 
 The result is about 1,000 lines of JavaScript that place every part in isometric space and write plain SVG, with no images. The page is 75 KB over the wire.
 
