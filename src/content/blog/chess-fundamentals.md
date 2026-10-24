@@ -39,7 +39,7 @@ The opening phase begins when pieces are still on their starting squares and end
 - **Protect your king's pawn cover** – Don't weaken it unnecessarily.
 - **Know common traps** – Avoid cheap mates and openings tricks.
 
-![Chess knight piece](/images/knight.jpg.png)
+![Chess knight piece](/images/knight.jpg.webp)
 
 ## 2. Middlegame Strategy
 

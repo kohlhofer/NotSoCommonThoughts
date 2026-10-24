@@ -19,7 +19,7 @@ That's [dxc4.com](https://dxc4.com).
 
 No sign-up. No database. No server storing your games. Just instant chess analytics that you can share with anyone.
 
-![dxc4.com analysis interface](/images/dxc4-screenshot.png)
+![dxc4.com analysis interface](/images/dxc4-screenshot.webp)
 
 ## The URL is the Database
 

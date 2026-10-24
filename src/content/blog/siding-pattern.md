@@ -50,12 +50,12 @@ After many iterations, the code was starting to show results that satisfied both
 
 The photos below show the siding implementation, which was a direct result of those hours spent in front of the screen, tweaking code and testing patterns.
 
-![Siding Pattern Implementation 1](/images/siding/IMG_1810.jpeg)  
-![Siding Pattern Implementation 2](/images/siding/IMG_1818.jpeg)  
-![Siding Pattern Implementation 3](/images/siding/IMG_1819.jpeg)  
-![Siding Pattern Implementation 4](/images/siding/IMG_1820.jpeg)  
-![Siding Pattern Implementation 5](/images/siding/IMG_1822.jpeg)  
-![Siding Pattern Implementation 6](/images/siding/IMG_1823.jpeg)
+![Siding Pattern Implementation 1](/images/siding/IMG_1810.webp)  
+![Siding Pattern Implementation 2](/images/siding/IMG_1818.webp)  
+![Siding Pattern Implementation 3](/images/siding/IMG_1819.webp)  
+![Siding Pattern Implementation 4](/images/siding/IMG_1820.webp)  
+![Siding Pattern Implementation 5](/images/siding/IMG_1822.webp)  
+![Siding Pattern Implementation 6](/images/siding/IMG_1823.webp)
 
 
 ## Code and Generative Architecture

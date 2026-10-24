@@ -13,7 +13,7 @@ Working on a little playful hex map generator just brought back a host of fond m
 
 I just shared this [hex map generator](https://kohlhofer.com/hex-map/) as part of my [kohlhofer.com/bits](https://kohlhofer.com/bits) collection, and found myself drawn back into the familiar patterns of hex-based game design. There's something deeply satisfying about the mathematics of hexagonal grids—the way they tessellate, how movement and adjacency work, the elegant simplicity of it all.
 
-[![Hex map example 2](/images/hex-map-2.jpg)](https://kohlhofer.com/hex-map/)
+[![Hex map example 2](/images/hex-map-2.webp)](https://kohlhofer.com/hex-map/)
 
 This little sketch generates Tolkien-esque fantasy landscapes with rolling grasslands, dense forests, towering mountains, mysterious swamps, and vast deserts. Cities, towns, and villages appear strategically placed across the map, connected by winding road networks that feel natural and purposeful. Each click brings a new world to life.
 
@@ -21,7 +21,7 @@ This little sketch generates Tolkien-esque fantasy landscapes with rolling grass
 
 At a time when browser games meant simple Flash animations or basic JavaScript, we built something that was rooted in modern web technology. It got a lot of attention in the Silicon Valley tech scene, who was otherwise pretty uninterested in the world of gaming. Anecdotes like tanking the productivity in the Flickr offices helped with that. 
 
-![Weewar game screenshot](/images/weewar.png)
+![Weewar game screenshot](/images/weewar.webp)
 
 Weewar's success ultimately caught the attention of Electronic Arts, who acquired it—a validation that what we'd built had real value in the emerging world of web-based gaming. This also kicked off my second stint of living and working in the US.
 

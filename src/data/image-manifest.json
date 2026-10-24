@@ -1,0 +1,331 @@
+{
+ "/images/hand-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/hand-3-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/VolumeAppScreen.webp": {
+  "w": 1600,
+  "h": 1000,
+  "thumb": "/images/VolumeAppScreen-thumb.webp",
+  "tw": 176,
+  "th": 110
+ },
+ "/images/IconComposer.webp": {
+  "w": 1600,
+  "h": 1020,
+  "thumb": "/images/IconComposer-thumb.webp",
+  "tw": 176,
+  "th": 112
+ },
+ "/images/brainchip.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/brainchip-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/mask.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/mask-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/fieldbw/media.webp": {
+  "w": 1600,
+  "h": 1135,
+  "thumb": "/images/fieldbw/media-thumb.webp",
+  "tw": 176,
+  "th": 125
+ },
+ "/images/fieldbw/scren.webp": {
+  "w": 1600,
+  "h": 1076,
+  "thumb": "/images/fieldbw/scren-thumb.webp",
+  "tw": 176,
+  "th": 118
+ },
+ "/images/scifi.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/scifi-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/chaos-studies/hero.webp": {
+  "w": 1600,
+  "h": 964,
+  "thumb": "/images/chaos-studies/hero-thumb.webp",
+  "tw": 176,
+  "th": 106
+ },
+ "/images/chaos-studies/ipad-dark-2.webp": {
+  "w": 1600,
+  "h": 1199,
+  "thumb": "/images/chaos-studies/ipad-dark-2-thumb.webp",
+  "tw": 176,
+  "th": 132
+ },
+ "/images/ml-42-blog-folder.webp": {
+  "w": 1600,
+  "h": 901,
+  "thumb": "/images/ml-42-blog-folder-thumb.webp",
+  "tw": 176,
+  "th": 99
+ },
+ "/images/every-decision-is-just-another-marker/life-paths.webp": {
+  "w": 1279,
+  "h": 808,
+  "thumb": "/images/every-decision-is-just-another-marker/life-paths-thumb.webp",
+  "tw": 176,
+  "th": 111
+ },
+ "/images/puzzle-machine/machine.webp": {
+  "w": 1316,
+  "h": 1153,
+  "thumb": "/images/puzzle-machine/machine-thumb.webp",
+  "tw": 176,
+  "th": 154
+ },
+ "/images/robot_reflection.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/robot_reflection-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/hex-map-2.webp": {
+  "w": 1334,
+  "h": 1238,
+  "thumb": "/images/hex-map-2-thumb.webp",
+  "tw": 176,
+  "th": 163
+ },
+ "/images/modular-synth.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/modular-synth-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/dxc4-screenshot.webp": {
+  "w": 1600,
+  "h": 1144,
+  "thumb": "/images/dxc4-screenshot-thumb.webp",
+  "tw": 176,
+  "th": 126
+ },
+ "/images/knight.jpg.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/knight.jpg-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/vector.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/vector-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/MapsAll.webp": {
+  "w": 1600,
+  "h": 787,
+  "thumb": "/images/MapsAll-thumb.webp",
+  "tw": 176,
+  "th": 86
+ },
+ "/images/midivol.webp": {
+  "w": 1600,
+  "h": 714,
+  "thumb": "/images/midivol-thumb.webp",
+  "tw": 176,
+  "th": 78
+ },
+ "/images/midivol-screen.webp": {
+  "w": 1600,
+  "h": 1000,
+  "thumb": "/images/midivol-screen-thumb.webp",
+  "tw": 176,
+  "th": 110
+ },
+ "/images/semiotic/device.webp": {
+  "w": 1600,
+  "h": 1200,
+  "thumb": "/images/semiotic/device-thumb.webp",
+  "tw": 176,
+  "th": 132
+ },
+ "/images/siding/IMG_1810.webp": {
+  "w": 1280,
+  "h": 813,
+  "thumb": "/images/siding/IMG_1810-thumb.webp",
+  "tw": 176,
+  "th": 112
+ },
+ "/images/siding/IMG_1818.webp": {
+  "w": 1280,
+  "h": 1182,
+  "thumb": "/images/siding/IMG_1818-thumb.webp",
+  "tw": 176,
+  "th": 162
+ },
+ "/images/siding/IMG_1820.webp": {
+  "w": 1267,
+  "h": 965,
+  "thumb": "/images/siding/IMG_1820-thumb.webp",
+  "tw": 176,
+  "th": 134
+ },
+ "/images/siding/IMG_1822.webp": {
+  "w": 1280,
+  "h": 1083,
+  "thumb": "/images/siding/IMG_1822-thumb.webp",
+  "tw": 176,
+  "th": 149
+ },
+ "/images/siding/IMG_1823.webp": {
+  "w": 1280,
+  "h": 868,
+  "thumb": "/images/siding/IMG_1823-thumb.webp",
+  "tw": 176,
+  "th": 119
+ },
+ "/images/books.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/books-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/ship.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/ship-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/alex.webp": {
+  "w": 1600,
+  "h": 2133,
+  "thumb": "/images/alex-thumb.webp",
+  "tw": 176,
+  "th": 235
+ },
+ "/images/guardrails.webp": {
+  "w": 1507,
+  "h": 615,
+  "thumb": "/images/guardrails-thumb.webp",
+  "tw": 176,
+  "th": 72
+ },
+ "/images/nochrome.webp": {
+  "w": 1024,
+  "h": 636,
+  "thumb": "/images/nochrome-thumb.webp",
+  "tw": 176,
+  "th": 109
+ },
+ "/images/uiinversion.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/uiinversion-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/fieldbw/sketch.webp": {
+  "w": 902,
+  "h": 646,
+  "thumb": "/images/fieldbw/sketch-thumb.webp",
+  "tw": 176,
+  "th": 126
+ },
+ "/images/trapped-a-tiny-llm/dream.webp": {
+  "w": 1088,
+  "h": 718,
+  "thumb": "/images/trapped-a-tiny-llm/dream-thumb.webp",
+  "tw": 176,
+  "th": 116
+ },
+ "/images/proven-checkmates/puzzle.webp": {
+  "w": 1280,
+  "h": 720,
+  "thumb": "/images/proven-checkmates/puzzle-thumb.webp",
+  "tw": 176,
+  "th": 99
+ },
+ "/images/weewar.webp": {
+  "w": 1196,
+  "h": 916,
+  "thumb": "/images/weewar-thumb.webp",
+  "tw": 176,
+  "th": 135
+ },
+ "/images/slop.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/slop-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/david.webp": {
+  "w": 1536,
+  "h": 1024,
+  "thumb": "/images/david-thumb.webp",
+  "tw": 176,
+  "th": 117
+ },
+ "/images/swimmer.webp": {
+  "w": 1024,
+  "h": 1024,
+  "thumb": "/images/swimmer-thumb.webp",
+  "tw": 176,
+  "th": 176
+ },
+ "/images/lorenz-bit.webp": {
+  "w": 1600,
+  "h": 778,
+  "thumb": "/images/lorenz-bit-thumb.webp",
+  "tw": 176,
+  "th": 85
+ },
+ "/images/MapsAll2.webp": {
+  "w": 1600,
+  "h": 455,
+  "thumb": "/images/MapsAll2-thumb.webp",
+  "tw": 176,
+  "th": 50
+ },
+ "/images/kohlhofer-music-screen.webp": {
+  "w": 1531,
+  "h": 1111,
+  "thumb": "/images/kohlhofer-music-screen-thumb.webp",
+  "tw": 176,
+  "th": 128
+ },
+ "/images/focus-illustration.webp": {
+  "w": 1427,
+  "h": 696,
+  "thumb": "/images/focus-illustration-thumb.webp",
+  "tw": 176,
+  "th": 86
+ },
+ "/images/siding/IMG_1819.webp": {
+  "w": 1280,
+  "h": 694,
+  "thumb": "/images/siding/IMG_1819-thumb.webp",
+  "tw": 176,
+  "th": 95
+ },
+ "/images/og-default.webp": {
+  "w": 1200,
+  "h": 630,
+  "thumb": "/images/og-default-thumb.webp",
+  "tw": 176,
+  "th": 92
+ }
+}

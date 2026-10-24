@@ -8,7 +8,7 @@ unlisted: false
 ---
 I am tired of the whole "AI slop" topic and think that attempts to distinguish authorship will be short-lived. Either something is worth reading or it is not. That has always been true.
 
-![AI Content Debate](/images/slop.png)
+![AI Content Debate](/images/slop.webp)
 
 The risk isn't AI-generated content—it's AI *summarization* of content. When we rely on AI to digest and condense everything for us, we lose the deep processing, retention, and critical thinking that comes from engaging with long-form writing.
 

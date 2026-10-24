@@ -25,7 +25,7 @@ The [maps page](https://kohlhofer.com/map) on kohlhofer.com is a great example o
 
 The [bits page](https://kohlhofer.com/bits) is another testament to this new way of working. I took some of my older CodePen explorations—like the [City](https://kohlhofer.com/city) generator and [Lorenz](https://kohlhofer.com/lorenz) visualizations—and quickly ported them over to the site. I barely touched any code myself. AI created the scaffolding, and I simply talked through the integration, describing what I wanted and how things should fit together. The process was fast, fluid, and let me focus on the creative and conceptual side rather than the technical plumbing.
 
-![Lorenz Bit](/images/lorenz-bit.jpg)
+![Lorenz Bit](/images/lorenz-bit.webp)
 
 ## Lessons Learned: Letting Go and Trusting the Process
 

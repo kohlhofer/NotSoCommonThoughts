@@ -1,5 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import imageManifestRaw from '../data/image-manifest.json';
+
+interface SizedImage { w: number; h: number; thumb: string; tw: number; th: number }
+const imageManifest = imageManifestRaw as Record<string, SizedImage>;
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -50,7 +54,10 @@ if (!useGenerativeThumbnail) {
       <a href={`/blog/${post.slug}/`} class="block overflow-hidden rounded-lg">
         <img
           src={postImage}
+          width={imageManifest[postImage]?.w}
+          height={imageManifest[postImage]?.h}
           alt={title}
+          decoding="async"
           class="w-full h-auto"
         />
       </a>

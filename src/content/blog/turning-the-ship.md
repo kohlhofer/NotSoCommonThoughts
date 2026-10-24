@@ -10,7 +10,7 @@ unlisted: false
 
 Changing organizational direction is like turning a massive ship. The larger the organization, the more this metaphor holds true.
 
-![Ship](/images/ship.png)
+![Ship](/images/ship.webp)
 
 You can't just yank the wheel and expect immediate results. The momentum of the existing direction carries the organization forward, resisting change.
 

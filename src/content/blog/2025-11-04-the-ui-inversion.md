@@ -29,7 +29,7 @@ What if the pattern that's emerging isn't "chat replaces everything" but somethi
 
 The interface adapts to the output, synthesized on the fly based on what you asked for. Not a predetermined layout you're forced to interpret, but a visualization shaped by your specific question. The understanding of this asymmetry adds another level to something I wrote about [ephemeral software](/blog/2025-10-15-ephemeral-software). Traditional software isn't just wrong because it persists when it shouldn't. It's wrong because it forces a single interface paradigm to handle both directions of interaction. Code and interfaces should both manifest when needed and dissolve when done, but they should also split along natural lines: natural language for expressing intent, visual forms for understanding results. The output interface becomes just another part of the computation that appears in service of your purpose, then vanishes.
 
-![UI Inversion](/images/uiinversion.png)
+![UI Inversion](/images/uiinversion.webp)
 
 I've noticed this in my own projects lately. The friction isn't usually in viewing results; it's in communicating what results I want. The cognitive load isn't in understanding the data but in wrangling the controls.
 

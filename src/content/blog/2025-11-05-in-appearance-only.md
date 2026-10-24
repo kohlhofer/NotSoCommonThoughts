@@ -28,7 +28,7 @@ The eerie part is how many people in organizations are unknowingly just pretendi
 
 But they've never connected it back to the original problem these practices were meant to solve. They're **imposters who don't know they're imposters**, because everyone around them is also checking whether the form is correct, not whether the substance is there.
 
-![Mask](/images/mask.png)
+![Mask](/images/mask.webp)
 
 ## The Mirror
 

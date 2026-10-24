@@ -55,12 +55,12 @@ const isHome = currentPath === '/';
 const canonicalURL = new URL(currentPath, Astro.site);
 
 // Share image: the page's own if it has one, otherwise the branded default
-// card at public/images/og-default.png. Resolved to an absolute URL because
+// card at public/images/og-default.webp. Resolved to an absolute URL because
 // Open Graph scrapers do not follow root-relative paths. Only the default
 // card has known dimensions — a per-post image is left for scrapers to
 // measure rather than asserting a size that might be wrong.
 const usingDefaultOgImage = !image;
-const ogImageURL = new URL(image ?? '/images/og-default.png', Astro.site);
+const ogImageURL = new URL(image ?? '/images/og-default.webp', Astro.site);
 ---
 
 <!DOCTYPE html>

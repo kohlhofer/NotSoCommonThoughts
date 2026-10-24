@@ -15,7 +15,7 @@ Over time, I’ve read books in every format: physical shelves, Kindle downloads
 
 So this weekend I built [kohlhofer.com/books](http://kohlhofer.com/books) as personal repository to catalog my reading.
 
-![My book collection website](/images/books.png)
+![My book collection website](/images/books.webp)
 
 ## The Technical Approach
 

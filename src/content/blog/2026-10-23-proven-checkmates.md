@@ -4,7 +4,7 @@ description: "How Claude, Stockfish and an exact solver made 1,010 mate puzzles 
 date: 2026-10-23
 slug: proven-checkmates
 tags: ["Chess", "Artificial Intelligence", "Projects"]
-image: /images/proven-checkmates/puzzle.jpg
+image: /images/proven-checkmates/puzzle.webp
 ---
 
 A chess puzzle is a promise. "White to play and mate in two" means exactly one first move works, and it works against every defence Black has.
@@ -12,7 +12,7 @@ A chess puzzle is a promise. "White to play and mate in two" means exactly one f
 There are now 1,010 of those promises on [dxc4.com/puzzles](https://dxc4.com/puzzles). Every one was checked by two programs, and both had to agree before it shipped.
 
 <figure>
-  <img src="/images/proven-checkmates/puzzle.jpg"
+  <img src="/images/proven-checkmates/puzzle.webp"
        alt="A puzzle page on dxc4.com: a chessboard on the left, and on the right the title Boden's crossfire, the line White to play and mate in two, buttons for Next puzzle and Open in analyzer, and a link to browse 1,010 puzzles"
        width="1280" height="720" loading="lazy">
   <figcaption>Puzzle No. 1, composed by Claude and proven by the solver.</figcaption>

@@ -14,4 +14,4 @@ With seniority comes freedom—but also responsibility, and, more often than not
 
 That simple cue was exactly what I needed. It helped me de-clutter my days, find more joy in my work, and, as a result, have more impact.
 
-![Focus Illustration](/images/focus-illustration.jpeg)
+![Focus Illustration](/images/focus-illustration.webp)

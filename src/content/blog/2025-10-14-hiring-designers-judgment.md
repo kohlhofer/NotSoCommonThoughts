@@ -11,7 +11,7 @@ I hire designers who can already run without a playbook. The skills I don't want
 
 Tools, systems, and product context are easy to transfer. Judgment is not. So I look for three signals before we ever talk about the UX architecture, the flows we’ll extend, or how the interface gets dressed.
 
-![Hand-drawn lines illustrating balance between feedback and alignment](/images/hand-3.png)
+![Hand-drawn lines illustrating balance between feedback and alignment](/images/hand-3.webp)
 
 ## 1. Get and Use Feedback
 

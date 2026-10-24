@@ -1,6 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { formatDate, categoryUrl } from '../utils';
+import imageManifestRaw from '../data/image-manifest.json';
+
+interface SizedImage { w: number; h: number; thumb: string; tw: number; th: number }
+const imageManifest = imageManifestRaw as Record<string, SizedImage>;
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -19,6 +23,9 @@ if (!image) {
 }
 
 const postImage = useGenerativeThumbnail ? null : (image || firstInlineImage);
+// The slot is 64/80px; ship the 176px derivative the images-webp pass
+// generated for it, with intrinsic size so the list reserves the space.
+const entry = postImage ? imageManifest[postImage] : null;
 
 // Format tag names
 const formattedTags = (tags || []).map(tag => ({
@@ -52,9 +59,13 @@ const formattedTags = (tags || []).map(tag => ({
       <div class="shrink-0 w-16 sm:w-20 mt-7">
         <a href={`/blog/${post.slug}`} class="block relative rounded-lg overflow-hidden">
           <img
-            src={postImage}
+            src={entry ? entry.thumb : postImage}
+            width={entry ? entry.tw : undefined}
+            height={entry ? entry.th : undefined}
             alt={title}
-            class="w-full opacity-95 transition-opacity group-hover:opacity-100"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-auto opacity-95 transition-opacity group-hover:opacity-100"
           />
         </a>
       </div>

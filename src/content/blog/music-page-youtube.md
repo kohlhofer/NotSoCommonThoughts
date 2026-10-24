@@ -13,6 +13,6 @@ I fetch the background image for each track using the YouTube API. The result is
 
 Users get a focused, centered experience: you can shuffle, play, pause, and skip tracks right from the page. No distractions, no clutter—just music and visuals, front and center.
 
-[![Music player screenshot](/images/kohlhofer-music-screen.jpg)](https://kohlhofer.com/music?v=7MWWRs_Nyj8)
+[![Music player screenshot](/images/kohlhofer-music-screen.webp)](https://kohlhofer.com/music?v=7MWWRs_Nyj8)
 
 Another nice touch: the URL auto-updates as you play, allowing for deep linking to specific videos. That means you can share a direct link to any track—like [this one](https://kohlhofer.com/music?v=7MWWRs_Nyj8), which is a fairly early piece paired with a snapshot of a nice moment in France. 

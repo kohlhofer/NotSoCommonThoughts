@@ -8,7 +8,7 @@ tags: ["Projects", "Design", "Artificial Intelligence"]
 
 What started as a D3 prototype turned into my daily thinking tool. [MapsAll.com](https://mapsall.com) is where AI meets spatial thinking—a mind mapping platform that helps me (and now others) make sense of everything from meeting notes to strategy docs.
 
-![MapsAll.com screenshot](/images/MapsAll.jpg)
+![MapsAll.com screenshot](/images/MapsAll.webp)
 
 ## Why Spatial Interfaces?
 
@@ -36,7 +36,7 @@ After the initial prototype, I created a more deliberate version of MapsAll with
 
 What started as an experiment has become an integral part of my daily workflow. I use MapsAll for tracking todos, organizing books I'm reading, planning projects, and structuring blog posts. It's become my go-to tool for organizing thoughts and ideas, whether I'm working on a new project or just trying to make sense of my reading list. One of the most valuable features is the ability to translate long-form meeting notes into spatial maps using AI, which helps capture all key aspects in a structured, visual format that makes complex discussions much easier to navigate and reference later.
 
-![MapsAll.com in action](/images/MapsAll2.jpg)
+![MapsAll.com in action](/images/MapsAll2.webp)
 
 You can see some of my [shared maps](https://www.mapsall.com/users/cm9m83cfc0000ie04e9bf8f39), like this deep dive into [the state of AI](https://mapsall.com/shared/cmaszgklx0003l204aap7cbti).
 

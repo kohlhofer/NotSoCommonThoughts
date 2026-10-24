@@ -26,7 +26,7 @@ The water looks hot.
 The sun is directly above. The sky is a glare.
 Huge clouds bulge all around the horizon. Pregnant with energy. They will surely unleash later—but not now.
 
-![Swimmer in the distance](/images/swimmer.jpg)
+![Swimmer in the distance](/images/swimmer.webp)
 
 The little sun sail casts some shade over the rope hammock strung between the poles at the end of the dock.
 Just offshore, styrofoam swimmers mark the crab traps dropped by some local fishermen in the early hours. They barely move.

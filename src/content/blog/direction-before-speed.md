@@ -22,7 +22,7 @@ This is why alignment matters more than hustle. A team moving slowly but in the 
 
 This applies whether you're leading an entire organization, a team, or trying to drive change from any position. The physics are the same.
 
-![Vector](/images/vector.png)
+![Vector](/images/vector.webp)
 
 ## The First Question
 

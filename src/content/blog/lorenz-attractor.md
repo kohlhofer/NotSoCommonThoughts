@@ -10,7 +10,7 @@ tags: ["Projects", "Design", "Code"]
 
 Chaos theory studies how small changes in initial conditions can lead to vastly different outcomes - the famous "butterfly effect." The Lorenz attractor, discovered by meteorologist Edward Lorenz in 1963, is one of the most iconic examples of this phenomenon. It's a set of chaotic solutions to a simplified system of equations that model atmospheric convection.
 
-![Lorenz Attractor visualization](/images/lorenz-bit.jpg)
+![Lorenz Attractor visualization](/images/lorenz-bit.webp)
 
 What makes the Lorenz attractor fascinating is its "strange attractor" behavior - the system never repeats exactly the same path, yet it's confined to a specific region in space, creating an intricate, butterfly-like pattern that's both deterministic and unpredictable.
 

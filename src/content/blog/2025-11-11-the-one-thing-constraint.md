@@ -4,7 +4,7 @@ description: "Good science fiction changes one thing and builds a world around i
 date: 2025-11-11
 tags: ["Design", "Reflections"]
 featured: false
-image: "/images/scifi.png"
+image: "/images/scifi.webp"
 useGenerativeThumbnail: true
 ---
 

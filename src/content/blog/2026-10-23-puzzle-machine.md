@@ -4,7 +4,7 @@ description: "An interactive drawing of how the 1,010 mate puzzles on dxc4.com w
 date: 2026-10-23
 slug: puzzle-machine
 tags: ["Chess", "Artificial Intelligence", "Projects"]
-image: /images/puzzle-machine/machine.jpg
+image: /images/puzzle-machine/machine.webp
 ---
 
 [Anatomy](https://github.com/wheresryan22/anatomy) is a Claude skill by Ryan that explains an idea by building it as a physical object. Its one rule: "Don't draw boxes, arrows and labels. Invent a real, well-made physical thing whose working *is* the concept." A cache that skips work when nothing changed becomes a pin-tumbler lock that only turns when every pin matches.

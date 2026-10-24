@@ -34,7 +34,7 @@ In our daily lives, we're constantly performing. We choose words that meet expec
 
 ## A Mirror to Our Own Processes
 
-[![A robot looking at its reflection](/images/robot_reflection.jpg)](/images/robot_reflection.jpg)
+[![A robot looking at its reflection](/images/robot_reflection.webp)](/images/robot_reflection.webp)
 
 When we interact with advanced AI systems, we're not just testing their capabilities—we're examining our own. The uncanny valley of AI interaction might be unsettling not because these systems are so different from us, but because they're revealing how similar our own cognitive processes might be to theirs.
 

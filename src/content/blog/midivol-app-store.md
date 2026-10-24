@@ -11,7 +11,7 @@ I wanted to control my Mac's volume with a MIDI controller. That's it. A simple 
 
 I have a MIDI controller on my desk for music production. It has knobs and faders. My Mac has a volume. Surely, I thought, someone has already solved this. It's such an obvious use case—anyone with a home studio setup would want this.
 
-[![MIDI Volume Control app](/images/midivol.png)](https://kohlhofer.com/midiVol/)
+[![MIDI Volume Control app](/images/midivol.webp)](https://kohlhofer.com/midiVol/)
 
 But when I searched, I found old forum posts, abandoned GitHub projects, commercial apps that did way more than I needed, solutions that required complex setup. Nothing simple. Nothing that just worked. So I built it.
 
@@ -26,7 +26,7 @@ It's my first desktop app. Ever. And I use it every single day, all day long.
 <a href="https://kohlhofer.com/midiVol/">
   <picture>
     <source srcset="/images/midivol-screen.webp" type="image/webp" />
-    <img src="/images/midivol-screen.png" alt="MIDI Volume Control menu bar interface" />
+    <img src="/images/midivol-screen.webp" alt="MIDI Volume Control menu bar interface" />
   </picture>
 </a>
 

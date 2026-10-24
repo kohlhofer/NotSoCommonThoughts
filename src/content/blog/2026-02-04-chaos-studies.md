@@ -4,14 +4,14 @@ description: "Turning a fascination with strange attractors into an immersive au
 date: 2026-02-04
 tags: ["Projects", "Music", "Design"]
 featured: true
-image: "/images/chaos-studies/hero.png"
+image: "/images/chaos-studies/hero.webp"
 ---
 
 Rotate your view and the bass slides behind you. Zoom in and the particles fill your screen. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
 
 What started as a [coding experiment with strange attractors](/blog/lorenz-attractor) is now available as [Chaos Studies](https://fieldbw.com/chaos-studies/) for iOS and macOS. An immersive experience that combines my interests in math, music, and art into a single interactive canvas.
 
-<a href="https://fieldbw.com/chaos-studies/" target="_blank"><img src="/images/chaos-studies/hero.png" alt="Chaos Studies"></a>
+<a href="https://fieldbw.com/chaos-studies/" target="_blank"><img src="/images/chaos-studies/hero.webp" alt="Chaos Studies"></a>
 
 ## From Playdate to Full Power
 
@@ -45,7 +45,7 @@ The stems were composed on the OP-XY by Teenage Engineering (who also helped Pan
 
 The explosion and implosion effects layer multiple synthesized sounds with careful timing—details that took tuning to make the visual experience feel visceral. Getting the mix right across tiny built-in speakers and expensive headphones took more iteration than I expected.
 
-<img src="/images/chaos-studies/ipad-dark-2.png" alt="Chaos Studies on iPad">
+<img src="/images/chaos-studies/ipad-dark-2.webp" alt="Chaos Studies on iPad">
 
 ## Art for Art's Sake
 

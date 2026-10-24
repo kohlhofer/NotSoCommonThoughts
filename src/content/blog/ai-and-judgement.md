@@ -9,7 +9,7 @@ featured: true
 
 *A version of this post was first published on [MapsAll](https://www.mapsall.com/blog/ai-and-judgement).*
 
-![Modular Synth](/images/modular-synth.jpeg)
+![Modular Synth](/images/modular-synth.webp)
 
 In 1995, musician and producer Brian Eno made a profound observation about computer sequencers that has become increasingly relevant in our AI-powered world:
 

@@ -8,7 +8,7 @@ tags: ["little-bits", "Leadership"]
 
 I had an interesting chat at work the other day about micro-management. It reminded me about this long held belief that much of leadership is really about setting guardrails and finding the right balance.
 
-![Guardrails on a winding road](/images/guardrails.jpg)
+![Guardrails on a winding road](/images/guardrails.webp)
 
 Set the guardrails too tight, and you crush any chance of real ownership or fresh ideas. Too loose, and people are just flailing around without direction. You're not doing anyone any favors either way.
 

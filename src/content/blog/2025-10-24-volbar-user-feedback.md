@@ -15,7 +15,7 @@ I built the menu bar controls as a convenience. A bonus. A simple way to see and
 
 <picture>
   <source srcset="/images/VolumeAppScreen.webp" type="image/webp" />
-  <img src="/images/VolumeAppScreen.png" alt="Menu Volume – System & Music menu bar screenshot" />
+  <img src="/images/VolumeAppScreen.webp" alt="Menu Volume – System & Music menu bar screenshot" />
 </picture>
 
 
@@ -35,7 +35,7 @@ Menu Volume – System & Music exists because of that feedback loop. MIDI Volume
 
 <picture>
   <source srcset="/images/IconComposer.webp" type="image/webp" />
-  <img src="/images/IconComposer.png" alt="Menu Volume – System & Music icon in Icon Composer" />
+  <img src="/images/IconComposer.webp" alt="Menu Volume – System & Music icon in Icon Composer" />
 </picture>
 
 By the way, this was also an excuse to play with Apple's new Icon Composer. It made it easy and fun to dial in a liquid glass-compatible icon and export every size without touching the old tooling. See the screenshot above.

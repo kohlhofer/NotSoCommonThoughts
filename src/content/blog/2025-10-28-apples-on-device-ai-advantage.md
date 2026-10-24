@@ -11,7 +11,7 @@ What if the real AI inflection point is happening on my desk instead of in the c
 
 The usual scoreboard about foundational models and their ever-increasing capabilities barely mentions what happens on the device in front of us. Apple has spent nearly a decade weaving neural hardware into phones, tablets, and Macs without turning it into a hype cycle. Those chips feel less like a spec race and more like a quiet promise: the intelligence you rely on should live where you already work.
 
-![Illustration of abstract neural pathways etched into a chip](/images/brainchip.png)
+![Illustration of abstract neural pathways etched into a chip](/images/brainchip.webp)
 
 ## An Invitation Hiding in Plain Sight
 

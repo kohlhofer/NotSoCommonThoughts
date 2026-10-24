@@ -4,7 +4,7 @@ description: "A 25-million-parameter language model trained from scratch, squeez
 date: 2026-10-01
 slug: trapped-a-tiny-llm
 tags: ["Projects", "Hardware", "Artificial Intelligence", "Code"]
-image: /images/trapped-a-tiny-llm/dream.jpg
+image: /images/trapped-a-tiny-llm/dream.webp
 ---
 
 I trained a language model from scratch and squeezed it into a $25 ESP32 board with just 16 MB of flash.
@@ -19,7 +19,7 @@ It feels a little like watching something dream.
 
 <figure>
   <video src="/images/trapped-a-tiny-llm/dream.mp4"
-         poster="/images/trapped-a-tiny-llm/dream.jpg"
+         poster="/images/trapped-a-tiny-llm/dream.webp"
          autoplay loop muted playsinline
          aria-label="The board on a desk with a battery and a pen beside it, writing a sentence across its screen one word at a time"></video>
   <figcaption>Pen is there for scale.</figcaption>

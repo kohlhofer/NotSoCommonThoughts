@@ -10,7 +10,7 @@ Last year I built a [context repository](/blog/2026-02-21-context-repository) â€
 
 Since then, markdown has become the de facto lingua franca of AI-assisted work â€” and increasingly beyond it. That's why I built [Markdown Library ML-42](https://fieldbw.com/ml-42).
 
-![Markdown Library ML-42 showing this blog's content folder](/images/ml-42-blog-folder.png)
+![Markdown Library ML-42 showing this blog's content folder](/images/ml-42-blog-folder.webp)
 
 ## Markdown Everywhere
 

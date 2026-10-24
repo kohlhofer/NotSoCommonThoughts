@@ -1,11 +1,16 @@
 ---
 // Author bio — sits at the foot of a post
+import imageManifestRaw from '../data/image-manifest.json';
+const avatar = imageManifestRaw['/images/alex.webp'];
 ---
 
 <div class="flex items-start gap-4">
   <img
-    src="/images/alex.jpg"
+    src={avatar ? avatar.thumb : '/images/alex.webp'}
+    width={avatar ? avatar.tw : undefined}
+    height={avatar ? avatar.th : undefined}
     alt="Alexander Kohlhofer"
+    decoding="async"
     class="w-14 h-14 rounded-full object-cover shrink-0"
   />
   <div>

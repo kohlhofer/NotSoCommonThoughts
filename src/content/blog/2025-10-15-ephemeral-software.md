@@ -49,7 +49,7 @@ The focus shifts entirely away from the software itself—its design, its featur
 
 ## No Longer Science Fiction
 
-![Science Fiction Interfaces](/images/nochrome.jpeg)
+![Science Fiction Interfaces](/images/nochrome.webp)
 
 Watch any science fiction film and you'll see interfaces that seem absurd by today's standards. Characters speak their intent and intelligence simply does their bidding. Systems understand context without explicit instruction. Capability materializes exactly when needed, in exactly the form required, then vanishes. No applications to open, no software to maintain, no visible machinery between thought and execution.
 
