@@ -46,4 +46,4 @@ The [context repository](/blog/2026-02-21-context-repository) made the pattern v
 
 ---
 
-Markdown Library ML-42 is now available for beta testing. If you work with markdown files across multiple projects — especially in AI-assisted workflows — [sign up here](https://markdownlibrary.app/). Documentation is on [Field Bureau & Werkstatt](https://markdownlibrary.app/docs/getting-started).
+Markdown Library ML-42 is now available for beta testing. If you work with markdown files across multiple projects — especially in AI-assisted workflows — [sign up here](https://markdownlibrary.app/). Documentation is on [markdownlibrary.app](https://markdownlibrary.app/docs/getting-started).
