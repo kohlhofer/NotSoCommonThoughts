@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { categoryUrl } from '../utils';
+import AppStrip from '../components/AppStrip.astro';
 
 interface Props {
   title: string;
@@ -466,5 +467,9 @@ const ogImageURL = new URL(image ?? '/images/og-default.webp', Astro.site);
         });
       });
     </script>
+
+    <!-- Apps strip: last in the body so in normal flow (mobile) it sits at
+         the end of the page; pinned to the viewport edge at >= 640px. -->
+    <AppStrip />
   </body>
 </html>

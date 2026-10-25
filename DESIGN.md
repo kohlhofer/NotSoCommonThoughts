@@ -346,6 +346,33 @@ components:
   divider-strong-dark:
     backgroundColor: "{colors.divider-dark-strong}"
     height: 1px
+
+  # Apps strip — the one inverted surface: dark bar on a light page,
+  # lifted bar on a dark page. See "Apps strip" in the Components prose.
+  app-strip-light:
+    backgroundColor: "{colors.on-light}"
+    textColor: "{colors.background-light}"
+    typography: "{typography.body-sm}"
+    height: 37px
+
+  app-strip-dark:
+    backgroundColor: "{colors.surface-dark-alt}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+    height: 37px
+
+  app-strip-link-light:
+    backgroundColor: "transparent"
+    textColor: "{colors.background-light}"
+    typography: "{typography.body-sm}"
+
+  app-strip-link-dark:
+    backgroundColor: "transparent"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.body-sm}"
+
+  app-strip-link-hover:
+    textColor: "{colors.accent-dark}"
 ---
 
 ## Overview
@@ -406,8 +433,9 @@ The site keeps its **off-canvas right sidebar** for navigation, search, theme to
 - **Post header** — The same edge-to-edge `surface` band from the top of the page. Inside the reading column: the "All thoughts" back link, the title at the statement scale, the description as a muted `1.25rem` standfirst, then one eyebrow-style meta row with the absolute date and reading time on the left and the categories on the right. Dates are absolute because the site is static: a relative date freezes at build time.
 - **Category header** — The same band without the scroll-over: the back link, the category name at the statement scale, and one eyebrow row reading "Category · N posts".
 - **Footer** — Theme-aware paper with a `border-t border-line`, its content aligned to the reading column (`max-w-2xl`). Three columns on desktop: a copyright line, an "Explore" list with terracotta dot-bullets, and a "Feeds & Data" list.
+- **Apps strip** — Pinned to the bottom edge at 640px and up; in normal flow at the end of the page below that. While pinned, the body gains 49px of bottom padding so the footer is never covered (see the Apps strip component).
 
-There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the page-header band: flat `surface`, full width, behind the home hero, post headers and category headers only.
+There are no gradients, no background washes, and no decorative imagery in the chrome. The one fill is the page-header band: flat `surface`, full width, behind the home hero, post headers and category headers only. The apps strip is the one *inverted* surface: it deliberately does not follow the theme (see the Apps strip component).
 
 ## Elevation & Depth
 
@@ -485,6 +513,10 @@ Theme-aware `bg-paper` with a `border-t border-line`. Inner container `max-w-3xl
 
 Fixed `top-4 right-4`, transparent, muted icon hovering to terracotta. The single visible control until the sidebar opens — no pill, no fill.
 
+### Apps strip
+
+A slim dismissible bar at the bottom of every page: an "Apps I make" label, three app links (Signal Recorder SR-7, Markdown Library ML-42, Chaos Studies), and a close button hung at the right edge. It is the one inverted surface in the system — a near-black bar (`#111111`, the light-theme ink) on a light page, a lifted `surface-dark-alt` bar (`#262625`) on a dark page — so it always reads as fixed chrome against the paper instead of blending into it. Links are full-strength paper/ink on the bar, hovering to the dark-theme terracotta (`#ec8a5f`), which holds contrast on both bar tones; the label and close button sit in muted. Pinned to the viewport edge at 640px and up (37px tall, 1px top hairline of 8% white in dark mode — in light mode the color step carries the separation); in normal flow at the end of the page below that. Dismissal is remembered in `localStorage` under a key shared with kohlhofer.com, so dismissing on either site dismisses both. The bar sits below the sidebar drawer in stacking order, so an open drawer covers it.
+
 ## Do's and Don'ts
 
 **Do**
@@ -503,7 +535,7 @@ Fixed `top-4 right-4`, transparent, muted icon hovering to terracotta. The singl
 
 - Don't add a second accent color. The brand has exactly one (terracotta). The old sky-blue prose scale is retired — do not reintroduce it.
 - Don't bring back a serif. Inter covers prose, headings, and metadata alike.
-- Don't make the chrome permanently dark. Sidebar and footer follow the active theme now.
+- Don't make the chrome permanently dark. Sidebar and footer follow the active theme now. The apps strip is the sole deliberate exception — its inversion *is* its design; don't make it theme-follow.
 - Don't bold prose headings past 600, and don't bold body text. Weight 700 is the wordmark only.
 - Don't use shadows or gradients. Elevation is hairline dividers and position.
 - Don't replace the strikethrough wordmark with a "cleaned up" version. The strikethrough *is* the brand.

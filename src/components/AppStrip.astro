@@ -1,0 +1,76 @@
+---
+// "Apps I make" — slim dismissible strip at the bottom of every page.
+// The one inverted surface in the system: a dark bar on a light page, a
+// lifted bar on a dark page (see DESIGN.md, "Apps strip"). Pinned to the
+// viewport edge at >= 640px; in normal flow at the end of the page below
+// that. The markup is static so it is in the first paint and the links are
+// indexable; the scripts only handle dismissal, which is remembered in
+// localStorage under a key shared with kohlhofer.com — dismissing on either
+// site dismisses both.
+---
+
+<aside id="appstrip" class="appstrip" aria-label="Apps I make">
+  <span class="appstrip-label">Apps I make</span>
+  <nav class="appstrip-nav" aria-label="Apps">
+    <a href="https://signalrecorder.app/" target="_blank" rel="noopener">Signal Recorder SR-7</a>
+    <a href="https://markdownlibrary.app/" target="_blank" rel="noopener">Markdown Library ML-42</a>
+    <a href="https://chaosstudies.app/" target="_blank" rel="noopener">Chaos Studies</a>
+  </nav>
+  <button type="button" class="appstrip-close" aria-label="Dismiss apps strip">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  </button>
+</aside>
+
+<!-- Remove before first paint if already dismissed, so it never flashes. -->
+<script is:inline>
+  (function () {
+    try {
+      if (localStorage.getItem('kohlhofer-appstrip-dismissed') === '1') {
+        var strip = document.getElementById('appstrip');
+        if (strip && strip.parentNode) strip.parentNode.removeChild(strip);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<script>
+  const KEY = 'kohlhofer-appstrip-dismissed'; // shared with kohlhofer.com
+  const strip = document.getElementById('appstrip');
+
+  if (strip) {
+    const desktop = window.matchMedia('(min-width: 640px)');
+
+    function syncHtmlClass() {
+      // While pinned, the layout adds room so the footer stays clear.
+      document.documentElement.classList.toggle('appstrip-on', strip.isConnected && desktop.matches);
+    }
+
+    function remove() {
+      if (!strip.isConnected) return;
+      strip.remove();
+      syncHtmlClass();
+    }
+
+    strip.querySelector('.appstrip-close').addEventListener('click', () => {
+      try {
+        localStorage.setItem(KEY, '1');
+      } catch (e) {}
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        remove();
+        return;
+      }
+      strip.classList.add('appstrip-gone');
+      strip.addEventListener('transitionend', remove, { once: true });
+      window.setTimeout(remove, 350); // in case transitionend never fires
+    });
+
+    if (typeof desktop.addEventListener === 'function') {
+      desktop.addEventListener('change', syncHtmlClass);
+    } else if (typeof desktop.addListener === 'function') {
+      desktop.addListener(syncHtmlClass);
+    }
+    syncHtmlClass();
+  }
+</script>

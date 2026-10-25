@@ -261,6 +261,124 @@ a:hover > .doorway-arrow {
   transform: translateX(4px);
 }
 
+/* ── Apps strip ─────────────────────────────────────────────────────
+   The one inverted surface in the system: the strip wears the page's
+   own palette flipped — the light theme's ink as its bar, the paper as
+   its text — and a lifted surface-dark-alt bar under .dark. Pinned to
+   the bottom edge at >= 640px (html.appstrip-on adds the matching body
+   room); in normal flow at the end of the page below that. Dismissal is
+   remembered in localStorage (src/components/AppStrip.astro). */
+.appstrip {
+  --strip-bg: var(--fg);
+  --strip-fg: var(--bg);
+  --strip-muted: #adadab;
+  --strip-accent: #ec8a5f;
+  --strip-border: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2.5rem;
+  padding: 0.25rem 1rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--strip-muted);
+  background-color: var(--strip-bg);
+  transition: opacity 0.25s ease;
+}
+
+.dark .appstrip {
+  --strip-bg: var(--surface-alt);
+  --strip-fg: var(--fg);
+  --strip-border: color-mix(in srgb, #ffffff 8%, transparent);
+}
+
+.appstrip-label {
+  color: var(--strip-muted);
+  white-space: nowrap;
+}
+
+.appstrip-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 1.25rem;
+}
+
+.appstrip-nav a {
+  color: var(--strip-fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.appstrip-nav a:hover {
+  color: var(--strip-accent);
+}
+
+/* The site-wide focus ring is terracotta; on the inverted bar the
+   current-color outline is always legible. */
+.appstrip-nav a:focus-visible,
+.appstrip-close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.appstrip-close {
+  margin-left: auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--strip-muted);
+  cursor: pointer;
+}
+
+.appstrip-close:hover {
+  color: var(--strip-fg);
+}
+
+.appstrip-close svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: block;
+}
+
+.appstrip-gone {
+  opacity: 0;
+}
+
+@media (min-width: 640px) {
+  .appstrip {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Below the sidebar drawer (z-30) so an open drawer covers it. */
+    z-index: 20;
+    flex-wrap: nowrap;
+    height: 2.3125rem;
+    margin: 0;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    justify-content: center;
+    border-top: 1px solid var(--strip-border);
+  }
+
+  .appstrip-close {
+    position: absolute;
+    right: clamp(1rem, 4vw, 2rem);
+  }
+
+  /* keep the footer clear of the pinned strip */
+  html.appstrip-on body {
+    padding-bottom: 49px;
+  }
+}
+
 /* Legacy alias — Outfit is gone; keep class harmless if referenced */
 .font-outfit {
   font-family: 'Inter', system-ui, sans-serif;
