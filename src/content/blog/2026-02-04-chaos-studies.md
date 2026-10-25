@@ -9,9 +9,9 @@ image: "/images/chaos-studies/hero.webp"
 
 Rotate your view and the bass slides behind you. Zoom in and the particles fill your screen. The attractor never repeats, but it never escapes either. It's hypnotic in a way that's hard to explain until you've sat with it.
 
-What started as a [coding experiment with strange attractors](/blog/lorenz-attractor) is now available as [Chaos Studies](https://fieldbw.com/chaos-studies/) for iOS and macOS. An immersive experience that combines my interests in math, music, and art into a single interactive canvas.
+What started as a [coding experiment with strange attractors](/blog/lorenz-attractor) is now available as [Chaos Studies](https://chaosstudies.app/) for iOS and macOS. An immersive experience that combines my interests in math, music, and art into a single interactive canvas.
 
-<a href="https://fieldbw.com/chaos-studies/" target="_blank"><img src="/images/chaos-studies/hero.webp" alt="Chaos Studies"></a>
+<a href="https://chaosstudies.app/" target="_blank"><img src="/images/chaos-studies/hero.webp" alt="Chaos Studies"></a>
 
 ## From Playdate to Full Power
 
@@ -57,6 +57,6 @@ Chaos Studies sits at an intersection. It harkens back to creating visceral expe
 
 ## Try It
 
-Chaos Studies is available on [the App Store](https://fieldbw.com/chaos-studies/) for iPhone, iPad, and Mac. Put on headphones. Manipulate the chaos. Let the sound move around you.
+Chaos Studies is available on [the App Store](https://chaosstudies.app/) for iPhone, iPad, and Mac. Put on headphones. Manipulate the chaos. Let the sound move around you.
 
 In a world optimized for engagement metrics and endless algorithmic feeds, software that simply asks you to slow down and explore feels like a breath of fresh air.

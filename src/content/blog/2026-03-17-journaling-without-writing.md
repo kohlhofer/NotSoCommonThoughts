@@ -12,7 +12,7 @@ Which makes it awkward that I've stumbled into something that captures things my
 
 ## Capture Throughout the Day
 
-I use [SR-7](https://fieldbw.com/sr-7) as my capture tool. It's a voice recorder I built, with automatic transcription, that runs on both my phone and desktop. I have a dedicated project set up for journaling. When something strikes me, I hit record. A reaction, a half-formed idea, a moment worth remembering. Thirty seconds or five minutes. Whatever the thought needs.
+I use [SR-7](https://signalrecorder.app/) as my capture tool. It's a voice recorder I built, with automatic transcription, that runs on both my phone and desktop. I have a dedicated project set up for journaling. When something strikes me, I hit record. A reaction, a half-formed idea, a moment worth remembering. Thirty seconds or five minutes. Whatever the thought needs.
 
 SR-7 transcribes each entry and generates a title and summary automatically. I don't review them in real time. I [don't watch the words appear](/blog/2026-03-11-dont-watch-the-words). The capture is the only thing I do. Everything after that is the machine's job.
 

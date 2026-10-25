@@ -8,7 +8,7 @@ featured: true
 
 Last year I built a [context repository](/blog/2026-02-21-context-repository) — a wellspring of critical company information assembled as markdown files in a git repo. Strategy, brand, product specs, all structured so AI could reason from it. I also included a lightweight static site so humans could browse the same content conveniently. But the real payload was always the markdown.
 
-Since then, markdown has become the de facto lingua franca of AI-assisted work — and increasingly beyond it. That's why I built [Markdown Library ML-42](https://fieldbw.com/ml-42).
+Since then, markdown has become the de facto lingua franca of AI-assisted work — and increasingly beyond it. That's why I built [Markdown Library ML-42](https://markdownlibrary.app/).
 
 ![Markdown Library ML-42 showing this blog's content folder](/images/ml-42-blog-folder.webp)
 
@@ -22,7 +22,7 @@ Markdown became the connective tissue between me and the machines I work with. N
 
 The problem is that none of my existing tools were built for this. Code editors treat markdown as just another file type. Note-taking apps want to own your files and lock them into their own system. I needed something that could browse markdown across dozens of project folders, render it cleanly, and let me edit in place — without importing, syncing, or converting anything.
 
-So I built [Markdown Library ML-42](https://fieldbw.com/ml-42).
+So I built [Markdown Library ML-42](https://markdownlibrary.app/).
 
 ## A Native Reader and Editor
 
@@ -40,10 +40,10 @@ These files were always there. I just never had a tool that made browsing them n
 
 ## The Format That Won
 
-I didn't set out to become a markdown maximalist. But the practical reality is hard to argue with. Markdown files are easy to read, easy to edit, easy to version, and easy for AI to work with. They don't require a runtime. They don't expire. They work with every tool in my stack, from Claude Code to git to a plain text editor. If you're new to the format or want a refresher, there's a [markdown primer](https://fieldbw.com/docs/ml-42/markdown-primer) in the docs.
+I didn't set out to become a markdown maximalist. But the practical reality is hard to argue with. Markdown files are easy to read, easy to edit, easy to version, and easy for AI to work with. They don't require a runtime. They don't expire. They work with every tool in my stack, from Claude Code to git to a plain text editor. If you're new to the format or want a refresher, there's a [markdown primer](https://markdownlibrary.app/docs/markdown-primer) in the docs.
 
 The [context repository](/blog/2026-02-21-context-repository) made the pattern visible. Markdown Library is what grew out of needing a proper way to work with all the markdown that followed.
 
 ---
 
-Markdown Library ML-42 is now available for beta testing. If you work with markdown files across multiple projects — especially in AI-assisted workflows — [sign up here](https://fieldbw.com/ml-42). Documentation is on [Field Bureau & Werkstatt](https://fieldbw.com/docs/ml-42/getting-started).
+Markdown Library ML-42 is now available for beta testing. If you work with markdown files across multiple projects — especially in AI-assisted workflows — [sign up here](https://markdownlibrary.app/). Documentation is on [Field Bureau & Werkstatt](https://markdownlibrary.app/docs/getting-started).
