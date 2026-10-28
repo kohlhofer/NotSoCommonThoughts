@@ -9,7 +9,7 @@ image: /images/proven-checkmates/puzzle.webp
 
 A chess puzzle is a promise. "White to play and mate in two" means exactly one first move works, and it works against every defence Black has.
 
-There are now 1,010 of those promises on [dxc4.com/puzzles](https://dxc4.com/puzzles). Every one was checked by two programs, and both had to agree before it shipped.
+There are now 1,010 of those promises on [dxc4.com/puzzles](https://dxc4.com/puzzles). Every one was [checked by two programs](https://dxc4.com/puzzles#checked), and both had to agree before it shipped.
 
 <figure>
   <img src="/images/proven-checkmates/puzzle.webp"
