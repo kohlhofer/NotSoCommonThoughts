@@ -20,7 +20,7 @@ There are now 1,010 of those promises on [dxc4.com/puzzles](https://dxc4.com/puz
 
 ## Two Checkers
 
-The first is a brute-force solver, a small Python program that plays out every legal move for both sides. Where Stockfish estimates, it proves: exactly one first move mates in time, and a mate exists after every defence. The second is Stockfish 19's mate search. If they disagree on the length or the first move, the puzzle is thrown out.
+The first is a brute-force solver, a small Python program that plays out every legal move for both sides. Where Stockfish estimates, [it proves](https://dxc4.com/puzzles#checked): exactly one first move mates in time, and a mate exists after every defence. The second is Stockfish 19's mate search. If they disagree on the length or the first move, the puzzle is thrown out.
 
 ## Where the Model Fits
 

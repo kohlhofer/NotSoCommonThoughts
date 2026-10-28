@@ -45,7 +45,7 @@ The serverless architecture isn't just about cost savings. It fundamentally chan
 
 The easiest way to start analyzing is to **import your Chess.com games directly** using [dxc4.com/import](https://dxc4.com/import). Just enter your Chess.com username, select the game you want to analyze, and you're ready to go. No need to manually copy PGN files or navigate through multiple screens.
 
-For players who want to analyze games from other sources, you can paste any PGN directly into the analyzer. The interface supports exploring multiple variations without losing track of the main line, real-time engine evaluations as you navigate through positions, and keyboard shortcuts for quick navigation through game history.
+For players who want to analyze games from other sources, you can paste any PGN directly into the analyzer. The interface supports exploring multiple variations without losing track of the main line, real-time [engine evaluations](https://dxc4.com/evaluation) as you navigate through positions, and keyboard shortcuts for quick navigation through game history.
 
 ## Try It Yourself
 
