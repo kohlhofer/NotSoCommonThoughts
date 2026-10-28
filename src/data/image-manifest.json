@@ -327,5 +327,12 @@
   "thumb": "/images/og-default-thumb.webp",
   "tw": 176,
   "th": 92
+ },
+ "/images/predicting-chess-puzzle-difficulty/levels.webp": {
+  "w": 1280,
+  "h": 1000,
+  "thumb": "/images/predicting-chess-puzzle-difficulty/levels-thumb.webp",
+  "tw": 176,
+  "th": 138
  }
 }
