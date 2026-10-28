@@ -1,5 +1,5 @@
 ---
-title: "The Puzzle Machine"
+title: "The Puzzle Machine, Drawn with the Anatomy Skill"
 description: "An interactive drawing of how the 1,010 mate puzzles on dxc4.com were made, built with Ryan's Anatomy skill for Claude: three hoppers on compute, an LLM on tokens, and one inspection head that decides what ships."
 date: 2026-10-23
 slug: puzzle-machine
@@ -33,7 +33,7 @@ Everything passes the same head. The probe in front is Stockfish's mate search, 
 
 The trays at the end are the pick step. It drops duplicates, allows any one idea three times, spreads the puzzles across mate length, where the black king stands and what kind of move the key is, and proves every one again.
 
-The pass and fail odds in the drawing are made up; the rest is how it works. The longer story, with the real numbers, is in [1,010 Checkmates, Each One Proven](/blog/proven-checkmates).
+The pass and fail odds in the drawing are made up; the rest is how it works. The longer story, with the real numbers, is in [1,010 Checkmate Puzzles, Each One Proven](/blog/proven-checkmates), and how each puzzle gets its rating is in [Rating Chess Puzzles Nobody Has Played](/blog/predicting-chess-puzzle-difficulty).
 
 ## The Build
 

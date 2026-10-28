@@ -1,5 +1,5 @@
 ---
-title: "1,010 Checkmates, Each One Proven"
+title: "1,010 Checkmate Puzzles, Each One Proven"
 description: "How Claude, Stockfish and an exact solver made 1,010 mate puzzles for dxc4.com: the model built the tools and picked the puzzles, the engines proved every one."
 date: 2026-10-23
 slug: proven-checkmates
@@ -45,3 +45,5 @@ Every puzzle also opens in the [dxc4 analyzer](https://dxc4.com/analyze). Once y
 The Easier and Harder labels are estimates. They will stay rough until real solve times can calibrate them.
 
 More on dxc4 itself, a free analyzer that keeps the whole game in the URL and runs Stockfish in your browser, is in [How I Built a Serverless Chess Analytics Platform](/blog/chess-analytics-in-the-url).
+
+*Updated 27 October 2026: the set has grown to 1,946 mate puzzles, in one, two and three moves, and 208 best-move puzzles. The Easier and Harder labels became predicted ratings, explained in [Rating Chess Puzzles Nobody Has Played](/blog/predicting-chess-puzzle-difficulty).*

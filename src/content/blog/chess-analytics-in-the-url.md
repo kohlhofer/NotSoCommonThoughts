@@ -54,3 +54,5 @@ Head to [dxc4.com/import](https://dxc4.com/import), enter your Chess.com usernam
 No sign-up, no subscription, no friction. Just instant, shareable chess analysis.
 
 Got a particularly brilliant game or a spectacular blunder? I'd love to see it—share your links on Twitter, Reddit, or wherever you discuss chess. I'm curious to see what positions people find worth sharing.
+
+*Updated 27 October 2026: dxc4 now also has [2,154 chess puzzles](https://dxc4.com/puzzles), and each one opens in the analyzer. How they are made is in [1,010 Checkmate Puzzles, Each One Proven](/blog/proven-checkmates).*
