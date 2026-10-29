@@ -17,7 +17,7 @@ His [doctrine chapter](https://medium.com/wardleymaps/doctrine-8bb0015688e5) giv
 
 ## The missing dimension
 
-The same split is missing from how an agent is defined. Definitions start the same way everywhere: "You are a senior software engineer." The system prompt sometimes repeats it. That line is the aptitude. It never says which of the three the agent should be, and the model fills the gap with its default, which is competent, unopinionated and in the middle of the range.
+The same split is missing from how an agent is defined. Definitions start the same way everywhere: "You are a senior software engineer." That line is the aptitude. It does not say whether it is a pioneer, a settler or a town planner, and the model fills in the gap with its default, which is competent, unopinionated and in the middle of the range.
 
 <figure class="not-prose" style="margin:2.5rem 0">
 <svg viewBox="0 0 400 368" role="img" aria-label="Diagram: a grid with four columns of capability, senior engineer, UI designer, security engineer and data engineer, and three rows named for the people who best embodied each mindset: Wozniak the pioneer, Jobs the settler and Cook the town planner. A chip labelled 'You are a senior engineer' sits above the first column with a dashed band running down it and question marks in two of its cells, because the job title fixes only the column. Two cells are filled in terracotta: the Wozniak row times senior engineer, labelled innovate, and the Cook row times security engineer, labelled harden and scale. The axes are captioned mindset and capability." style="display:block;width:100%;max-width:460px;height:auto;margin:0 auto;font-family:inherit">
