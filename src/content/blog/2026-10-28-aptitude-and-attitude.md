@@ -1,6 +1,6 @@
 ---
-title: "A Better Way to Define AI Agents"
-description: "Personas define what an agent is good at, never its mindset. Aptitude and attitude, Simon Wardley's two axes, put the right mindset at the right time."
+title: "How Do You Define an AI Agent?"
+description: "The job title says what an agent is good at, never how it should work. Aptitude and attitude, Simon Wardley's two axes, put the right mindset at the right time."
 date: 2026-10-28
 slug: aptitude-and-attitude
 tags: ["Artificial Intelligence", "Reflections"]
@@ -15,14 +15,12 @@ His [doctrine chapter](https://medium.com/wardleymaps/doctrine-8bb0015688e5) giv
 - Settlers "turn the half-baked thing into something useful for a larger audience."
 - Town planners "take something and industrialise it taking advantage of economies of scale." "You trust what they build."
 
-Apple is the cleanest version I can point to. Steve Wozniak built the first one in a garage, with no case and no keyboard. Steve Jobs turned it into a product a larger audience could buy. Tim Cook industrialised it.
-
 ## The missing dimension
 
 The same split is missing from how an agent is defined. Definitions start the same way everywhere: "You are a senior software engineer." The system prompt sometimes repeats it. That line is the aptitude. It never says which of the three the agent should be, and the model fills the gap with its default, which is competent, unopinionated and in the middle of the range.
 
 <figure class="not-prose" style="margin:2.5rem 0">
-<svg viewBox="0 0 400 368" role="img" aria-label="Diagram: a grid with four columns of capability, senior engineer, UI designer, security engineer and data engineer, and three rows named for the people who best embodied each mindset: Wozniak the pioneer, Jobs the settler and Cook the town planner. A chip labelled 'You are a senior engineer' sits above the first column with a dashed band running down it and question marks in two of its cells, because a persona fixes only the column. Two cells are filled in terracotta: the Wozniak row times senior engineer, labelled innovate, and the Cook row times security engineer, labelled harden and scale. The axes are captioned mindset and capability." style="display:block;width:100%;max-width:460px;height:auto;margin:0 auto;font-family:inherit">
+<svg viewBox="0 0 400 368" role="img" aria-label="Diagram: a grid with four columns of capability, senior engineer, UI designer, security engineer and data engineer, and three rows named for the people who best embodied each mindset: Wozniak the pioneer, Jobs the settler and Cook the town planner. A chip labelled 'You are a senior engineer' sits above the first column with a dashed band running down it and question marks in two of its cells, because the job title fixes only the column. Two cells are filled in terracotta: the Wozniak row times senior engineer, labelled innovate, and the Cook row times security engineer, labelled harden and scale. The axes are captioned mindset and capability." style="display:block;width:100%;max-width:460px;height:auto;margin:0 auto;font-family:inherit">
 <rect x="192" y="118" width="62" height="58" rx="8" fill="var(--surface-alt)" stroke="var(--border)"/>
 <rect x="260" y="118" width="62" height="58" rx="8" fill="var(--surface-alt)" stroke="var(--border)"/>
 <rect x="328" y="118" width="62" height="58" rx="8" fill="var(--surface-alt)" stroke="var(--border)"/>
@@ -61,7 +59,7 @@ The same split is missing from how an agent is defined. Definitions start the sa
 <text x="257" y="358" text-anchor="middle" font-size="9.5" fill="var(--fg-subtle)">capability</text>
 <text transform="rotate(-90 24 213)" x="24" y="213" text-anchor="middle" font-size="9.5" fill="var(--fg-subtle)">mindset</text>
 </svg>
-<figcaption>The persona fixes the column. The task picks the cell. The rows are the three mindsets, named for the people who best embodied them.</figcaption>
+<figcaption>The job title fixes the column. The task picks the cell. The rows are the three mindsets, named for the people who best embodied them.</figcaption>
 </figure>
 
 ## Naming both
@@ -72,8 +70,8 @@ One line in the definition does it:
 Aptitude: senior engineer. Attitude: town planner.
 ```
 
-And the contract changes in both directions. A pioneer gets a question and owes you options, some of them wrong on purpose. A settler gets the rough thing that worked once and owes you the repeatable, tested version. A town planner gets the running system and its constraints and owes you something boring on purpose. Same senior engineer, three contracts.
+And the contract changes in both directions. A pioneer gets a question and owes you options, some of which may turn out wrong. A settler gets the rough thing that worked once and owes you the repeatable, tested version. A town planner gets the running system and its constraints and owes you something boring on purpose. Same senior engineer, three contracts.
 
 You do not want a town planner when you are looking to innovate, and you do not need a pioneer when you are fixing a security or scaling problem. The row is picked by the work.
 
-You can simply give an agent an aptitude. The same doesn't work for humans, which is why Wardley writes about staffing rather than prompting. What's yours?
+You can simply give an agent an aptitude. The same doesn't work for humans, which is why Wardley writes about staffing rather than prompting. Are you a pioneer, a settler, or a town planner?
