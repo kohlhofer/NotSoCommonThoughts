@@ -70,7 +70,7 @@ One line in the definition does it:
 Aptitude: senior engineer. Attitude: town planner.
 ```
 
-And the contract changes in both directions. A pioneer gets a question and owes you options, some of which may turn out wrong. A settler gets the rough thing that worked once and owes you the repeatable, tested version. A town planner gets the running system and its constraints and owes you something boring on purpose. Same senior engineer, three contracts.
+And the contract changes in both directions. The pioneer takes a question and returns several rough attempts, some of which will fail. The settler takes the half-baked thing and makes it useful for a larger audience. The town planner takes the running system and industrialises it. Same senior engineer, three contracts.
 
 You do not want a town planner when you are looking to innovate, and you do not need a pioneer when you are fixing a security or scaling problem. The row is picked by the work.
 
