@@ -7,7 +7,7 @@ tags: ["Artificial Intelligence", "Reflections"]
 unlisted: true
 ---
 
-I have been fascinated by a Simon Wardley idea about organisations, and I have been talking it over with a friend since. [Wardley named the split aptitude and attitude in 2014](https://www.swardleymaps.com/posts/2014-07-22-notes-on-organisation-aptitude-and-attitude): aptitude is the skill, and attitude is the kind of work a person thrives in. For an organisation, the attitudes are three.
+I have been fascinated by a Simon Wardley idea about organisations, and I have been talking it over with my friend Aleksandar Simovic since. [Wardley named the split aptitude and attitude in 2014](https://www.swardleymaps.com/posts/2014-07-22-notes-on-organisation-aptitude-and-attitude): aptitude is the skill, and attitude is the kind of work a person thrives in. For an organisation, the attitudes are three.
 
 His [doctrine chapter](https://medium.com/wardleymaps/doctrine-8bb0015688e5) gives the definitions:
 
@@ -74,4 +74,4 @@ And the contract changes in both directions. A pioneer gets a question and owes 
 
 You do not want a town planner when you are looking to innovate, and you do not need a pioneer when you are fixing a security or scaling problem. The row is picked by the work.
 
-You can simply give an agent an aptitude. The same doesn't work for humans, which is why Wardley writes about staffing rather than prompting. Are you a pioneer, a settler, or a town planner?
+You can simply give an agent an aptitude. The same doesn't work for humans, which is why Wardley writes about staffing rather than prompting. With people, the failure looks like what Aleksandar calls [the flat line problem](https://simalexan.com/posts/the-flat-line-problem/): one rulebook across a prototype and a hardening job, and the engineers argue about process. Are you a pioneer, a settler, or a town planner?
