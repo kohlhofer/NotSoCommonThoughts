@@ -94,3 +94,5 @@ Holding the side button puts it to sleep, which is the closest thing it has to a
 Nothing it says is retrieved, ranked, served or logged. It just sits on my desk, making up stories until the battery runs out.
 
 When the battery dies, it stops dreaming.
+
+*Updated 29 October 2026: I have since retrained the model from scratch on a much faster computer. The full run took a couple of hours instead of the 23.2 on the M3 MacBook, and it fixed some of the issues the incremental approach had created. The prose is better, and it runs a little faster on the board. The next thing I trained was the model that rates the dxc4 puzzles, in [Rating Chess Puzzles Nobody Has Played](/blog/predicting-chess-puzzle-difficulty).*
