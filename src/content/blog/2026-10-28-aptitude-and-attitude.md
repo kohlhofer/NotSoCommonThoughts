@@ -3,7 +3,7 @@ title: "How Do You Define an AI Agent?"
 description: "The job title says what an agent is good at, never how it should work. Aptitude and attitude, Simon Wardley's two axes, put the right mindset at the right time."
 date: 2026-10-28
 slug: aptitude-and-attitude
-tags: ["Artificial Intelligence", "Reflections"]
+tags: ["Artificial Intelligence", "Reflections", "Leadership"]
 unlisted: true
 ---
 
