@@ -1,10 +1,9 @@
 ---
 title: "How Do You Define an AI Agent?"
 description: "The job title says what an agent is good at, never how it should work. Aptitude and attitude, Simon Wardley's two axes, put the right mindset at the right time."
-date: 2026-10-28
+date: 2026-10-31
 slug: aptitude-and-attitude
 tags: ["Artificial Intelligence", "Reflections", "Leadership"]
-unlisted: true
 ---
 
 I have been fascinated by a Simon Wardley idea about organisations, and I have been talking it over with my friend Aleksandar Simovic since. [Wardley named the split aptitude and attitude in 2014](https://www.swardleymaps.com/posts/2014-07-22-notes-on-organisation-aptitude-and-attitude): aptitude is the skill, and attitude is the kind of work a person thrives in. For an organisation, the attitudes are three.
