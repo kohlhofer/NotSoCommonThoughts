@@ -119,3 +119,5 @@ Clone it, run `claude` in the folder and say "set up". Claude asks your name, se
 The starter grew out of the [first version of this idea](https://youtu.be/ib74sLgjIBM) from [Systems Made Better](https://www.youtube.com/@SystemsMadeBetter), itself inspired by Karpathy's post. I read my knowledge bases in [Markdown Library ML-42](/blog/2026-04-06-markdown-library), which reloads an article the moment Claude rewrites it.
 
 The starter ships with a librarian and no books.
+
+*Updated 31 October 2026: The base has since grown semantic search. A 310 MB model that runs locally files every section of the wiki as a vector, and a question is matched to articles by meaning as well as by exact words, so an article is found even when the question uses words it never says. [The follow-up describes the layer](/blog/2026-10-31-knowledge-base-gets-semantic-search).*
