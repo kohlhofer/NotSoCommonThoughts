@@ -1,8 +1,8 @@
 ---
-title: "My Knowledge Base Understands What I Mean"
-description: "The follow-up to the self-maintaining knowledge base: a 310 MB model running locally turns questions and sections into vectors, so the base finds the article even when the words don't match."
+title: "The Knowledge Base Gets Semantic Search"
+description: "The knowledge base gets semantic search: a 310 MB local embedding model, EmbeddingGemma 2 on llama.cpp, finds articles even when the words don't match."
 date: 2026-10-31
-slug: knowledge-base-understands-what-i-mean
+slug: knowledge-base-gets-semantic-search
 tags: ["Projects", "Code", "Artificial Intelligence"]
 ---
 
@@ -10,9 +10,9 @@ The [knowledge base](/blog/2026-10-02-self-managing-knowledge-base) I described 
 
 ## The Embedding Layer
 
-The new part is a 310 MB model, [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2b), Apache 2.0. [llama.cpp](https://github.com/ggml-org/llama.cpp) serves it locally on port 8199, launched detached, and a launchd agent restarts it within ten seconds if it dies.
+The new part is semantic search. The model is [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2b), a 310 MB GGUF, Apache 2.0. [llama.cpp](https://github.com/ggml-org/llama.cpp) serves it locally on port 8199, launched detached, and a launchd agent restarts it within ten seconds if it dies.
 
-The model reads words and writes out a vector, a point in a space where nearby points mean the same thing, with or without shared words. Documents are filed with the model's trained `title: … | text: …` prefix and questions arrive as `task: search result | query: …`, so both sides of a search live in the same space.
+The model reads words and writes out an embedding, a vector in a space where nearby vectors mean the same thing, with or without shared words. Documents are filed with the model's trained `title: … | text: …` prefix and questions arrive as `task: search result | query: …`, so both sides of a search live in the same space.
 
 <figure class="not-prose" style="margin:2.5rem 0">
 <svg viewBox="0 0 460 340" role="img" aria-label="Diagram in three rows. The top row is the five skills: kb-ingest, kb-draft, kb-compile, kb-question, kb-health-check, each with an arrow down. The middle row is the markdown library: a RAW/ box for verbatim sources and a larger box for Wiki and Outputs, 361 files of plain markdown in git, with an arrow from RAW to Wiki. The bottom row is a zone, the embedding layer, outside git, one per machine, containing a terracotta box for EmbeddingGemma 2, 310 MB running locally on port 8199, and a box for the index: 2,032 sections as vectors in a 12 MB SQLite file. An arrow from the library down into the zone is captioned: every section becomes a vector, re-filed after each compile. The kb-question arrow routes down the right side into the zone, captioned: asks by meaning. A dashed note at the bottom reads: grep stays for exact strings, links and filenames." style="display:block;width:100%;max-width:460px;height:auto;margin:0 auto;font-family:inherit">
@@ -65,12 +65,14 @@ The model reads words and writes out a vector, a point in a space where nearby p
 <figcaption>The five skills keep the library current. The embedding layer is a mirror of it, kept outside git and re-filed after each write; kb-question asks through it.</figcaption>
 </figure>
 
-The layer is a mirror of the markdown library. Every section of `Wiki/` and `Outputs/` — 2,032 of them across 361 files — is filed as a vector in a 12 MB SQLite file. There is no vector database: a question is ranked by brute-force cosine against all two thousand vectors, about 0.1 seconds.
+The layer is a mirror of the markdown library. Every section of `Wiki/` and `Outputs/` — 2,032 of them across 361 files — is filed as a vector in a 12 MB SQLite file. There is no vector database: a question is ranked by brute-force cosine similarity against all two thousand vectors, about 0.1 seconds.
 
 The mirror lives outside git, one per machine. The writing skills keep it current: `kb-compile` and `kb-draft` run `kb-index` after the commit, and it re-embeds only what that pass changed. `kb-index --status` says what is pending, and a full rebuild of the corpus takes 31 seconds on my M5 Max, 32 sections at a time.
 
 ## Asking
 
 `kb-question` uses the layer whenever a question is a paraphrase: `kb-search` finds the articles by meaning, and the hits arrive with each article's Status and Provenance, which is how the answer is weighted. Exact strings, `[[links]]` and filenames still go to grep.
+
+With `kb-question` answering on top of the retrieval, that is RAG, pointed at a markdown library instead of the open web.
 
 The question no longer has to be phrased the way the article is.
