@@ -10,7 +10,7 @@ The [knowledge base](/blog/2026-10-02-self-managing-knowledge-base) I described 
 
 ## The Embedding Layer
 
-The new part is a 310 MB model, [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2b), Apache 2.0, running on the machine that needs it. [llama.cpp](https://github.com/ggml-org/llama.cpp) serves it on port 8199, launched detached, and a launchd agent restarts it within ten seconds if it dies.
+The new part is a 310 MB model, [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2b), Apache 2.0. [llama.cpp](https://github.com/ggml-org/llama.cpp) serves it locally on port 8199, launched detached, and a launchd agent restarts it within ten seconds if it dies.
 
 The model reads words and writes out a vector, a point in a space where nearby points mean the same thing, with or without shared words. Documents are filed with the model's trained `title: … | text: …` prefix and questions arrive as `task: search result | query: …`, so both sides of a search live in the same space.
 
