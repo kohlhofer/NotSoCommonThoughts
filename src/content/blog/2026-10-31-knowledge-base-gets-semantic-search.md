@@ -8,7 +8,7 @@ tags: ["Projects", "Code", "Artificial Intelligence"]
 
 The [knowledge base](/blog/2026-10-02-self-managing-knowledge-base) I described in October maintains itself, but its search was grep. Grep is file-based: it finds the exact words you type, and the corpus rarely uses yours. Ask it how sure I am of an article and the result is empty, because the article says "Status: established, two sources".
 
-For an agent, that miss costs a round-trip: another query with different words, the files it opens while checking, and the tokens all of it consumes. The base makes every agent translate the question into its vocabulary before it answers.
+For an agent, that miss costs a round-trip: another query with different words, the files it opens while checking, and the tokens all of it consumes.
 
 ## The Embedding Layer
 
