@@ -60,6 +60,10 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   vite: {
+    server: {
+      // Tailnet access via `tailscale serve` (port 8448) on the Studio
+      allowedHosts: ['studio.king-werner.ts.net'],
+    },
     build: {
       cssCodeSplit: true,
       minify: 'esbuild',
