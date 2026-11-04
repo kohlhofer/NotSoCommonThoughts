@@ -15,6 +15,9 @@ interface Props {
   // Unlisted posts stay reachable by URL but are kept out of search engines,
   // since the sitemap integration has no way to exclude them.
   noindex?: boolean;
+  // Optional JSON-LD structured data, emitted verbatim in the head. Post pages
+  // pass a BlogPosting; everything else passes nothing.
+  jsonLd?: object;
   // Home page only: the wordmark stays with the sticky hero band and the
   // content sheet slides over both (see .wordmark-pinned).
   pinWordmark?: boolean;
@@ -22,7 +25,7 @@ interface Props {
 
 const SITE_DESCRIPTION = 'A personal blog exploring the intersection of design, technology, and human creativity. Through thoughtful analysis and personal experiences, it examines how modern tools and AI are reshaping our approach to design, coding, and creative work, while maintaining a focus on the human elements of judgment, intuition, and meaningful decision-making.';
 
-const { title, description = SITE_DESCRIPTION, image, ogType = 'website', noindex = false, pinWordmark = false } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image, ogType = 'website', noindex = false, pinWordmark = false, jsonLd } = Astro.props;
 
 // Get all categories from posts
 const posts = (await getCollection('blog')).filter(post => !post.data.unlisted);
@@ -93,6 +96,8 @@ const ogImageURL = new URL(image ?? '/images/og-default.webp', Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
+
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
     <title>{title}</title>
     <!-- Self-hosted Inter -->

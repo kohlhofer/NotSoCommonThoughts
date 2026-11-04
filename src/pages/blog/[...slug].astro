@@ -25,6 +25,20 @@ const ogImage = post.data.useGenerativeThumbnail
   ? undefined
   : post.data.image ?? firstInlineImage;
 
+// Article structured data: the typed twin of the og:type=article tags, for
+// crawlers and AI answers that read JSON-LD instead of meta.
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  ...(post.data.description ? { description: post.data.description } : {}),
+  image: new URL(ogImage ?? '/images/og-default.webp', Astro.site).href,
+  datePublished: post.data.date.toISOString().slice(0, 10),
+  dateModified: post.data.date.toISOString().slice(0, 10),
+  author: { '@type': 'Person', name: 'Alexander Kohlhofer', url: 'https://kohlhofer.com' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': new URL(Astro.url.pathname, Astro.site).href },
+};
+
 // Get all categories from tags
 const categories = post.data.tags || [];
 
@@ -39,7 +53,7 @@ const relatedPosts = allPosts
   .slice(0, 4);
 ---
 
-<Layout title={`${post.data.title} - NSCT`} description={post.data.description} image={ogImage} ogType="article" noindex={post.data.unlisted}>
+<Layout title={`${post.data.title} - NSCT`} description={post.data.description} image={ogImage} ogType="article" noindex={post.data.unlisted} jsonLd={article}>
   <!-- Post header -->
   <BlogHero post={post} />
 
