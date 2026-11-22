@@ -15,9 +15,9 @@ The errands on its page are the ones that eat an afternoon of tabs and logins: c
 
 <figure class="not-prose">
   <img src="/images/nod-a-personal-agent-on-a-computer-you-own/hero-collage.jpg"
-       alt="Nod on the desktop: the agent's conversation next to a call brief it prepared"
+       alt="Nod's launch artwork: a ring of pink paper dots on layered sheets of torn graph paper"
        width="2000" height="1125" loading="lazy">
-  <figcaption>The agent's conversation, next to a call brief it prepared.</figcaption>
+  <figcaption>Nod's launch artwork, from n8n.</figcaption>
 </figure>
 
 You talk to it in one conversation, in the app or on Telegram or WhatsApp, while several jobs run in the background. It remembers what you tell it: say once that Anna, not Bob, handles invoices, and it uses that from then on. It learns your writing style from sent mail, and it keeps the steps of a task and fixes them when a site changes. Every note it keeps can be seen, edited or deleted.
